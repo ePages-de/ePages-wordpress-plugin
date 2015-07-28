@@ -12,24 +12,21 @@ Author URI: http://mindmatters.de/
 defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
 
 
-# TODO: add example shop url.
-$sample_shop_id = "http://example.com";
+$epages_example_shop_url = "https://creamyiceshop.com/rs/shops/CreamyIceShop";
 
 
 if ( is_admin() ) {
+  add_action('admin_init', 'epages_settings_api_init');
   add_action("admin_notices", "epages_show_admin_message");
   add_action("admin_menu", "epages_add_options_page");
 }
 
-
-
-
-
-
-
+function epages_settings_api_init() {
+  register_setting('epages_options_page', 'epages_api_url');
+}
 
 function epages_add_options_page() {
-	add_menu_page("ePages Shop Settings", "ePages Shop", "manage_options", "epages_options_page", "epages_options_page");
+  add_menu_page("ePages Shop Settings", "ePages Shop", "manage_options", "epages_options_page", "epages_options_page");
 }
 
 function epages_options_page() {
@@ -37,6 +34,16 @@ function epages_options_page() {
     <div class="wrap">
       <h2>ePages Shop Settings</h2>
     </div>
+    <form method="post" action="options.php">
+      <?php settings_fields('epages_options_page'); ?>
+      <label for="epages_api_url">ePages API URL</label>
+      <input
+        type="text"
+        name="epages_api_url"
+        value="<?php echo get_option("epages_api_url") ?>"
+        placeholder="<?php echo $epages_example_shop_url; ?>">
+      <input type="submit" value="Save">
+    </form>
   <?php
 }
 
@@ -48,7 +55,7 @@ function epages_options_page() {
 // Actions
 
 function epages_show_admin_message() {
-  if ( epages_shop_id() == $sample_shop_id ) {
+  if ( epages_api_url() == $epages_example_shop_url ) {
     ?>
     <div class="updated fade">
       <p>
@@ -64,20 +71,17 @@ function epages_show_admin_message() {
 
 // Helper
 
-function epages_shop_id() {
-  static $shop_id = null;
-  if (is_null($shop_id)) {
-    $shop_id = get_option("epages_shop_id");
+function epages_api_url() {
+  static $epages_api_url = null;
+  if (is_null($epages_api_url)) {
+    $epages_api_url = get_option("epages_api_url");
 
-    if (empty($shop_id)) {
-      $shop_id = $sample_shop_id;
+    if (empty($epages_api_url)) {
+      $epages_api_url = $epages_example_shop_url;
     }
   }
-  return $shop_id;
-} 
-
-
-
+  return $epages_api_url;
+}
 
 //function epages_shop_widget_shortcode_handler($atts) {
   //// Add SITe.js script
