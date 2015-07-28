@@ -32,17 +32,28 @@ function epages_add_options_page() {
 function epages_options_page() {
   ?>
     <div class="wrap">
-      <h2>ePages Shop Settings</h2>
+      <h2>Connect your ePages Shop</h2>
     </div>
     <form method="post" action="options.php">
       <?php settings_fields('epages_options_page'); ?>
-      <label for="epages_api_url">ePages API URL</label>
+      <label for="epages_api_url">Your ePages API URL</label>
+      <br/>
       <input
         type="text"
         name="epages_api_url"
-        value="<?php echo get_option("epages_api_url") ?>"
-        placeholder="<?php echo $epages_example_shop_url; ?>">
+        size=60
+        value="<?php echo get_option("epages_api_url") ?>">
+      <br/>
       <input type="submit" value="Save">
+    </form>
+    <div class="wrap">
+      <h2>Disconnect your ePages Shop</h2>
+    </div>
+    <p>Disable the ePages Shop Widget in your Wordpress Installation:</p>
+    <form method="post" action="options.php">
+      <?php settings_fields('epages_options_page'); ?>
+      <input type="hidden" name="epages_api_url" value="">
+      <input type="submit" value="Disconnect ePages Shop">
     </form>
   <?php
 }
