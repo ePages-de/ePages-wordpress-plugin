@@ -1,5 +1,11 @@
 # SITe Wordpress Plugin
 
+## For webmasters
+
+1. Download the [latest version](https://github.com/ePages-de/site-wordpress/archive/master.zip)
+2. Unzip it
+3. Copy the ```site-wordpress-master``` folder into ```wp-content/plugins/```
+
 ## For developers
 
 ### Setup

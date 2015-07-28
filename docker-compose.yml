@@ -5,7 +5,7 @@ wordpress:
   ports:
     - 8080:80
   volumes:
-    - site:/var/www/html/wp-content/plugins/site
+    - .:/var/www/html/wp-content/plugins/site-wordpress
 
 db:
   image: mariadb
