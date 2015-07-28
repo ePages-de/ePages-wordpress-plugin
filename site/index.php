@@ -29,13 +29,13 @@ if ( is_admin() ) {
 
 
 function epages_add_options_page() {
-	add_menu_page("ePages basket settings", "ePages basket", "manage_options", "epages_options_page", "epages_options_page");
+	add_menu_page("ePages Shop Settings", "ePages Shop", "manage_options", "epages_options_page", "epages_options_page");
 }
 
 function epages_options_page() {
   ?>
     <div class="wrap">
-      <h2>ePages basket settings</h2>
+      <h2>ePages Shop Settings</h2>
     </div>
   <?php
 }
@@ -49,7 +49,15 @@ function epages_options_page() {
 
 function epages_show_admin_message() {
   if ( epages_shop_id() == $sample_shop_id ) {
-    echo "<div class=\"updated fade\"><p><strong>Your ePages shop is almost ready to use</strong>. Please visit the <a href=\"options-general.php?page=epages_options_page\"><strong>ePages settings</strong></a> to to set up the plugin.</p></div>";
+    ?>
+    <div class="updated fade">
+      <p>
+        <strong>Your ePages shop is almost ready to use</strong>. Please visit
+        the <a href="options-general.php?page=epages_options_page"><strong>ePages
+        settings</strong></a> to to set up the plugin.
+      </p>
+    </div>
+    <?php
   }
 }
 
