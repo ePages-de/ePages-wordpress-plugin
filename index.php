@@ -34,6 +34,9 @@ function epages_options_page() {
     <div class="wrap">
       <h2>Connect your ePages Shop</h2>
     </div>
+    <p>
+      <a href="https://www.epages.co.uk/">Create your ePages Shop</a> and then enter your ePages API URL here:
+    </p>
     <form method="post" action="options.php">
       <?php settings_fields('epages_options_page'); ?>
       <label for="epages_api_url">Your ePages API URL</label>
@@ -46,16 +49,18 @@ function epages_options_page() {
       <br/>
       <input type="submit" value="Save">
     </form>
-    <div class="wrap">
-      <h2>Disconnect your ePages Shop</h2>
-    </div>
-    <p>Disable the ePages Shop Widget in your Wordpress Installation:</p>
-    <form method="post" action="options.php">
-      <?php settings_fields('epages_options_page'); ?>
-      <input type="hidden" name="epages_api_url" value="">
-      <input type="submit" value="Disconnect ePages Shop">
-    </form>
-  <?php
+    <?php if(epages_shop_connected()) { ?>
+      <div class="wrap">
+        <h2>Disconnect your ePages Shop</h2>
+      </div>
+      <p>Disable the ePages Shop Widget in your Wordpress installation:</p>
+      <form method="post" action="options.php">
+        <?php settings_fields('epages_options_page'); ?>
+        <input type="hidden" name="epages_api_url" value="">
+        <input type="submit" value="Disconnect ePages Shop">
+      </form>
+    <?php
+    }
 }
 
 
@@ -66,7 +71,7 @@ function epages_options_page() {
 // Actions
 
 function epages_show_admin_message() {
-  if ( epages_api_url() == $epages_example_shop_url ) {
+  if ( epages_shop_connected() ) {
     ?>
     <div class="updated fade">
       <p>
@@ -94,6 +99,9 @@ function epages_api_url() {
   return $epages_api_url;
 }
 
+function epages_shop_connected() {
+  return epages_api_url() != $epages_example_shop_url;
+}
 //function epages_shop_widget_shortcode_handler($atts) {
   //// Add SITe.js script
     //wp_enqueue_script("epages_shop_widget", "http://localhost:4566/site.js", array(), null, true);
