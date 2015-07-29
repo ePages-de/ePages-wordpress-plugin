@@ -16,9 +16,9 @@ $epages_example_shop_url = "https://creamyiceshop.com/rs/shops/CreamyIceShop";
 
 
 if ( is_admin() ) {
-  add_action('admin_init', 'epages_settings_api_init');
-  add_action("admin_notices", "epages_show_admin_message");
-  add_action("admin_menu", "epages_add_options_page");
+  add_action('admin_init',    'epages_settings_api_init');
+  add_action("admin_notices", 'epages_show_admin_message');
+  add_action("admin_menu",    'epages_add_options_page');
 
 }
 
