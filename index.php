@@ -33,9 +33,9 @@ function epages_add_options_page() {
 
 function epages_options_page() {
 
-  $confirmation_failed = False;
-
   if ( !get_option("epages_api_url_confirmed") && !empty( get_option("epages_api_url") ) ) {
+    $confirmation_failed = False;
+
     $args = array(
       'headers' => array(
         'Authorization' => 'Bearer M0mPgTiGPtw5LkdCGwhel3gcGc5PqIPF',
@@ -90,10 +90,12 @@ function epages_options_page() {
         size=60
         value="<?php echo get_option("epages_api_url") ?>">
 
-      <?php if ( $confirmation_failed ) { ?>
-        <span class="epages-shop-form-failure">Invalid shop URL</span>
-      <?php } else { ?>
-        <span class="epages-shop-form-success">Confirmed</span>
+      <?php if ( isset( $confirmation_failed) ) { ?>
+        <?php if ( $confirmation_failed ) { ?>
+          <span class="epages-shop-form-failure">Invalid shop URL</span>
+        <?php } else { ?>
+          <span class="epages-shop-form-success">Confirmed</span>
+        <?php } ?>
       <?php } ?>
 
       <br/>
@@ -122,7 +124,7 @@ function epages_options_page() {
 // Actions
 
 function epages_show_admin_message() {
-  if ( !epages_shop_connected() ) {
+  if ( !get_option("epages_api_url_confirmed") ) {
     ?>
     <div class="updated fade">
       <p>
@@ -150,9 +152,6 @@ function epages_api_url() {
   return $epages_api_url;
 }
 
-function epages_shop_connected() {
-  return epages_api_url() != $epages_example_shop_url;
-}
 //function epages_shop_widget_shortcode_handler($atts) {
   //// Add SITe.js script
     //wp_enqueue_script("epages_shop_widget", "http://localhost:4566/site.js", array(), null, true);
