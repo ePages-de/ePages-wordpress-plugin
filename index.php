@@ -109,6 +109,7 @@ function epages_options_page() {
       <p>Disable the ePages Shop Widget in your Wordpress installation:</p>
       <form method="post" action="options.php">
         <?php settings_fields('epages_options_page'); ?>
+        <input type="hidden" name="epages_api_url" value="">
         <input type="hidden" name="epages_api_url_confirmed" value="0">
         <input type="submit" value="Disconnect ePages Shop">
       </form>
