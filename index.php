@@ -9,22 +9,22 @@ Author: mindmatters
 Author URI: http://mindmatters.de/
 */
 
-defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
+defined("ABSPATH") or die("Plugin file cannot be accessed directly.");
 
 
 $epages_example_shop_url = "https://creamyiceshop.com/rs/shops/CreamyIceShop";
 
 
-if ( is_admin() ) {
-  add_action('admin_init',    'epages_settings_api_init');
-  add_action("admin_notices", 'epages_show_admin_message');
-  add_action("admin_menu",    'epages_add_options_page');
+if (is_admin()) {
+  add_action("admin_init",    "epages_settings_api_init");
+  add_action("admin_notices", "epages_show_admin_message");
+  add_action("admin_menu",    "epages_add_options_page");
 
 }
 
 function epages_settings_api_init() {
-  register_setting('epages_options_page', 'epages_api_url');
-  register_setting('epages_options_page', 'epages_api_url_confirmed');
+  register_setting("epages_options_page", "epages_api_url");
+  register_setting("epages_options_page", "epages_api_url_confirmed");
 }
 
 function epages_add_options_page() {
@@ -33,35 +33,35 @@ function epages_add_options_page() {
 
 function epages_options_page() {
 
-  if ( !get_option("epages_api_url_confirmed") && !empty( get_option("epages_api_url") ) ) {
+  if (!get_option("epages_api_url_confirmed") && !empty(get_option("epages_api_url"))) {
     $confirmation_failed = False;
 
     $args = array(
-      'headers' => array(
-        'Authorization' => 'Bearer M0mPgTiGPtw5LkdCGwhel3gcGc5PqIPF',
-        'Accept'        => 'application/vnd.epages.v1+json'
+      "headers" => array(
+        "Authorization" => "Bearer M0mPgTiGPtw5LkdCGwhel3gcGc5PqIPF",
+        "Accept"        => "application/vnd.epages.v1+json"
       ),
     );
 
-    $url = trim(get_option("epages_api_url"), '/') . '/legal';
-    $resp = wp_remote_get( $url, $args );
+    $url = trim(get_option("epages_api_url"), "/") . "/legal";
+    $resp = wp_remote_get($url, $args);
     $success = False;
 
-    if ( is_array( $resp ) ) {
-      if ( 200 == $resp['response']['code'] ) {
+    if (is_array($resp)) {
+      if (200 == $resp["response"]["code"]) {
         try {
-          $json = json_decode( $resp['body'] );
-          if ( is_array( $json->links ) ) {
+          $json = json_decode($resp["body"]);
+          if (is_array($json->links)) {
             $success = True;
           }
-        } catch ( Exception $ex ) {
+        } catch (Exception $ex) {
           $json = null;
         }
       }
     }
 
     $confirmation_failed = !$success;
-    update_option( "epages_api_url_confirmed", $success );
+    update_option("epages_api_url_confirmed", $success);
 
   }
 
@@ -81,7 +81,7 @@ function epages_options_page() {
       and then enter your ePages API URL here:
     </p>
     <form method="post" action="options.php">
-      <?php settings_fields('epages_options_page'); ?>
+      <?php settings_fields("epages_options_page"); ?>
       <label for="epages_api_url">Your ePages API URL</label>
       <br/>
       <input
@@ -90,8 +90,8 @@ function epages_options_page() {
         size=60
         value="<?php echo get_option("epages_api_url") ?>">
 
-      <?php if ( isset( $confirmation_failed) ) { ?>
-        <?php if ( $confirmation_failed ) { ?>
+      <?php if (isset($confirmation_failed)) { ?>
+        <?php if ($confirmation_failed) { ?>
           <span class="epages-shop-form-failure">Invalid shop URL</span>
         <?php } else { ?>
           <span class="epages-shop-form-success">Confirmed</span>
@@ -102,13 +102,13 @@ function epages_options_page() {
       <input type="submit" value="Save">
     </form>
 
-    <?php if ( get_option("epages_api_url_confirmed") ) { ?>
+    <?php if (get_option("epages_api_url_confirmed")) { ?>
       <div class="wrap">
         <h2>Disconnect your ePages Shop</h2>
       </div>
       <p>Disable the ePages Shop Widget in your Wordpress installation:</p>
       <form method="post" action="options.php">
-        <?php settings_fields('epages_options_page'); ?>
+        <?php settings_fields("epages_options_page"); ?>
         <input type="hidden" name="epages_api_url" value="">
         <input type="hidden" name="epages_api_url_confirmed" value="0">
         <input type="submit" value="Disconnect ePages Shop">
@@ -125,7 +125,7 @@ function epages_options_page() {
 // Actions
 
 function epages_show_admin_message() {
-  if ( !get_option("epages_api_url_confirmed") ) {
+  if (!get_option("epages_api_url_confirmed")) {
     ?>
     <div class="updated fade">
       <p>
@@ -164,7 +164,7 @@ function epages_api_url() {
 
     //$shop_id = sanitize_html_class($a["shopid"]);
 
-    //return "<div class='epages-shop-widget' data-shopid='{$shop_id}'></div>";
+    //return "<div class="epages-shop-widget" data-shopid="{$shop_id}"></div>";
 //}
 
 //// Usage: [epages_shop_widget shopid="DemoShop"]
