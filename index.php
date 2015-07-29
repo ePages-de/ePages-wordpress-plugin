@@ -19,10 +19,12 @@ if ( is_admin() ) {
   add_action('admin_init', 'epages_settings_api_init');
   add_action("admin_notices", "epages_show_admin_message");
   add_action("admin_menu", "epages_add_options_page");
+
 }
 
 function epages_settings_api_init() {
   register_setting('epages_options_page', 'epages_api_url');
+  register_setting('epages_options_page', 'epages_api_url_confirmed');
 }
 
 function epages_add_options_page() {
@@ -30,13 +32,53 @@ function epages_add_options_page() {
 }
 
 function epages_options_page() {
+
+  $confirmation_failed = False;
+
+  if ( !get_option("epages_api_url_confirmed") && !empty( get_option("epages_api_url") ) ) {
+    $args = array(
+      'headers' => array(
+        'Authorization' => 'Bearer M0mPgTiGPtw5LkdCGwhel3gcGc5PqIPF',
+        'Accept'        => 'application/vnd.epages.v1+json'
+      ),
+    );
+
+    $url = trim(get_option("epages_api_url"), '/') . '/legal';
+    $resp = wp_remote_get( $url, $args );
+    $success = False;
+
+    if ( is_array( $resp ) ) {
+      if ( 200 == $resp['response']['code'] ) {
+        try {
+          $json = json_decode( $resp['body'] );
+          if ( is_array( $json->links ) ) {
+            $success = True;
+          }
+        } catch ( Exception $ex ) {
+          $json = null;
+        }
+      }
+    }
+
+    $confirmation_failed = !$success;
+    update_option( "epages_api_url_confirmed", $success );
+
+  }
+
   ?>
+    <style type="text/css">
+      .epages-shop-form-failure { background: #c00; color: #fff; padding: 4px 8px 3px; margin-left: 10px; }
+      .epages-shop-form-success { background: #0c0; color: #fff; padding: 4px 8px 3px; margin-left: 10px; }
+    </style>
+
     <div class="wrap">
       <h2>Connect your ePages Shop</h2>
     </div>
     <p>
-      <a href="https://www.epages.co.uk/" target="_blank">Create your ePages
-      Shop</a> and then enter your ePages API URL here:
+      <a href="https://www.epages.co.uk/" target="_blank">
+        Create your ePages Shop
+      </a>
+      and then enter your ePages API URL here:
     </p>
     <form method="post" action="options.php">
       <?php settings_fields('epages_options_page'); ?>
@@ -47,17 +89,25 @@ function epages_options_page() {
         name="epages_api_url"
         size=60
         value="<?php echo get_option("epages_api_url") ?>">
+
+      <?php if ( $confirmation_failed ) { ?>
+        <span class="epages-shop-form-failure">Invalid shop URL</span>
+      <?php } else { ?>
+        <span class="epages-shop-form-success">Confirmed</span>
+      <?php } ?>
+
       <br/>
       <input type="submit" value="Save">
     </form>
-    <?php if(epages_shop_connected()) { ?>
+
+    <?php if ( get_option("epages_api_url_confirmed") ) { ?>
       <div class="wrap">
         <h2>Disconnect your ePages Shop</h2>
       </div>
       <p>Disable the ePages Shop Widget in your Wordpress installation:</p>
       <form method="post" action="options.php">
         <?php settings_fields('epages_options_page'); ?>
-        <input type="hidden" name="epages_api_url" value="">
+        <input type="hidden" name="epages_api_url_confirmed" value="0">
         <input type="submit" value="Disconnect ePages Shop">
       </form>
     <?php
@@ -72,7 +122,7 @@ function epages_options_page() {
 // Actions
 
 function epages_show_admin_message() {
-  if ( epages_shop_connected() ) {
+  if ( !epages_shop_connected() ) {
     ?>
     <div class="updated fade">
       <p>
