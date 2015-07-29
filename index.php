@@ -12,9 +12,6 @@ Author URI: http://mindmatters.de/
 defined("ABSPATH") or die("Plugin file cannot be accessed directly.");
 
 
-$epages_example_shop_url = "https://creamyiceshop.com/rs/shops/CreamyIceShop";
-
-
 if (is_admin()) {
   add_action("admin_init",    "epages_settings_api_init");
   add_action("admin_notices", "epages_show_admin_message");
@@ -62,7 +59,6 @@ function epages_options_page() {
 
     $confirmation_failed = !$success;
     update_option("epages_api_url_confirmed", $success);
-
   }
 
   ?>
@@ -140,18 +136,6 @@ function epages_show_admin_message() {
 
 
 // Helper
-
-function epages_api_url() {
-  static $epages_api_url = null;
-  if (is_null($epages_api_url)) {
-    $epages_api_url = get_option("epages_api_url");
-
-    if (empty($epages_api_url)) {
-      $epages_api_url = $epages_example_shop_url;
-    }
-  }
-  return $epages_api_url;
-}
 
 //function epages_shop_widget_shortcode_handler($atts) {
   //// Add SITe.js script
