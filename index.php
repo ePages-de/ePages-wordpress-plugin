@@ -35,7 +35,8 @@ function epages_options_page() {
       <h2>Connect your ePages Shop</h2>
     </div>
     <p>
-      <a href="https://www.epages.co.uk/">Create your ePages Shop</a> and then enter your ePages API URL here:
+      <a href="https://www.epages.co.uk/" target="_blank">Create your ePages
+      Shop</a> and then enter your ePages API URL here:
     </p>
     <form method="post" action="options.php">
       <?php settings_fields('epages_options_page'); ?>
