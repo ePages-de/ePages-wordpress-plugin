@@ -130,7 +130,7 @@ function epages_show_admin_message() {
     <div class="updated fade">
       <p>
         <strong>Your ePages shop is almost ready to use</strong>. Please visit
-        the <a href="options-general.php?page=epages_options_page"><strong>ePages
+        the <a href="admin.php?page=epages_options_page"><strong>ePages
         settings</strong></a> to to set up the plugin.
       </p>
     </div>
