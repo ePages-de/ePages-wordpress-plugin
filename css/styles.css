@@ -1,0 +1,25 @@
+#epages-popup-content {
+	display: none;
+}
+
+#epages-popup-content a {
+	text-decoration: none;
+}
+
+#epages-popup-content.open {
+	display: block;
+}
+
+#epages-popup-content .media-modal-content .media-frame-title,
+#epages-popup-content .media-modal-content .media-frame-content {
+  display: none;
+}
+
+#epages-popup-content .media-modal-content[data-active-dialog=product-settings] .media-frame-title.product-settings,
+#epages-popup-content .media-modal-content[data-active-dialog=product-settings] .media-frame-content.product-settings,
+
+#epages-popup-content .media-modal-content[data-active-dialog=appearance] .media-frame-title.appearance,
+#epages-popup-content .media-modal-content[data-active-dialog=appearance] .media-frame-content.appearance {
+	display: inherit;
+}
+
