@@ -39,14 +39,16 @@ require_once EPAGES_PLUGIN_DIR . "/functions/options_page.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/init.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/add_options_page.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/show_admin_message.php";
+require_once EPAGES_PLUGIN_DIR . "/actions/add_editor_button.php";
 
 
 if (is_admin()) {
   add_action("admin_init",    "epages_init");
   add_action("admin_notices", "epages_show_admin_message");
   add_action("admin_menu",    "epages_add_options_page");
+  add_action("media_buttons", "epages_add_editor_button" );
+  
 }
-
 
 
 // Helper
