@@ -30,47 +30,23 @@ static $epages_api_http_options = array(
 );
 
 
+// FUNCTIONS
 require_once EPAGES_PLUGIN_DIR . "/functions/log.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/load_template.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/options_page.php";
 
+// ACTIONS
+require_once EPAGES_PLUGIN_DIR . "/actions/init.php";
+require_once EPAGES_PLUGIN_DIR . "/actions/add_options_page.php";
+require_once EPAGES_PLUGIN_DIR . "/actions/show_admin_message.php";
+
 
 if (is_admin()) {
-  add_action("admin_init",    "epages_settings_api_init");
+  add_action("admin_init",    "epages_init");
   add_action("admin_notices", "epages_show_admin_message");
   add_action("admin_menu",    "epages_add_options_page");
-
 }
 
-function epages_settings_api_init() {
-  register_setting("epages_options_page", "epages_api_url");
-  register_setting("epages_options_page", "epages_api_url_confirmed");
-}
-
-function epages_add_options_page() {
-  add_menu_page("ePages Shop Settings", "ePages Shop", "manage_options", "epages_options_page", "epages_options_page");
-}
-
-
-
-
-
-
-// Actions
-
-function epages_show_admin_message() {
-  if (!get_option("epages_api_url_confirmed")) {
-    ?>
-    <div class="updated fade">
-      <p>
-        <strong>Your ePages shop is almost ready to use</strong>. Please visit
-        the <a href="admin.php?page=epages_options_page"><strong>ePages
-        settings</strong></a> to to set up the plugin.
-      </p>
-    </div>
-    <?php
-  }
-}
 
 
 // Helper
