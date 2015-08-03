@@ -49,20 +49,24 @@ if (is_admin()) {
   add_action("media_buttons", "epages_add_editor_button" );
 
   # TODO: only load this on the editor page.
+  add_filter("mce_external_plugins",  "epages_add_mce_plugin");
   add_action("admin_enqueue_scripts", "epages_add_scripts");
   add_action("in_admin_header",       "epages_add_popup");
-
 }
 
+function epages_add_mce_plugin($args) {
+  $args["epages"] = EPAGES_PLUGIN_URL . "/js/mce-editor.js";
+  return $args;
+}
 
 function epages_add_popup() {
-  epages_load_template("popup", array(
-  ));
+  epages_load_template("popup", array());
 }
 
 function epages_add_scripts() {
   wp_enqueue_style("epages-editor-css", EPAGES_PLUGIN_URL . "/css/styles.css");
   wp_enqueue_script("epages-script", EPAGES_PLUGIN_URL . "/js/script.js");
+  add_editor_style(EPAGES_PLUGIN_URL . "/css/editor.css");
 }
 
 // Helper
