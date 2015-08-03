@@ -29,7 +29,6 @@ static $epages_api_http_options = array(
   ),
 );
 
-
 // FUNCTIONS
 require_once EPAGES_PLUGIN_DIR . "/functions/log.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/load_template.php";
