@@ -39,11 +39,6 @@
             <div class="media-toolbar-primary add-store">
               <a href="#" class="button media-button button-primary button-large media-button-select">Save</a>
             </div>
-            <!--
-            <div class="media-toolbar-primary store-settings">
-              <a href="#" class="button media-button button-primary button-large media-button-select"><?php _e('Update'); ?></a>
-            </div>
-            -->
           </div>
         </div>
       </div>
