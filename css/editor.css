@@ -3,6 +3,8 @@
   padding: 10px 0 25px;
   text-align: center;
   border: 1px solid #ddd;
+  height: 200px;
+  width: 100%;
 }
 
 .epages-shop-remove-widget {
@@ -22,6 +24,6 @@
   display: block;
 }
 
-.epages-shop-edit-button {
+#epages-shop-edit-button {
   cursor: pointer;
 }

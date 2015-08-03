@@ -1,7 +1,7 @@
 jQuery(function() {
   $epagesEditorPopup = jQuery("#epages-popup-content");
 
-  jQuery("#insert-epages-button").click(epages_open_popup);
+  jQuery("#epages-shop-button").click(epages_open_popup);
 
   jQuery(".media-modal-close", $epagesEditorPopup).click(function() {
     $epagesEditorPopup.removeClass("open");
@@ -25,19 +25,34 @@ jQuery(function() {
   });
 
   jQuery(".button-primary", $epagesEditorPopup).click(function() {
+    var existingShortcode = epages_find_shortcode(jQuery("#content").val());
     var shortcode = {};
-    shortcode.shortcode = new wp.shortcode();
-    shortcode.shortcode.tag = "epages";
-    shortcode.shortcode.type = "single";
 
-    if (tinymce.activeEditor && !tinymce.activeEditor.isHidden()) {
-      tinymce.activeEditor.execCommand("mceInsertContent", false, shortcode.shortcode.string());
-      tinymce.activeEditor.execCommand("mceSetContent", false, tinymce.activeEditor.getBody().innerHTML);
+    if (!existingShortcode) {
+      shortcode.shortcode = new wp.shortcode();
+      shortcode.shortcode.tag = "epages";
+      shortcode.shortcode.type = "single";
     } else {
-      var $content = jQuery("#content");
-      var cursorAt = $content.get(0).selectionStart;
+      shortcode = existingShortcode;
+    }
 
-      $content.val($content.val().substr(0, cursorAt) + shortcode.shortcode.string() + $content.val().substr(cursorAt));
+    if (existingShortcode) {
+      jQuery("#content").val(
+        jQuery("#content").val().replace(existingShortcode.content, shortcode.shortcode.string())
+      );
+      if (tinyMCE.activeEditor) {
+        jQuery(tinymce.activeEditor.getBody()).find(".epages-shop-placeholder").attr("data-epages-shortcode", shortcode.shortcode.string());
+      }
+    } else {
+      if (tinymce.activeEditor && !tinymce.activeEditor.isHidden()) {
+        tinymce.activeEditor.execCommand("mceInsertContent", false, shortcode.shortcode.string());
+        tinymce.activeEditor.execCommand("mceSetContent", false, tinymce.activeEditor.getBody().innerHTML);
+      } else {
+        var $content = jQuery("#content");
+        var cursorAt = $content.get(0).selectionStart;
+
+        $content.val($content.val().substr(0, cursorAt) + shortcode.shortcode.string() + $content.val().substr(cursorAt));
+      }
     }
 
     jQuery("#epages-popup-content").removeClass("open");
@@ -51,6 +66,33 @@ jQuery(function() {
       .filter("[data-content=" + current + "]").addClass("active");
 });
 
+function epages_has_widget() {
+  if (tinyMCE.activeEditor && !tinyMCE.activeEditor.isHidden()) {
+    content = tinyMCE.activeEditor.getBody();
+    return jQuery(content).find(".epages-shop-placeholder").length > 0;
+  }
+
+  return epages_find_shortcode(jQuery("#content").val());
+}
+
 function epages_open_popup() {
   $epagesEditorPopup.addClass("open");
+}
+
+function epages_find_shortcode(content) {
+  var found = false;
+  var index = 0;
+
+  while (found = wp.shortcode.next("epages", content, index)) {
+    if (found) {
+      break;
+    }
+    index = found.index + 1;
+  }
+
+  if (typeof found == 'undefined') {
+    found = false;
+  }
+
+  return found;
 }

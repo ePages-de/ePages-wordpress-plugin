@@ -1,8 +1,3 @@
-<style type="text/css">
-  .epages-shop-form-failure { background: #c00; color: #fff; padding: 4px 8px 3px; margin-left: 10px; }
-  .epages-shop-form-success { background: #0c0; color: #fff; padding: 4px 8px 3px; margin-left: 10px; }
-</style>
-
 <div class="wrap">
   <h2>Connect your ePages Shop</h2>
 </div>

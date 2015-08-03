@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  var epages_base_url = '<?php echo EPAGES_PLUGIN_URL; ?>';
+</script>
+
 <div id="epages-popup-content">
   <div class="media-modal wp-core-ui">
     <div class="media-modal-content">
