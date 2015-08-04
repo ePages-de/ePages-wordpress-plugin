@@ -186,7 +186,6 @@ window.ePagesShop = window.ePagesShop || {};
     $(eps.selectors.closeButton, eps.editorPopup).click(function(event) {
       event.preventDefault();
       eps.closeEditorPopup();
-      return false;
     });
 
     // Loads the shop‘s categories when clicking
@@ -218,20 +217,21 @@ window.ePagesShop = window.ePagesShop || {};
     // Closes the editor popup on `escape`.
     $(document).keydown(function(event) {
       if (event.keyCode === eps.keycodes.escape && eps.editorPopupIsOpen()) {
+        event.preventDefault();
         eps.closeEditorPopup()
-        return false;
       }
     });
 
     // Toggles the editor popup menu highlighting and content
     // depending on the currently selected menu element.
-    $(eps.selectors.menuItem, eps.editorPopup).click(function() {
+    $(eps.selectors.menuItem, eps.editorPopup).click(function(event) {
+      event.preventDefault();
+
       $(eps.selectors.menuItem, eps.editorPopup).removeClass("active");
       $(this).addClass("active");
 
       $(eps.selectors.modalContent, eps.editorPopup).attr("data-active-dialog", $(this).attr("data-content"));
       $(eps.selectors.menu).removeClass("visible");
-      return false;
     });
 
     // Inserts or updates an existing shortcode when the editor
