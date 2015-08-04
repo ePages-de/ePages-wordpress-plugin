@@ -51,6 +51,16 @@ if (is_admin()) {
   add_filter("mce_external_plugins",  "epages_add_mce_plugin");
   add_action("admin_enqueue_scripts", "epages_add_scripts");
   add_action("in_admin_header",       "epages_add_popup");
+  }
+else{
+  add_filter("script_loader_tag", "epages_build_script_tag", 10, 2);
+}
+
+function epages_build_script_tag($tag, $handle) {
+  if ("epages_shop_widget" !== $handle) {
+    return $tag;
+  }
+  return str_replace(" src", ' async="async" data-shop-url="' . get_option("epages_api_url") .'" id="epages-widget" src', $tag);
 }
 
 function epages_add_mce_plugin($args) {
@@ -71,21 +81,9 @@ function epages_add_scripts($hook) {
   wp_enqueue_style("epages-editor-css", EPAGES_PLUGIN_URL . "/css/styles.css");
 }
 
-// Helper
+function epages_shop_widget_shortcode_handler($attrs) {
+    wp_enqueue_script("epages_shop_widget", "https://site-production.herokuapp.com/site.js", array(), null, true);
+    return '<div class="epages-shop-widget"></div>';
+}
 
-//function epages_shop_widget_shortcode_handler($atts) {
-  //// Add SITe.js script
-    //wp_enqueue_script("epages_shop_widget", "http://localhost:4566/site.js", array(), null, true);
-
-    //// Cleanup shortcode parameters
-    //$a = shortcode_atts(array(
-        //"shopid" => ""
-    //), $atts);
-
-    //$shop_id = sanitize_html_class($a["shopid"]);
-
-    //return "<div class="epages-shop-widget" data-shopid="{$shop_id}"></div>";
-//}
-
-//// Usage: [epages_shop_widget shopid="DemoShop"]
-//add_shortcode("epages_shop_widget", "epages_shop_widget_shortcode_handler");
+add_shortcode("epages", "epages_shop_widget_shortcode_handler");
