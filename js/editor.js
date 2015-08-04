@@ -5,15 +5,21 @@ window.ePagesShop = window.ePagesShop || {};
   var eps = window.ePagesShop,
       $ = window.jQuery;
 
+  eps.baseUrl = window.ePagesPluginBaseUrl;
+  eps.shopUrl = window.ePagesShopUrl;
+  eps.httpHeaders = window.ePagesHttpHeaders;
+
   eps.shortcode = {
     tag: "epages"
   };
 
   eps.selectors = {
-    editorPopup:      "#epages-popup-content",
-    editorSaveButton: "#epages-save-button",
-    placeholder:      ".epages-shop-placeholder",
-    textEditor:       "#content"
+    editorPopup:         "#epages-popup-content",
+    editorSaveButton:    "#epages-save-button",
+    placeholder:         ".epages-shop-placeholder",
+    textEditor:          "#content",
+    categoriesContainer: ".epages-categories-container",
+    categoriesSpinner:   ".categories-spinner"
   };
 
   eps.keycodes = {
@@ -174,6 +180,28 @@ window.ePagesShop = window.ePagesShop || {};
       event.preventDefault();
       eps.closeEditorPopup();
       return false;
+    });
+
+    $(".categories-checkbox", eps.editorPopup).click(function(event) {
+      $(eps.selectors.categoriesSpinner).css("visibility", "visible");
+
+      $.ajax({
+        url: eps.shopUrl + "/categories",
+        headers: eps.httpHeaders
+      }).done(function(categories) {
+        subCategories = categories[0].subCategories;
+
+        html = subCategories.map(function(subCategory) {
+          var hrefSplit = subCategory.href.split("/"),
+              categoryId = hrefSplit[hrefSplit.length - 1];
+
+          return $('<li><input type="checkbox" value="' + categoryId + '">' + subCategory.title + '</li>');
+        });
+
+        $(eps.selectors.categoriesContainer).html(html);
+      }).always(function() {
+        $(eps.selectors.categoriesSpinner).css("visibility", "hidden");
+      });
     });
 
     // Closes the editor popup on `escape`.

@@ -1,5 +1,11 @@
 <script type="text/javascript">
-  window.ePagesPluginBaseUrl = '<?php echo EPAGES_PLUGIN_URL; ?>';
+  window.ePagesPluginBaseUrl = '<?php echo $epages_plugin_url; ?>';
+  window.ePagesShopUrl = '<?php echo $epages_api_url; ?>';
+
+  window.ePagesHttpHeaders = {
+    Authorization: '<?php echo $epages_api_http_options["headers"]["Authorization"]; ?>',
+    Accept: '<?php echo $epages_api_http_options["headers"]["Accept"]; ?>'
+  };
 </script>
 
 <div id="epages-popup-content">
@@ -15,19 +21,27 @@
         </div>
 
         <div class="media-frame-title product-settings">
-          <h1>
-            Product settings <span class="dashicons dashicons-arrow-down"></span>
-          </h1>
+          <h1>Product settings <span class="dashicons dashicons-arrow-down"></span></h1>
         </div>
 
         <div class="media-frame-title appearance">
-          <h1>
-            Appearance<span class="dashicons dashicons-arrow-down"></span>
-          </h1>
+          <h1>Appearance<span class="dashicons dashicons-arrow-down"></span></h1>
         </div>
 
         <div class="media-frame-content product-settings">
-          <p>Product settings ...</p>
+          <h2>Which products do you want to display?</h2>
+          <label>
+            <input type="radio" name="products" value="all" checked="checked" class="all-products-checkbox">
+            Show all products
+          </label>
+          <label>
+            <input type="radio" name="products" value="categories" class="categories-checkbox">
+            All products from selected categories
+            <img src="<?php echo $epages_plugin_url . "/images/spinner.gif"; ?>" class="categories-spinner">
+          </label>
+
+          <ol class="epages-categories-container">
+          </ol>
         </div>
 
         <div class="media-frame-content appearance">

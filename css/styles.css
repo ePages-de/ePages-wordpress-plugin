@@ -41,6 +41,26 @@
   padding: 18px;
 }
 
+#epages-popup-content .media-modal-content h2 {
+  margin-bottom: 30px;
+}
+
+#epages-popup-content .media-modal-content .product-settings label {
+  display: block;
+  margin-top: 10px;
+}
+
+#epages-popup-content .media-modal-content .product-settings .categories-spinner {
+  visibility: hidden;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+#epages-popup-content .media-modal-content .epages-categories-container {
+  list-style: none;
+  padding-left: 23px;
+}
+
 #epages-popup-content .media-toolbar .store-url {
   margin-top: 12px;
   font-weight: bold;

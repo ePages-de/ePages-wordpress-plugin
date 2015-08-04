@@ -51,8 +51,7 @@ if (is_admin()) {
   add_filter("mce_external_plugins",  "epages_add_mce_plugin");
   add_action("admin_enqueue_scripts", "epages_add_scripts");
   add_action("in_admin_header",       "epages_add_popup");
-  }
-else{
+} else {
   add_filter("script_loader_tag", "epages_build_script_tag", 10, 2);
 }
 
@@ -69,12 +68,18 @@ function epages_add_mce_plugin($args) {
 }
 
 function epages_add_popup() {
-  epages_load_template("popup", array());
+  global $epages_api_http_options;
+
+  epages_load_template("popup", array(
+    "epages_plugin_url"       => EPAGES_PLUGIN_URL,
+    "epages_api_url"          => get_option("epages_api_url"),
+    "epages_api_http_options" => $epages_api_http_options
+  ));
 }
 
 function epages_add_scripts($hook) {
   if ($hook == "post-new.php" || $hook == "post.php") {
-    wp_enqueue_script("epages-editor", EPAGES_PLUGIN_URL . "/js/editor.js");
+    wp_enqueue_script("epages-editor", EPAGES_PLUGIN_URL . "/js/editor.js", array(), false, true);
     add_editor_style(EPAGES_PLUGIN_URL . "/css/editor.css");
   }
 

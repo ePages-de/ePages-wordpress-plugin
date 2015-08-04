@@ -5,10 +5,6 @@ window.ePagesShop = window.ePagesShop || {};
   var eps = window.ePagesShop,
       $ = window.jQuery;
 
-
-  // Returns the widget‘s base URL.
-  eps.baseUrl = window.ePagesPluginBaseUrl;
-
   // The tinyMCE editor plugin.
   tinyMCE.PluginManager.add("epages", function(editor) {
     editor.onBeforeSetContent.add(function(editor, event) {
