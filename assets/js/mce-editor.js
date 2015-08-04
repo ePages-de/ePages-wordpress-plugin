@@ -14,7 +14,7 @@ window.ePagesShop = window.ePagesShop || {};
         if (!found) return;
 
         var content = event.content;
-        var store = '<img src="' + eps.baseUrl + '/images/shop_placeholder.svg" \
+        var store = '<img src="' + eps.baseUrl + '/assets/images/shop_placeholder.svg" \
                        data-epages-shortcode="' + window.encodeURIComponent(found.content) + '" \
                        data-mce-placeholder="true" data-mce-resize="false" class="epages-shop-placeholder">';
 

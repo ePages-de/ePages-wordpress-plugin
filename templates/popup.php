@@ -37,7 +37,7 @@
           <label>
             <input type="radio" name="products" value="categories" class="categories-checkbox">
             All products from selected categories
-            <img src="<?php echo $epages_plugin_url . "/images/spinner.gif"; ?>" class="categories-spinner">
+            <img src="<?php echo $epages_plugin_url . "/assets/images/spinner.gif"; ?>" class="categories-spinner">
           </label>
 
           <ol class="epages-categories-container">
