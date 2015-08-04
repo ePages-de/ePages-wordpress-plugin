@@ -4,7 +4,7 @@
 Plugin Name: SITe
 Plugin URI: http://www.epages.com/us/
 Description: Example integration of the SITe widget for WordPress.
-Version: 0.1
+Version: 1.0
 Author: mindmatters
 Author URI: http://mindmatters.de/
 */
