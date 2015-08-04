@@ -198,6 +198,8 @@ window.ePagesShop = window.ePagesShop || {};
         url: eps.shopUrl + "/categories",
         headers: eps.httpHeaders
       }).done(function(categories) {
+        // We expect the first category to contain the
+        // actual shop categories to display.
         subCategories = categories[0].subCategories;
 
         html = subCategories.map(function(subCategory) {
