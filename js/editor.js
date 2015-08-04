@@ -282,7 +282,7 @@ window.ePagesShop = window.ePagesShop || {};
         .filter("[data-content=" + current + "]").addClass("active");
 
     // Loop to enhance the shop placeholder image.
-    setInterval(eps.enhancePlaceholder, 200);
+    setInterval(eps.enhancePlaceholder, 500);
   });
 
 }(window, document));
