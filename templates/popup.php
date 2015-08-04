@@ -36,6 +36,13 @@
 
         <div class="media-frame-toolbar">
           <div class="media-toolbar">
+            <div class="media-toolbar-secondary">
+              <div class="store-url"><?php echo get_option("epages_api_url"); ?></div>
+              <div class="settings-link">
+                <a target="_blank" href="admin.php?page=epages_options_page">Plugin settings</a>
+              </div>
+            </div>
+
             <div class="media-toolbar-primary add-store">
               <a href="#" id="epages-save-button" class="button media-button button-primary button-large media-button-select">Save</a>
             </div>

@@ -23,6 +23,11 @@
 	display: inherit;
 }
 
+#epages-popup-content .media-toolbar .store-url {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
 #epages-shop-button { float: right; }
 
 .epages-shop-form-failure { background: #c00; color: #fff; padding: 4px 8px 3px; margin-left: 10px; }
