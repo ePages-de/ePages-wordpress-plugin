@@ -35,6 +35,7 @@ static $epages_api_http_options = array(
 require_once EPAGES_PLUGIN_DIR . "/functions/log.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/load_template.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/options_page.php";
+require_once EPAGES_PLUGIN_DIR . "/functions/register_shortcode.php";
 
 // Load actions
 require_once EPAGES_PLUGIN_DIR . "/actions/init.php";
@@ -55,17 +56,10 @@ if (is_admin()) {
   add_action("admin_menu",    "epages_add_options_page");
   add_action("media_buttons", "epages_add_editor_button" );
 
-  # TODO: only load this on the editor page.
+  # TODO: only register these on the editor page.
   add_filter("mce_external_plugins",  "epages_add_mce_plugin");
   add_action("admin_enqueue_scripts", "epages_add_scripts");
   add_action("in_admin_header",       "epages_add_popup");
 } else {
   add_filter("script_loader_tag", "epages_build_script_tag", 10, 2);
 }
-
-function epages_shop_widget_shortcode_handler($attrs) {
-  wp_enqueue_script("epages_shop_widget", $siteUrl, array(), null, true);
-  return '<div class="epages-shop-widget"></div>';
-}
-
-add_shortcode("epages", "epages_shop_widget_shortcode_handler");
