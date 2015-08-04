@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  var epages_base_url = '<?php echo EPAGES_PLUGIN_URL; ?>';
+  window.ePagesPluginBaseUrl = '<?php echo EPAGES_PLUGIN_URL; ?>';
 </script>
 
 <div id="epages-popup-content">
@@ -37,7 +37,7 @@
         <div class="media-frame-toolbar">
           <div class="media-toolbar">
             <div class="media-toolbar-primary add-store">
-              <a href="#" class="button media-button button-primary button-large media-button-select">Save</a>
+              <a href="#" id="epages-save-button" class="button media-button button-primary button-large media-button-select">Save</a>
             </div>
           </div>
         </div>

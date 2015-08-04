@@ -63,8 +63,6 @@ function epages_add_popup() {
 }
 
 function epages_add_scripts($hook) {
-  wp_enqueue_script("epages-script", EPAGES_PLUGIN_URL . "/js/script.js");
-
   if ($hook == "post-new.php" || $hook == "post.php") {
     wp_enqueue_script("epages-editor", EPAGES_PLUGIN_URL . "/js/editor.js");
     add_editor_style(EPAGES_PLUGIN_URL . "/css/editor.css");
