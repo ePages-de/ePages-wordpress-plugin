@@ -10,16 +10,23 @@ window.ePagesShop = window.ePagesShop || {};
   eps.httpHeaders = window.ePagesHttpHeaders;
 
   eps.shortcode = {
-    tag: "epages"
+    tag:  "epages",
+    type: "single"
   };
 
   eps.selectors = {
+    textEditor:          "#content",
     editorPopup:         "#epages-popup-content",
     editorSaveButton:    "#epages-save-button",
+    shopButton:          "#epages-shop-button",
     placeholder:         ".epages-shop-placeholder",
-    textEditor:          "#content",
     categoriesContainer: ".epages-categories-container",
-    categoriesSpinner:   ".categories-spinner"
+    categoriesCheckbox:  ".categories-checkbox",
+    categoriesSpinner:   ".categories-spinner",
+    menu:                ".media-menu",
+    menuItem:            ".media-menu-item",
+    modalContent:        ".media-modal-content",
+    closeButton:         ".media-modal-close"
   };
 
   eps.keycodes = {
@@ -52,22 +59,20 @@ window.ePagesShop = window.ePagesShop || {};
     var found = false,
         index = 0;
 
-    while (found = wp.shortcode.next("epages", text, index)) {
-      if (found) {
-        break;
-      }
+    while (found = wp.shortcode.next(eps.shortcode.tag, text, index)) {
+      if (found) { break; }
       index = found.index + 1;
     }
 
-    if (typeof found === "undefined") {
+    if (found === undefined) {
       found = false;
     }
 
     return found;
   };
 
-  // Returns whether Wordpress‘ visual or text editor contains the
-  // ePages shop widget.
+  // Returns whether Wordpress‘ visual or text editor
+  // contains the ePages shop widget.
   eps.editorContainsWidget = function() {
     if (eps.visualEditorVisible()) {
       return $(eps.visualEditorContent()).find(eps.selectors.placeholder).length > 0;
@@ -131,8 +136,8 @@ window.ePagesShop = window.ePagesShop || {};
     });
   };
 
-  // Adds, removes or updates the position of a button for the
-  // shop placeholder image.
+  // Adds, removes or updates the position of a button
+  // for the shop placeholder image.
   eps.updateButton = function(options) {
     var body = tinymce.activeEditor.dom.doc.body,
         button = tinymce.activeEditor.dom.select("#" + options.id),
@@ -171,18 +176,18 @@ window.ePagesShop = window.ePagesShop || {};
   $(function() {
     eps.editorPopup = $(eps.selectors.editorPopup);
 
-    $("#epages-shop-button").click(function(event) {
+    $(eps.selectors.shopButton).click(function(event) {
       event.preventDefault();
       eps.openEditorPopup();
     });
 
-    $(".media-modal-close", eps.editorPopup).click(function(event) {
+    $(eps.selectors.closeButton, eps.editorPopup).click(function(event) {
       event.preventDefault();
       eps.closeEditorPopup();
       return false;
     });
 
-    $(".categories-checkbox", eps.editorPopup).click(function(event) {
+    $(eps.selectors.categoriesCheckbox, eps.editorPopup).click(function(event) {
       $(eps.selectors.categoriesSpinner).css("visibility", "visible");
 
       $.ajax({
@@ -212,19 +217,19 @@ window.ePagesShop = window.ePagesShop || {};
       }
     });
 
-    // Toggles the editor popup menu highlighting and content depending
-    // on the currently selected menu element.
-    $(".media-menu-item", eps.editorPopup).click(function() {
-      $(".media-menu .media-menu-item", eps.editorPopup).removeClass("active");
+    // Toggles the editor popup menu highlighting and content
+    // depending on the currently selected menu element.
+    $(eps.selectors.menuItem, eps.editorPopup).click(function() {
+      $(eps.selectors.menuItem, eps.editorPopup).removeClass("active");
       $(this).addClass("active");
 
-      $(".media-modal-content", eps.editorPopup).attr("data-active-dialog", $(this).attr("data-content"));
-      $(".media-menu").removeClass("visible");
+      $(eps.selectors.modalContent, eps.editorPopup).attr("data-active-dialog", $(this).attr("data-content"));
+      $(eps.selectors.menu).removeClass("visible");
       return false;
     });
 
-    // Inserts or updates an existing shortcode when the editor popup‘s
-    // save button is clicked.
+    // Inserts or updates an existing shortcode when the editor
+    // popup‘s save button is clicked.
     $(eps.selectors.editorSaveButton).click(function(event) {
       event.preventDefault();
 
@@ -236,7 +241,7 @@ window.ePagesShop = window.ePagesShop || {};
       if (!existingShortcode) {
         shortcode.shortcode = new wp.shortcode();
         shortcode.shortcode.tag = eps.shortcode.tag;
-        shortcode.shortcode.type = "single";
+        shortcode.shortcode.type = eps.shortcode.type;
       } else {
         shortcode = existingShortcode;
       }
@@ -270,9 +275,9 @@ window.ePagesShop = window.ePagesShop || {};
     });
 
     var current = "product-settings";
-    $(".media-modal-content", eps.editorPopup).attr("data-mode", current);
-    $(".media-modal-content", eps.editorPopup).attr("data-active-dialog", current);
-    $(".media-menu-item")
+    $(eps.selectors.modalContent, eps.editorPopup).attr("data-mode", current);
+    $(eps.selectors.modalContent, eps.editorPopup).attr("data-active-dialog", current);
+    $(eps.selectors.menuItem)
         .removeClass("active")
         .filter("[data-content=" + current + "]").addClass("active");
 
