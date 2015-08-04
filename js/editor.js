@@ -33,6 +33,14 @@ window.ePagesShop = window.ePagesShop || {};
     escape: 27
   };
 
+  // Loads the shop‘s categories and returns a Promise.
+  eps.loadCategories = function() {
+    return $.ajax({
+      url: eps.shopUrl + "/categories",
+      headers: eps.httpHeaders
+    });
+  };
+
   // Returns whether Wordpess‘ visual editor is displayed.
   eps.visualEditorVisible = function() {
     return tinyMCE.activeEditor && !tinyMCE.activeEditor.isHidden();
@@ -193,25 +201,23 @@ window.ePagesShop = window.ePagesShop || {};
     $(eps.selectors.categoriesCheckbox, eps.editorPopup).click(function(event) {
       $(eps.selectors.categoriesSpinner).css("visibility", "visible");
 
-      $.ajax({
-        url: eps.shopUrl + "/categories",
-        headers: eps.httpHeaders
-      }).done(function(categories) {
-        // We expect the first category to contain the
-        // actual shop categories to display.
-        subCategories = categories[0].subCategories;
+      eps.loadCategories()
+        .done(function(categories) {
+          // We expect the first category to contain the
+          // actual shop categories to display.
+          subCategories = categories[0].subCategories;
 
-        html = subCategories.map(function(subCategory) {
-          var hrefSplit = subCategory.href.split("/"),
-              categoryId = hrefSplit[hrefSplit.length - 1];
+          html = subCategories.map(function(subCategory) {
+            var hrefSplit = subCategory.href.split("/"),
+                categoryId = hrefSplit[hrefSplit.length - 1];
 
-          return $('<li><input type="checkbox" value="' + categoryId + '">' + subCategory.title + '</li>');
+            return $('<li><input type="checkbox" value="' + categoryId + '">' + subCategory.title + '</li>');
+          });
+
+          $(eps.selectors.categoriesContainer).html(html);
+        }).always(function() {
+          $(eps.selectors.categoriesSpinner).css("visibility", "hidden");
         });
-
-        $(eps.selectors.categoriesContainer).html(html);
-      }).always(function() {
-        $(eps.selectors.categoriesSpinner).css("visibility", "hidden");
-      });
     });
 
     // Closes the editor popup on `escape`.
