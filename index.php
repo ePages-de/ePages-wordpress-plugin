@@ -43,6 +43,10 @@ require_once EPAGES_PLUGIN_DIR . "/actions/add_editor_button.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/add_scripts.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/add_popup.php";
 
+// Load filters
+require_once EPAGES_PLUGIN_DIR . "/filters/add_mce_plugin.php";
+require_once EPAGES_PLUGIN_DIR . "/filters/build_script_tag.php";
+
 
 if (is_admin()) {
   add_action("admin_init",    "epages_init");
@@ -57,19 +61,6 @@ if (is_admin()) {
 } else {
   add_filter("script_loader_tag", "epages_build_script_tag", 10, 2);
 }
-
-function epages_build_script_tag($tag, $handle) {
-  if ("epages_shop_widget" !== $handle) {
-    return $tag;
-  }
-  return str_replace(" src", ' async="async" data-shop-url="' . get_option("epages_api_url") .'" id="epages-widget" src', $tag);
-}
-
-function epages_add_mce_plugin($args) {
-  $args["epages"] = EPAGES_PLUGIN_URL . "/js/mce-editor.js";
-  return $args;
-}
-
 
 function epages_shop_widget_shortcode_handler($attrs) {
     wp_enqueue_script("epages_shop_widget", "https://site-production.herokuapp.com/site.js", array(), null, true);
