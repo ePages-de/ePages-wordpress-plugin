@@ -274,10 +274,12 @@ window.ePagesShop = window.ePagesShop || {};
       eps.closeEditorPopup();
     });
 
+    // Activates the current menu item.
     var current = "product-settings";
-    $(eps.selectors.modalContent, eps.editorPopup).attr("data-mode", current);
-    $(eps.selectors.modalContent, eps.editorPopup).attr("data-active-dialog", current);
-    $(eps.selectors.menuItem)
+    $(eps.selectors.modalContent, eps.editorPopup)
+      .attr("data-mode", current)
+      .attr("data-active-dialog", current);
+    $(eps.selectors.menuItem, eps.editorPopup)
         .removeClass("active")
         .filter("[data-content=" + current + "]").addClass("active");
 
