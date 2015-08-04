@@ -176,17 +176,21 @@ window.ePagesShop = window.ePagesShop || {};
   $(function() {
     eps.editorPopup = $(eps.selectors.editorPopup);
 
+    // Opens the editor popup.
     $(eps.selectors.shopButton).click(function(event) {
       event.preventDefault();
       eps.openEditorPopup();
     });
 
+    // Closes the editor popup.
     $(eps.selectors.closeButton, eps.editorPopup).click(function(event) {
       event.preventDefault();
       eps.closeEditorPopup();
       return false;
     });
 
+    // Loads the shop‘s categories when clicking
+    // on the categories checkbox.
     $(eps.selectors.categoriesCheckbox, eps.editorPopup).click(function(event) {
       $(eps.selectors.categoriesSpinner).css("visibility", "visible");
 
