@@ -29,16 +29,19 @@ static $epages_api_http_options = array(
   ),
 );
 
-// FUNCTIONS
+
+// Load functions
 require_once EPAGES_PLUGIN_DIR . "/functions/log.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/load_template.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/options_page.php";
 
-// ACTIONS
+// Load actions
 require_once EPAGES_PLUGIN_DIR . "/actions/init.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/add_options_page.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/show_admin_message.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/add_editor_button.php";
+require_once EPAGES_PLUGIN_DIR . "/actions/add_scripts.php";
+require_once EPAGES_PLUGIN_DIR . "/actions/add_popup.php";
 
 
 if (is_admin()) {
@@ -67,24 +70,6 @@ function epages_add_mce_plugin($args) {
   return $args;
 }
 
-function epages_add_popup() {
-  global $epages_api_http_options;
-
-  epages_load_template("popup", array(
-    "epages_plugin_url"       => EPAGES_PLUGIN_URL,
-    "epages_api_url"          => get_option("epages_api_url"),
-    "epages_api_http_options" => $epages_api_http_options
-  ));
-}
-
-function epages_add_scripts($hook) {
-  if ($hook == "post-new.php" || $hook == "post.php") {
-    wp_enqueue_script("epages-editor", EPAGES_PLUGIN_URL . "/js/editor.js", array(), false, true);
-    add_editor_style(EPAGES_PLUGIN_URL . "/css/editor.css");
-  }
-
-  wp_enqueue_style("epages-editor-css", EPAGES_PLUGIN_URL . "/css/styles.css");
-}
 
 function epages_shop_widget_shortcode_handler($attrs) {
     wp_enqueue_script("epages_shop_widget", "https://site-production.herokuapp.com/site.js", array(), null, true);
