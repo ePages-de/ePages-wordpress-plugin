@@ -30,12 +30,14 @@
 
         <div class="media-frame-content product-settings">
           <h2>Which products do you want to display?</h2>
+
           <label>
-            <input type="radio" name="products" value="all" checked="checked" class="epages-all-products-radio-button">
+            <input type="radio" name="product-settings" value="all-products" checked="checked" class="epages-all-products-radio-button">
             Show all products
           </label>
+
           <label>
-            <input type="radio" name="products" value="categories" class="epages-categories-radio-button">
+            <input type="radio" name="product-settings" value="categories" class="epages-categories-radio-button">
             All products from selected category
             <img src="<?php echo $epages_plugin_url . "/assets/images/spinner.gif"; ?>" class="epages-categories-spinner">
           </label>
@@ -44,7 +46,25 @@
         </div>
 
         <div class="media-frame-content appearance">
-          <p>Appearance ...</p>
+          <h2>How do you want your shop to look like?</h2>
+
+          <label>
+            <input type="checkbox" value="search-form" checked="checked" class="epages-option-search-form">
+            Show search field
+            <span class="tooltip" data-tooltip="Mark this checkbox, if you want to display a search field in your product list view."><i class="fa fa-lg fa-info-circle"></i></span>
+          </label>
+
+          <label>
+            <input type="checkbox" value="category-list" class="epages-option-category-list">
+            Show category selection
+            <span class="tooltip" data-tooltip="Mark this checkbox, if you want to display a category selection dropdown menu in your product list view."><i class="fa fa-lg fa-info-circle"></i></span>
+          </label>
+
+          <label>
+            <input type="checkbox" value="sort" checked="checked" class="epages-option-sort">
+            Show product sorting
+            <span class="tooltip" data-tooltip="Mark this checkbox, if you want to display a product sorting option in your product list view."><i class="fa fa-lg fa-info-circle"></i></span>
+          </label>
         </div>
 
         <div class="media-frame-toolbar">

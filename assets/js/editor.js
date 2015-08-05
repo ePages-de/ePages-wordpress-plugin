@@ -24,6 +24,9 @@ window.ePagesShop = window.ePagesShop || {};
     allProductsRadioButton: ".epages-all-products-radio-button",
     categoriesRadioButton:  ".epages-categories-radio-button",
     categoriesSpinner:      ".epages-categories-spinner",
+    searchFormOption:       ".epages-option-search-form",
+    categoryListOption:     ".epages-option-category-list",
+    sortOption:             ".epages-option-sort",
     menu:                   ".media-menu",
     menuItem:               ".media-menu-item",
     modalContent:           ".media-modal-content",
@@ -128,15 +131,26 @@ window.ePagesShop = window.ePagesShop || {};
     var existingShortcode = eps.findShortcode(eps.textEditorContent());
     if (!existingShortcode) { return; }
 
+    // Product settings.
     var categoryId = existingShortcode.shortcode.attrs.named.data_category_id;
     if (categoryId) {
+      $(eps.selectors.allProductsRadioButton).prop("checked", false);
       $(eps.selectors.categoriesRadioButton).prop("checked", true);
+
       eps.loadAndDisplayCategories()
         .done(function() {
           $(eps.selectors.categoriesContainer + " input[value=" + categoryId + "]")
             .prop("checked", true);
         });
     }
+
+    // Appearance settings.
+    $(eps.selectors.searchFormOption, eps.editorPopup)
+      .prop("checked", "true" === existingShortcode.shortcode.attrs.named.data_search_form);
+    $(eps.selectors.categoryListOption, eps.editorPopup)
+      .prop("checked", "true" === existingShortcode.shortcode.attrs.named.data_category_list);
+    $(eps.selectors.sortOption, eps.editorPopup)
+      .prop("checked", "true" === existingShortcode.shortcode.attrs.named.data_sort);
   };
 
   // Enhances the shop placeholder image with buttons to edit
@@ -288,13 +302,18 @@ window.ePagesShop = window.ePagesShop || {};
 
       var result = {};
 
-      // Selected category.
+      // Product settings.
       if ($(eps.selectors.categoriesRadioButton).prop("checked")) {
         var selectedCategory = $(eps.selectors.categoriesContainer +" input:checked")[0];
         if (selectedCategory) {
           result.data_category_id = selectedCategory.value;
         }
       }
+
+      // Appearance settings.
+      result.data_search_form   = $(eps.selectors.searchFormOption).is(":checked");
+      result.data_category_list = $(eps.selectors.categoryListOption).is(":checked");
+      result.data_sort          = $(eps.selectors.sortOption).is(":checked");
 
       shortcode.shortcode.attrs.named = result;
 

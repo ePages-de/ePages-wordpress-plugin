@@ -6,6 +6,7 @@ function epages_add_scripts($hook) {
     add_editor_style(EPAGES_PLUGIN_URL . "/assets/css/editor.css");
   }
 
+  wp_enqueue_style("epages-font-awesome-css", EPAGES_PLUGIN_URL . "/assets/css/font-awesome.min.css");
   wp_enqueue_style("epages-editor-css", EPAGES_PLUGIN_URL . "/assets/css/styles.css");
 }
 

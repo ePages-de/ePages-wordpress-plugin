@@ -13,7 +13,7 @@
 #epages-popup-content .media-modal-content {
   position: absolute;
   width: 920px;
-  height: 620px;
+  height: 520px;
   top: 50%;
   left: 50%;
   right: inherit;
@@ -45,8 +45,8 @@
   margin-bottom: 30px;
 }
 
-#epages-popup-content .media-modal-content .product-settings label {
-  display: block;
+#epages-popup-content .media-modal-content .media-frame-content label {
+  display: table;
   margin-top: 10px;
 }
 
@@ -70,3 +70,38 @@
 
 .epages-shop-form-failure { background: #c00; color: #fff; padding: 4px 8px 3px; margin-left: 10px; }
 .epages-shop-form-success { background: #0c0; color: #fff; padding: 4px 8px 3px; margin-left: 10px; }
+
+
+
+.tooltip{
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  vertical-align: text-top;
+  cursor: pointer;
+}
+
+.tooltip:hover:after{
+  background: #333;
+  background: rgba(0,0,0,.8);
+  border-radius: 5px;
+  bottom: 26px;
+  color: #fff;
+  content: attr(data-tooltip);
+  left: 20%;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  width: 220px;
+}
+
+.tooltip:hover:before{
+  border: solid;
+  border-color: #333 transparent;
+  border-width: 6px 6px 0 6px;
+  bottom: 20px;
+  content: "";
+  left: 50%;
+  position: absolute;
+  z-index: 99;
+}
