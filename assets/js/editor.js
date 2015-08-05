@@ -129,17 +129,29 @@ window.ePagesShop = window.ePagesShop || {};
 
   eps.updateEditorOptions = function() {
     var existingShortcode = eps.findShortcode(eps.textEditorContent());
-    if (!existingShortcode) { return; }
+    if (!existingShortcode) {
+      // Product settings.
+      $(eps.selectors.allProductsRadioButton, eps.editorPopup).prop("checked", true);
+      $(eps.selectors.categoriesRadioButton, eps.editorPopup).prop("checked", false);
+      $(eps.selectors.categoriesContainer, eps.editorPopup).empty();
+
+      // Appearance settings.
+      $(eps.selectors.searchFormOption, eps.editorPopup).prop("checked", true);
+      $(eps.selectors.categoryListOption, eps.editorPopup).prop("checked", false);
+      $(eps.selectors.sortOption, eps.editorPopup).prop("checked", true);
+
+      return;
+    }
 
     // Product settings.
     var categoryId = existingShortcode.shortcode.attrs.named.data_category_id;
     if (categoryId) {
-      $(eps.selectors.allProductsRadioButton).prop("checked", false);
-      $(eps.selectors.categoriesRadioButton).prop("checked", true);
+      $(eps.selectors.allProductsRadioButton, eps.editorPopup).prop("checked", false);
+      $(eps.selectors.categoriesRadioButton, eps.editorPopup).prop("checked", true);
 
       eps.loadAndDisplayCategories()
         .done(function() {
-          $(eps.selectors.categoriesContainer + " input[value=" + categoryId + "]")
+          $(eps.selectors.categoriesContainer + " input[value=" + categoryId + "]", eps.editorPopup)
             .prop("checked", true);
         });
     }
