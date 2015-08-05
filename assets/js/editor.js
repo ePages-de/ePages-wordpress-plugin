@@ -42,6 +42,28 @@ window.ePagesShop = window.ePagesShop || {};
     });
   };
 
+  eps.loadAndDisplayCategories = function() {
+    $(eps.selectors.categoriesSpinner).css("visibility", "visible");
+
+    return eps.loadCategories()
+      .done(function(categories) {
+        // We expect the first category to contain the
+        // actual shop categories to display.
+        subCategories = categories[0].subCategories;
+
+        html = subCategories.map(function(subCategory) {
+          var hrefSplit = subCategory.href.split("/"),
+              categoryId = hrefSplit[hrefSplit.length - 1];
+
+          return $('<li><input type="radio" name="epages-categories" value="' + categoryId + '">' + subCategory.title + '</li>');
+        });
+
+        $(eps.selectors.categoriesContainer).html(html);
+      }).always(function() {
+        $(eps.selectors.categoriesSpinner).css("visibility", "hidden");
+      });
+  };
+
   // Returns whether Wordpess‘ visual editor is displayed.
   eps.visualEditorVisible = function() {
     return tinyMCE.activeEditor && !tinyMCE.activeEditor.isHidden();
@@ -102,6 +124,21 @@ window.ePagesShop = window.ePagesShop || {};
     return eps.editorPopup.hasClass("open");
   };
 
+  eps.updateEditorOptions = function() {
+    var existingShortcode = eps.findShortcode(eps.textEditorContent());
+    if (!existingShortcode) { return; }
+
+    var categoryId = existingShortcode.shortcode.attrs.named.data_category_id;
+    if (categoryId) {
+      $(eps.selectors.categoriesRadioButton).prop("checked", true);
+      eps.loadAndDisplayCategories()
+        .done(function() {
+          $(eps.selectors.categoriesContainer + " input[value=" + categoryId + "]")
+            .prop("checked", true);
+        });
+    }
+  };
+
   // Enhances the shop placeholder image with buttons to edit
   // and remove the shop placeholder.
   eps.enhancePlaceholder = function() {
@@ -116,7 +153,10 @@ window.ePagesShop = window.ePagesShop || {};
     eps.updateButton({
       id: "epages-shop-edit-button",
       value: "Edit shop",
-      callback: eps.openEditorPopup,
+      callback: function() {
+        eps.updateEditorOptions();
+        eps.openEditorPopup();
+      },
       position: {
         top: function(placeholder) {
           return placeholder.offset().top + 110;
@@ -188,6 +228,7 @@ window.ePagesShop = window.ePagesShop || {};
     // Opens the editor popup.
     $(eps.selectors.shopButton).click(function(event) {
       event.preventDefault();
+      eps.updateEditorOptions();
       eps.openEditorPopup();
     });
 
@@ -204,25 +245,7 @@ window.ePagesShop = window.ePagesShop || {};
 
     // Loads the shop‘s categories.
     $(eps.selectors.categoriesRadioButton, eps.editorPopup).click(function(event) {
-      $(eps.selectors.categoriesSpinner).css("visibility", "visible");
-
-      eps.loadCategories()
-        .done(function(categories) {
-          // We expect the first category to contain the
-          // actual shop categories to display.
-          subCategories = categories[0].subCategories;
-
-          html = subCategories.map(function(subCategory) {
-            var hrefSplit = subCategory.href.split("/"),
-                categoryId = hrefSplit[hrefSplit.length - 1];
-
-            return $('<li><input type="radio" name="epages-categories" value="' + categoryId + '">' + subCategory.title + '</li>');
-          });
-
-          $(eps.selectors.categoriesContainer).html(html);
-        }).always(function() {
-          $(eps.selectors.categoriesSpinner).css("visibility", "hidden");
-        });
+      eps.loadAndDisplayCategories();
     });
 
     // Closes the editor popup on `escape`.
@@ -267,15 +290,13 @@ window.ePagesShop = window.ePagesShop || {};
 
       // Selected category.
       if ($(eps.selectors.categoriesRadioButton).prop("checked")) {
-        var selectedCategory = $(".epages-categories-container input:checked")[0];
+        var selectedCategory = $(eps.selectors.categoriesContainer +" input:checked")[0];
         if (selectedCategory) {
           result.data_category_id = selectedCategory.value;
         }
       }
 
-      for (var i in result) {
-        shortcode.shortcode.attrs.named[i] = result[i];
-      }
+      shortcode.shortcode.attrs.named = result;
 
       if (existingShortcode) {
         eps.textEditorContent(
