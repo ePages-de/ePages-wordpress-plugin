@@ -178,14 +178,14 @@ window.ePagesShop = window.ePagesShop || {};
   eps.updateEditButton = function() {
     eps.updateButton({
       id: "epages-shop-edit-button",
-      value: "Edit shop",
+      value: "Edit",
       callback: function() {
         eps.updateEditorOptions();
         eps.openEditorPopup();
       },
       position: {
         top: function(placeholder) {
-          return placeholder.offset().top + 110;
+          return placeholder.offset().top + 90;
         },
         left: function(placeholder, button) {
           return placeholder.offset().left + placeholder.outerWidth() / 2 - button.outerWidth() / 2 - 2;
@@ -234,8 +234,8 @@ window.ePagesShop = window.ePagesShop || {};
 
       button.css({
         "position": "absolute",
-        "top":      "" + options.position.top(placeholder, button) + "px",
-        "left":     "" + options.position.left(placeholder, button) + "px"
+        "top":      "" + Math.floor(options.position.top(placeholder, button)) + "px",
+        "left":     "" + Math.floor(options.position.left(placeholder, button)) + "px"
       });
     }
   };

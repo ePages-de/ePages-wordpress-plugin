@@ -42,7 +42,8 @@ require_once EPAGES_PLUGIN_DIR . "/actions/init.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/add_options_page.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/show_admin_message.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/add_editor_button.php";
-require_once EPAGES_PLUGIN_DIR . "/actions/add_scripts.php";
+require_once EPAGES_PLUGIN_DIR . "/actions/add_admin_scripts.php";
+require_once EPAGES_PLUGIN_DIR . "/actions/add_front_scripts.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/add_popup.php";
 
 // Load filters
@@ -58,8 +59,9 @@ if (is_admin()) {
 
   # TODO: only register these on the editor page.
   add_filter("mce_external_plugins",  "epages_add_mce_plugin");
-  add_action("admin_enqueue_scripts", "epages_add_scripts");
+  add_action("admin_enqueue_scripts", "epages_add_admin_scripts");
   add_action("in_admin_header",       "epages_add_popup");
 } else {
   add_filter("script_loader_tag", "epages_build_script_tag", 10, 2);
+  add_action("wp_enqueue_scripts", "epages_add_front_scripts" );
 }

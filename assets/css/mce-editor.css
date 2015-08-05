@@ -1,0 +1,30 @@
+.epages-shop-placeholder {
+  background: #eee;
+  padding: 10px 0 25px;
+  text-align: center;
+  border: 1px solid #ddd;
+  height: 200px;
+  width: 100%;
+}
+
+.epages-shop-remove-widget {
+  display: none;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #aaa;
+  background: #ddd;
+  font-size: 175%;
+  line-height: 23px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.epages-shop-placeholder:hover .epages-shop-remove-widget {
+  display: block;
+}
+
+#epages-shop-edit-button {
+  cursor: pointer;
+  font-size: 24px;
+}
