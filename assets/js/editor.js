@@ -15,18 +15,19 @@ window.ePagesShop = window.ePagesShop || {};
   };
 
   eps.selectors = {
-    textEditor:          "#content",
-    editorPopup:         "#epages-popup-content",
-    editorSaveButton:    "#epages-save-button",
-    shopButton:          "#epages-shop-button",
-    placeholder:         ".epages-shop-placeholder",
-    categoriesContainer: ".epages-categories-container",
-    categoriesCheckbox:  ".epages-categories-checkbox",
-    categoriesSpinner:   ".epages-categories-spinner",
-    menu:                ".media-menu",
-    menuItem:            ".media-menu-item",
-    modalContent:        ".media-modal-content",
-    closeButton:         ".media-modal-close"
+    textEditor:             "#content",
+    editorPopup:            "#epages-popup-content",
+    editorSaveButton:       "#epages-save-button",
+    shopButton:             "#epages-shop-button",
+    placeholder:            ".epages-shop-placeholder",
+    categoriesContainer:    ".epages-categories-container",
+    allProductsRadioButton: ".epages-all-products-radio-button",
+    categoriesRadioButton:  ".epages-categories-radio-button",
+    categoriesSpinner:      ".epages-categories-spinner",
+    menu:                   ".media-menu",
+    menuItem:               ".media-menu-item",
+    modalContent:           ".media-modal-content",
+    closeButton:            ".media-modal-close"
   };
 
   eps.keycodes = {
@@ -196,9 +197,13 @@ window.ePagesShop = window.ePagesShop || {};
       eps.closeEditorPopup();
     });
 
-    // Loads the shop‘s categories when clicking
-    // on the categories checkbox.
-    $(eps.selectors.categoriesCheckbox, eps.editorPopup).click(function(event) {
+    // Clears the shop‘s categories.
+    $(eps.selectors.allProductsRadioButton, eps.editorPopup).click(function(event) {
+      $(eps.selectors.categoriesContainer, eps.editorPopup).empty();
+    });
+
+    // Loads the shop‘s categories.
+    $(eps.selectors.categoriesRadioButton, eps.editorPopup).click(function(event) {
       $(eps.selectors.categoriesSpinner).css("visibility", "visible");
 
       eps.loadCategories()
@@ -211,7 +216,7 @@ window.ePagesShop = window.ePagesShop || {};
             var hrefSplit = subCategory.href.split("/"),
                 categoryId = hrefSplit[hrefSplit.length - 1];
 
-            return $('<li><input type="checkbox" value="' + categoryId + '">' + subCategory.title + '</li>');
+            return $('<li><input type="radio" name="epages-categories" value="' + categoryId + '">' + subCategory.title + '</li>');
           });
 
           $(eps.selectors.categoriesContainer).html(html);
@@ -256,6 +261,20 @@ window.ePagesShop = window.ePagesShop || {};
         shortcode.shortcode.type = eps.shortcode.type;
       } else {
         shortcode = existingShortcode;
+      }
+
+      var result = {};
+
+      // Selected category.
+      if ($(eps.selectors.categoriesRadioButton).prop("checked")) {
+        var selectedCategory = $(".epages-categories-container input:checked")[0];
+        if (selectedCategory) {
+          result.data_category_id = selectedCategory.value;
+        }
+      }
+
+      for (var i in result) {
+        shortcode.shortcode.attrs.named[i] = result[i];
       }
 
       if (existingShortcode) {
