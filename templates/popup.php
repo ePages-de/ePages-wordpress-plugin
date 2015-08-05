@@ -31,17 +31,16 @@
         <div class="media-frame-content product-settings">
           <h2>Which products do you want to display?</h2>
           <label>
-            <input type="radio" name="products" value="all" checked="checked" class="all-products-checkbox">
+            <input type="radio" name="products" value="all" checked="checked" class="epages-all-products-checkbox">
             Show all products
           </label>
           <label>
-            <input type="radio" name="products" value="categories" class="categories-checkbox">
+            <input type="radio" name="products" value="categories" class="epages-categories-checkbox">
             All products from selected categories
-            <img src="<?php echo $epages_plugin_url . "/assets/images/spinner.gif"; ?>" class="categories-spinner">
+            <img src="<?php echo $epages_plugin_url . "/assets/images/spinner.gif"; ?>" class="epages-categories-spinner">
           </label>
 
-          <ol class="epages-categories-container">
-          </ol>
+          <ol class="epages-categories-container"></ol>
         </div>
 
         <div class="media-frame-content appearance">
