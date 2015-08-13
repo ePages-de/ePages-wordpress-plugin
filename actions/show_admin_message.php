@@ -1,9 +1,5 @@
-<?php
-
-function epages_show_admin_message() {
-  if (!get_option("epages_api_url_confirmed")) {
-
-?>
+<?php function epages_show_admin_message() {
+  if (!get_option("epages_api_url_confirmed") && $_GET["page"]!= "epages_options_page") { ?>
     <div class="updated fade">
       <p>
         <strong>Your ePages shop is almost ready to use</strong>. Please visit
@@ -11,9 +7,4 @@ function epages_show_admin_message() {
         settings</strong></a> to to set up the plugin.
       </p>
     </div>
-<?php
-
-  }
-}
-
-?>
+<?php }} ?>

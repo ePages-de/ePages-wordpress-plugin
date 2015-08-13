@@ -1,6 +1,5 @@
 window.ePagesShop = window.ePagesShop || {};
 
-
 (function(window, document, undefined) {
   var eps = window.ePagesShop,
       $ = window.jQuery;
@@ -15,22 +14,22 @@ window.ePagesShop = window.ePagesShop || {};
   };
 
   eps.selectors = {
-    textEditor:             "#content",
-    editorPopup:            "#epages-popup-content",
-    editorSaveButton:       "#epages-save-button",
-    shopButton:             "#epages-shop-button",
-    placeholder:            ".epages-shop-placeholder",
-    categoriesContainer:    ".epages-categories-container",
-    allProductsRadioButton: ".epages-all-products-radio-button",
-    categoriesRadioButton:  ".epages-categories-radio-button",
-    categoriesSpinner:      ".epages-categories-spinner",
-    searchFormOption:       ".epages-option-search-form",
-    categoryListOption:     ".epages-option-category-list",
-    sortOption:             ".epages-option-sort",
-    menu:                   ".media-menu",
-    menuItem:               ".media-menu-item",
-    modalContent:           ".media-modal-content",
-    closeButton:            ".media-modal-close"
+    textEditor:              "#content",
+    editorPopup:             "#epages-popup-content",
+    editorSaveButton:        "#epages-save-button",
+    shopButton:              "#epages-shop-button",
+    placeholder:             ".epages-shop-placeholder",
+    categoriesContainer:     ".epages-categories-container",
+    allProductsRadioButton:  ".epages-all-products-radio-button",
+    categoriesRadioButton:   ".epages-categories-radio-button",
+    categoriesSpinner:       ".epages-categories-spinner",
+    searchFormOption:        ".epages-option-search-form",
+    categoryListOption:      ".epages-option-category-list",
+    sortOption:              ".epages-option-sort",
+    menu:                    ".media-menu",
+    menuItem:                ".media-menu-item",
+    modalContent:            ".media-modal-content",
+    closeButton:             ".media-modal-close"
   };
 
   eps.keycodes = {
@@ -168,6 +167,7 @@ window.ePagesShop = window.ePagesShop || {};
   // Enhances the shop placeholder image with buttons to edit
   // and remove the shop placeholder.
   eps.enhancePlaceholder = function() {
+    eps.updateShopButton();
     if (eps.visualEditorVisible()) {
       eps.updateEditButton();
       eps.updateRemoveButton();
@@ -185,7 +185,7 @@ window.ePagesShop = window.ePagesShop || {};
       },
       position: {
         top: function(placeholder) {
-          return placeholder.offset().top + 90;
+          return placeholder.offset().top + 105;
         },
         left: function(placeholder, button) {
           return placeholder.offset().left + placeholder.outerWidth() / 2 - button.outerWidth() / 2 - 2;
@@ -209,6 +209,10 @@ window.ePagesShop = window.ePagesShop || {};
         }
       }
     });
+  };
+
+  eps.updateShopButton = function() {
+    $(eps.selectors.shopButton).text(eps.findShortcode(eps.textEditorContent()) ? "Edit Shop" : "Add Shop");
   };
 
   // Adds, removes or updates the position of a button
@@ -244,6 +248,7 @@ window.ePagesShop = window.ePagesShop || {};
   eps.removePlaceholder = function() {
     var placeholder = tinymce.activeEditor.dom.select(eps.selectors.placeholder);
     tinymce.activeEditor.dom.remove(placeholder);
+    eps.updateShopButton();
   };
 
 
@@ -262,6 +267,12 @@ window.ePagesShop = window.ePagesShop || {};
     $(eps.selectors.closeButton, eps.editorPopup).click(function(event) {
       event.preventDefault();
       eps.closeEditorPopup();
+    });
+
+    // Deletes the placeholder and update the shop button
+    $(eps.selectors.placeholderRemoveButton).click(function(event) {
+      $(eps.visualEditorContent()).find(eps.selectors.placeholder);
+      eps.updateShopButton();
     });
 
     // Clears the shop‘s categories.

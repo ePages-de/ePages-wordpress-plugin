@@ -1,44 +1,40 @@
 <div class="wrap">
-  <h2>Connect your ePages Shop</h2>
-</div>
-
-<p>
-  <a href="https://www.epages.co.uk/" target="_blank">Create your ePages Shop</a>
-  and then enter your ePages API URL here:
-</p>
-
-<form method="post" action="options.php">
-  <?php settings_fields("epages_options_page"); ?>
-
-  <label for="epages_api_url">Your ePages API URL</label>
-  <br/>
-  <input
-    type="text"
-    name="epages_api_url"
-    size=60
-    value="<?php echo get_option("epages_api_url") ?>">
-
-  <?php if ($shop_id_validated) { ?>
-    <?php if ($valid_shop_id) { ?>
-      <span class="epages-shop-form-success">Confirmed</span>
-    <?php } else { ?>
-      <span class="epages-shop-form-failure">Invalid shop URL</span>
-    <?php } ?>
-  <?php } ?>
-
-  <br/>
-  <input type="submit" value="Save">
-</form>
+  <h2>Connect your Online Shop with the Plugin</h2>
 
 <?php if (get_option("epages_api_url_confirmed")) { ?>
   <div class="wrap">
-    <h2>Disconnect your ePages Shop</h2>
+    <div class="epages-verified-shop-text"><i class="fa fa-check-circle fa-4x"></i><span><b>Congratulations! Your Online Shop is now connected with you</b></span></div>
   </div>
-  <p>Disable the ePages Shop Widget in your Wordpress installation:</p>
+  <br>
+  <p>Now you can add your Online Shop to any Wordpress page or post. Just click the 'Add Online Shop' button.</p>
+  <p>After that click 'Edit' to edit product and appearance settings for Online Shop for this page or post.</p>
+  <p>Have a question? Visit our <a href="https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website">help center</a></p>
+  <p>Your API URL is: <b><?php echo get_option("epages_api_url") ?></b></p>
+
   <form method="post" action="options.php">
     <?php settings_fields("epages_options_page"); ?>
     <input type="hidden" name="epages_api_url" value="">
     <input type="hidden" name="epages_api_url_confirmed" value="0">
-    <input type="submit" value="Disconnect ePages Shop">
+    <?php submit_button('Disconnect Online Shop') ?>
   </form>
+<?php } else { ?>
+  <p><b>There are just a few steps left to start selling on your Wordpress site</b></p>
+  <ol>
+    <li>
+      <b><a href="https://www.epages.co.uk/" target="_blank">Create your free Online Shop</a></b>
+      If you already have an ePages Online Shop, move on to the next step.
+    </li>
+    <li>Enter your API url here. <a href="https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website">Learn more</a> how to attain the URL</li>
+  </ol>
+
+  <form method="post" action="options.php">
+    <?php settings_fields("epages_options_page"); ?>
+    <input type="text" name="epages_api_url" size=60
+      value="<?php echo get_option("epages_api_url") ?>">
+
+    <?php if ($shop_id_validated && !$valid_shop_id) { ?>
+      <span class="epages-shop-form-failure">Invalid shop URL</span>
+    <?php } submit_button('Save') ?>
+  </form>
+</div>
 <?php } ?>

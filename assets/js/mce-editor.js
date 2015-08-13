@@ -14,7 +14,7 @@ window.ePagesShop = window.ePagesShop || {};
         if (!found) return;
 
         var content = event.content;
-        var store = '<img src="' + eps.baseUrl + '/assets/images/shop_placeholder.svg" \
+        var store = '<img src="' + eps.baseUrl + '/assets/images/shop_widget.svg" \
                        data-epages-shortcode="' + window.encodeURIComponent(found.content) + '" \
                        data-mce-placeholder="true" data-mce-resize="false" class="epages-shop-placeholder">';
 
@@ -28,7 +28,6 @@ window.ePagesShop = window.ePagesShop || {};
       if (event.get) {
         return event.content = event.content.replace(/(<img [^>]*data-epages-shortcode=[^>]+>)/g, function(match, tag) {
           var data = window.decodeURIComponent($(tag).attr("data-epages-shortcode"));
-
           if (data) {
             return data;
           }
@@ -38,15 +37,14 @@ window.ePagesShop = window.ePagesShop || {};
     });
 
     editor.onMouseUp.add(function(editor, event) {
-      var node = event.target;
-
-      if ($.inArray("epages-shop-remove-widget", node.classList) !== -1) {
+      var node = event.target.id;
+      if(node === undefined) return;
+      if (node == "epages-shop-remove-button") {
         editor.dom.remove(node.parentElement);
-      } else if ($.inArray("epages-shop-edit-button", node.classList) !== -1) {
+      } else if (node == "epages-shop-edit-button") {
         eps.openEditorPopup();
       }
     });
-
   });
 
 }(window, document));

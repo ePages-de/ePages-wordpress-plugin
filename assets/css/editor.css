@@ -75,6 +75,13 @@
   float: right;
 }
 
+.epages-verified-shop-text b {
+  font-size: 18px;
+  line-height: 35px;
+  vertical-align: 10px;
+  padding-left: 15px;
+}
+
 .epages-shop-form-failure { background: #c00; color: #fff; padding: 4px 8px 3px; margin-left: 10px; }
 .epages-shop-form-success { background: #0c0; color: #fff; padding: 4px 8px 3px; margin-left: 10px; }
 
@@ -119,3 +126,5 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+
