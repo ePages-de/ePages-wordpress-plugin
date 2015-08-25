@@ -23,9 +23,11 @@ if (!defined('EPAGES_PLUGIN_URL'))
 
 
 static $siteUrl = "https://site-production.herokuapp.com/site.js";
+
+// TODO: add auth to headers if access to non-public api calls
+// "Authorization" => "Bearer M0mPgTiGPtw5LkdCGwhel3gcGc5PqIPF",
 static $epages_api_http_options = array(
   "headers" => array(
-    "Authorization" => "Bearer M0mPgTiGPtw5LkdCGwhel3gcGc5PqIPF",
     "Accept"        => "application/vnd.epages.v1+json"
   ),
 );
