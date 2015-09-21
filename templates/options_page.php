@@ -3,7 +3,7 @@
 
 <?php if (get_option("epages_api_url_confirmed")) { ?>
   <div class="wrap">
-    <div class="epages-verified-shop-text"><i class="fa fa-check-circle fa-4x"></i><span><b>Congratulations! Your Online Shop is now connected with you</b></span></div>
+    <div class="epages-verified-shop-text"><i class="fa fa-check-circle fa-4x"></i><span><b>Congratulations! Your Online Shop is now connected with your Website!</b></span></div>
   </div>
   <br>
   <p>Now you can add your Online Shop to any Wordpress page or post. Just click the 'Add Online Shop' button.</p>
