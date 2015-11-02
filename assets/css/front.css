@@ -209,15 +209,18 @@ div.epages-shop-overlay-product-descriptio{
 div.epages-shop-overlay-product-variations{
   padding-bottom: 20px;
 }
-.epages-shop-overlay-custom-attributes{
+.epages-shop-overlay-custom-attributes-table{
   width: 20%;
 }
-table.epages-shop-overlay-custom-attributes td {
+table.epages-shop-overlay-custom-attributes-table td,
+table.epages-shop-overlay-custom-attributes-table th {
   border-width: 0 0 1px;
   width: 20%;
-
 }
-table.epages-shop-overlay-custom-attributes {
+table.epages-shop-overlay-custom-attributes-table td li{
+  line-height: 1.4;
+}
+table.epages-shop-overlay-custom-attributes-table {
   border-collapse: separate;
   border-spacing: 0;
   border-width: 1px 0 0;
