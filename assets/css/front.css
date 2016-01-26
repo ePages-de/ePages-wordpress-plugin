@@ -273,6 +273,7 @@ p {
 }
 .epages-shop-product-list {
     clear: both;
+    padding-top: 30px;
 }
 .epages-shop-pagination {
     clear: both;
@@ -700,7 +701,6 @@ div.epages-shop-variation{
     {
     	-webkit-appearance: none;
     	appearance:none;
-    	width:100%;
     	background:#FFF;
     	background:transparent;
     	border:none;
