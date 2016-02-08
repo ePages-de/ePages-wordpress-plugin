@@ -346,7 +346,7 @@ img .img-responsive {
 .epages-cart-button {color:inherit !important; }
 .epages-cart-button:hover {background-color: grey; }
 .epages-shop-search-form {float:left; margin-bottom: 10px; width: 125px;}
-.epages-shop-sort {float:left; clear: both; width: 150px;}
+.epages-shop-sort {float:left; clear: both; width: 125px;}
 .epages-shop-cart {margin-top: 20px;}
 
 .epages-shop-navigation {
