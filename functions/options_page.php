@@ -6,7 +6,7 @@ function epages_options_page() {
   $valid_shop_id = false;
   $shop_id_validated = false;
 
-  if (!get_option("epages_api_url_confirmed") && !empty(get_option("epages_api_url"))) {
+  if (!get_option("epages_api_url_confirmed") && (get_option("epages_api_url"))) {
     $shop_id_validated = true;
 
     // We’re hitting the legal-API to verify whether the provided
