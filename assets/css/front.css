@@ -572,6 +572,8 @@ div.epages-shop-variation{
 
 .epages-shop-product-list-image-container {
 margin-bottom: 10px;
+height: 100px;
+max-height: 100px;
 }
 
 .epages-shop-product-name {
