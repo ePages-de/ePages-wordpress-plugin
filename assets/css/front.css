@@ -550,8 +550,8 @@ table.epages-shop-overlay-custom-attributes-table {
   overflow-y: hidden;
 }
 .epages-shop-overlay-product-image {
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  max-height: 100px;
   display: block;
 }
 div.epages-shop-overlay-box-1 h2{
@@ -571,7 +571,7 @@ div.epages-shop-variation{
 
 
 .epages-shop-product-list-image-container {
-height: 100px;
+max-height: 100px;
 margin-bottom: 10px;
 }
 
