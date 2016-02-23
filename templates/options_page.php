@@ -1,5 +1,5 @@
 <div class="wrap">
-  <h2><?php _e('Connect your Online Shop with the Plugin'  , 'epages'); ?></h2>
+
 
 <?php if (get_option("epages_api_url_confirmed"  , 'epages')) { ?>
   <div class="wrap">
@@ -19,6 +19,7 @@
     <?php submit_button( __('Disconnect Online Shop' , 'epages')) ?>
   </form>
 <?php } else { ?>
+  <h2><?php _e('Connect your Online Shop with the Plugin'  , 'epages'); ?></h2>
   <p><b><?php _e('There are just a few steps left to start selling on your Wordpress site' , 'epages'); ?></b></p>
   <ol>
     <li>
