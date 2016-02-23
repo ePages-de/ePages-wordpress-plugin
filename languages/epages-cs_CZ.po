@@ -1,0 +1,224 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ePages Online Shop\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Mon Feb 22 2016 17:29:32 GMT+0100 (CET)\n"
+"PO-Revision-Date: Mon Feb 22 2016 17:37:12 GMT+0100 (CET)\n"
+"Last-Translator: Overlord <d.ignatieva@epages.com>\n"
+"Language-Team: \n"
+"Language: Czech\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: cs_CZ\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+msgid "ePages Online Shop"
+msgstr "Online obchod"
+
+#. URI of the plugin
+msgid "http://www.epages.com/us"
+msgstr "http://www.epages.com/us"
+
+#. Description of the plugin
+msgid "ePages Online Shop integration for WordPress."
+msgstr "ePages Online obchod integrace pro WordPress."
+
+#. Author of the plugin
+msgid "mindmatters"
+msgstr "mindmatters"
+
+#. Author URI of the plugin
+msgid "http://mindmatters.de"
+msgstr "http://mindmatters.de"
+
+#: ../index.php:15
+msgid "Plugin file cannot be accessed directly."
+msgstr "Nelze získat přímý přístup k souboru modulu plug-in."
+
+#: ../actions/add_editor_button.php:5
+msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Add Shop</a>"
+msgstr "Přidat obchod"
+
+#: ../actions/add_options_page.php:4
+msgid "Online Shop Settings"
+msgstr "Nastavení online obchodu"
+
+#: ../actions/add_options_page.php:4
+msgid "Online Shop"
+msgstr "Online obchod"
+
+#: ../actions/show_admin_message.php:4
+msgid "Your ePages shop is almost ready to use"
+msgstr "<strong>Váš online obchod ePages je téměř připraven k použití.</strong>"
+
+#: ../actions/show_admin_message.php:5
+msgid "Please visit the "
+msgstr "Přejděte na stránku "
+
+#: ../actions/show_admin_message.php:6
+msgid "ePages settings"
+msgstr "<strong>nastavení ePages</strong>"
+
+#: ../actions/show_admin_message.php:7
+msgid "to to set up the plugin."
+msgstr "a nastavte modul plug-in."
+
+#: ../functions/options_page.php:17
+msgid "Trying to validate shop URL: "
+msgstr "Probíhá pokus o ověření adresy API URL: "
+
+#: ../functions/options_page.php:24
+msgid "Shop URL validation status: "
+msgstr "Stav ověření adresy API URL: "
+
+#: ../functions/options_page.php:24
+msgid "Success"
+msgstr "úspěch"
+
+#: ../functions/options_page.php:24
+msgid "Failure"
+msgstr "selhání"
+
+#: ../functions/options_page.php:45
+msgid "Exception while parsing the shop URL validation response."
+msgstr "Při analýze odezvy procesu ověření adresy API URL došlo k výjimce."
+
+#: ../templates/options_page.php:2
+msgid "Connect your Online Shop with the Plugin"
+msgstr "Propojit online obchod s modulem plug-in"
+
+#: ../templates/options_page.php:7
+msgid "Congratulations! Your Online Shop is now connected with your Website!"
+msgstr "Gratulujeme! Váš online obchod je nyní propojen s vaším webem."
+
+#: ../templates/options_page.php:10
+msgid ""
+"Now you can add your Online Shop to any Wordpress page or post. Just click "
+"the Add Online Shop button."
+msgstr ""
+"Nyní můžete svůj online obchod přidat na jakoukoli stránku WordPress či do "
+"jakéhokoli příspěvku. Stačí při přidávání nového příspěvku kliknout na "
+"možnost „Přidat obchod“."
+
+#: ../templates/options_page.php:11
+msgid ""
+"After that click Edit to edit product and appearance settings for Online "
+"Shop for this page or post."
+msgstr ""
+"Poté můžete pro tuto stránku či příspěvek upravit nastavení produktů a "
+"zobrazení online obchodu. Kliknutím na možnost „Upravit obchod“ můžete toto "
+"nastavení kdykoli změnit."
+
+#: ../templates/options_page.php:12
+#, php-format
+msgid ""
+"Have a question? Visit our <a href=\"https://www.online-help-center."
+"com/customer/en/portal/articles?"
+"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
+msgstr ""
+"Chcete se na něco zeptat? Navštivte naše <a href=\\\"https://www.online-help-"
+"center.com/customer/en/portal/articles?"
+"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">centrum "
+"nápovědy"
+
+#: ../templates/options_page.php:13
+msgid "Your API URL is: "
+msgstr "Vaše adresa API URL je:"
+
+#: ../templates/options_page.php:19
+msgid "Disconnect Online Shop"
+msgstr "Odpojit online obchod"
+
+#: ../templates/options_page.php:22
+msgid "There are just a few steps left to start selling on your Wordpress site"
+msgstr ""
+"<strong>Už jen pár kroků a můžete začít na svém webu WordPress prodávat."
+"</strong>"
+
+#: ../templates/options_page.php:25
+msgid "Create your free Online Shop"
+msgstr "Vytvořit online obchod zdarma"
+
+#: ../templates/options_page.php:26
+msgid "If you already have an ePages Online Shop, move on to the next step."
+msgstr "Pokud již online obchod ePages máte, pokračujte dalším krokem."
+
+#: ../templates/options_page.php:28
+msgid "Enter your API url here. "
+msgstr "Sem zadejte adresu API URL. "
+
+#: ../templates/options_page.php:28
+msgid "Learn more"
+msgstr "Zde najdete informace o tom"
+
+#: ../templates/options_page.php:28
+msgid "how to attain the URL"
+msgstr ", jak adresu URL získat."
+
+#: ../templates/options_page.php:37
+msgid "Invalid shop URL"
+msgstr "Neplatná adresa API URL"
+
+#: ../templates/options_page.php:38 ../templates/popup.php:80
+msgid "Save"
+msgstr "Uložit"
+
+#: ../templates/popup.php:18 ../templates/popup.php:24
+msgid "Product settings"
+msgstr "Nastavení produktů"
+
+#: ../templates/popup.php:19 ../templates/popup.php:28
+msgid "Appearance"
+msgstr "Nastavení zobrazení"
+
+#: ../templates/popup.php:32
+msgid "Which products do you want to display?"
+msgstr "Které produkty chcete zobrazit?"
+
+#: ../templates/popup.php:36
+msgid "Show all products"
+msgstr "Zobrazit všechny produkty"
+
+#: ../templates/popup.php:41
+msgid "All products from selected category"
+msgstr "Všechny produkty ve vybrané kategorii"
+
+#: ../templates/popup.php:49
+msgid "How do you want your shop to look like?"
+msgstr "Jak má váš online obchod vypadat?"
+
+#: ../templates/popup.php:53
+msgid "Show search field"
+msgstr "Zobrazit vyhledávací pole"
+
+#: ../templates/popup.php:54
+msgid ""
+"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
+"your product list view.\">"
+msgstr ""
+"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
+"your product list view.\">"
+
+#: ../templates/popup.php:59
+msgid "Show category selection"
+msgstr "Zobrazit výběr kategorie"
+
+#: ../templates/popup.php:65
+msgid "Show product sorting"
+msgstr "Zobrazit řazení produktů"
+
+#: ../templates/popup.php:75
+msgid "Plugin settings"
+msgstr "Nastavení modulu plug-in"

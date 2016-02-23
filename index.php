@@ -1,19 +1,23 @@
 <?php
 
 /*
-Plugin Name: SITe
+Plugin Name: ePages Online Shop
 Plugin URI: http://www.epages.com/us/
-Description: Example integration of the SITe widget for WordPress.
-Version: 1.0
+Description: ePages Online Shop integration for WordPress.
+Version: 1.1
 Author: mindmatters
 Author URI: http://mindmatters.de/
+Text Domain: epages
+Domain Path: /languages
 */
 
-defined("ABSPATH") or die("Plugin file cannot be accessed directly.");
+
+defined("ABSPATH") or die(__("Plugin file cannot be accessed directly."));
 
 
 if (!defined('EPAGES_PLUGIN_NAME'))
   define('EPAGES_PLUGIN_NAME', trim(dirname(plugin_basename(__FILE__)), '/'));
+
 
 if (!defined('EPAGES_PLUGIN_DIR'))
   define('EPAGES_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . EPAGES_PLUGIN_NAME);
@@ -23,6 +27,7 @@ if (!defined('EPAGES_PLUGIN_URL'))
 
 
 static $siteUrl = "https://site-production.herokuapp.com/site.js";
+
 
 // TODO: add auth to headers if access to non-public api calls
 // "Authorization" => "Bearer M0mPgTiGPtw5LkdCGwhel3gcGc5PqIPF",
@@ -52,6 +57,12 @@ require_once EPAGES_PLUGIN_DIR . "/actions/add_popup.php";
 require_once EPAGES_PLUGIN_DIR . "/filters/add_mce_plugin.php";
 require_once EPAGES_PLUGIN_DIR . "/filters/build_script_tag.php";
 
+
+add_action( 'plugins_loaded', 'epages_load_textdomain' );
+
+function epages_load_textdomain() {
+	load_plugin_textdomain( 'epages', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
 
 if (is_admin()) {
   add_action("admin_init",    "epages_init");

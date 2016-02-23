@@ -14,14 +14,14 @@ function epages_options_page() {
     $url = esc_html(get_option("epages_api_url"));
     $url = trim($url, "/") . "/legal";
 
-    epages_log("Trying to validate shop URL: " . $url);
+    epages_log( __("Trying to validate shop URL: "  , 'epages') . $url);
 
     $response = wp_remote_get($url, $epages_api_http_options);
     epages_log($response);
 
     $valid_shop_id = epages_is_valid_api_response($response);
 
-    epages_log("Shop URL validation status: " . ($valid_shop_id ? "Success" : "Failure"));
+    epages_log( __("Shop URL validation status: ") . ($valid_shop_id ? __("Success"  , 'epages') : __("Failure"  , 'epages')));
     update_option("epages_api_url_confirmed", $valid_shop_id);
   }
 
@@ -42,11 +42,12 @@ function epages_is_valid_api_response($response) {
         return true;
       }
     } catch (Exception $ex) {
-      epages_log("Exception while parsing the shop URL validation response.");
+      epages_log( __("Exception while parsing the shop URL validation response."  , 'epages') );
     }
   }
 
   return false;
 }
+
 
 ?>

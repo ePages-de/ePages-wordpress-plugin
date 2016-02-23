@@ -127,4 +127,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.media-modal-close span.media-modal-icon {
+    background-image: none;
+    float: right;
+    padding-right: 12px;
+}
 
+.media-modal-close {
+    position: absolute;
+    top: 12px;
+    }
