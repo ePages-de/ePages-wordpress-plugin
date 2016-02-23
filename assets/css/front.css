@@ -551,7 +551,6 @@ table.epages-shop-overlay-custom-attributes-table {
 }
 .epages-shop-overlay-product-image {
   width: auto;
-  max-height: 100px;
   display: block;
 }
 div.epages-shop-overlay-box-1 h2{
