@@ -2292,12 +2292,6 @@ h2 {
 }
 /**************************  Shop Widget   *************************/
 
-.epages-cart-button {
-    color: inherit !important;
-}
-.epages-cart-button:hover {
-    background-color: grey;
-}
 .epages-shop-search-form {
     float: left;
     margin-bottom: 10px;
@@ -2432,6 +2426,7 @@ a:hover {
 
 .epages-shop-overlay-buy-button {
     width: 100%;
+    background: #66BB6A !important;
     background-color: #66BB6A !important;
     -moz-border-radius: 18px !important;
     -webkit-border-radius: 18px !important;
@@ -2577,6 +2572,7 @@ div.epages-shop-variation {
 }
 .epages-cart-button {
     background-color: white !important;
+    background: white !important;
     float: right;
     cursor: pointer;
     border: 0;
@@ -2587,6 +2583,12 @@ div.epages-shop-variation {
     font-weight: bold;
     vertical-align: top;
     padding-left: 5px;
+}
+.epages-cart-button {
+    color: inherit !important;
+}
+.epages-cart-button:hover {
+    background-color: grey;
 }
 .epages-shop-product-list-image-container {
     margin-bottom: 10px;
@@ -2872,7 +2874,8 @@ th {
     vertical-align: middle;
     float: right;
     font-weight: bold;
-    background-color: #66BB6A;
+    background: #66BB6A !important;
+    background-color: #66BB6A !important;
     -moz-border-radius: 18px;
     -webkit-border-radius: 18px;
     border-radius: 18px;
