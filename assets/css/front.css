@@ -2762,9 +2762,7 @@ th {
         padding-left: 30%;
         align-self: center;
     }
-    .epages-cart-overlay-line-table tbody td:first-child {
-        display: none;
-    }
+
     .epages-cart-overlay-line-table td:nth-child(2) {
         font-weight: 800;
         border-top: 1px solid #ebebeb;
