@@ -2268,6 +2268,10 @@ h2 {
     margin-bottom: 40px;
     text-align: left;
 }
+
+.epages-shop-widget {
+  max-width: 800px;
+}
 .epages-shop-widget .epages-shop-product {
     float: left;
     margin-bottom: 10px;
@@ -2376,7 +2380,6 @@ a:hover {
 .epages-shop-overlay-box {
     float: left;
     min-width: 400px;
-    max-width: 490px;
     padding: 0 20px 0 10px;
 }
 .epages-shop-overlay-box-1 {
@@ -2458,6 +2461,7 @@ a:hover {
     transition: 0.6s;
     width: auto;
     display: block;
+    max-width: 490px;
 }
 .epages-shop-overlay-slideshow {
     display: inline-flex;
