@@ -392,12 +392,9 @@ h2 {
 .epages-shop-widget label {
     font-size: 80%;
 }
-.epages-shop-widget .epages-shop-navigation label {
-    font-size: 12px;
-}
 .epages-shop-widget .epages-shop-navigation,
 .epages-shop-widget .epages-shop-navigation select,
-.epages-shop-widget .epages-shop-navigation input {
+.epages-shop-widget .epages-shop-navigation input, label {
     font-size: 12px;
 }
 /**************************  Shop Widget   *************************/
@@ -413,17 +410,16 @@ h2 {
 }
 
 .epages-search-form>input[type="text"], input[type="search"], textarea, select {
+    max-width: 145px;
     background: none !important;
     border: 1px solid rgba(187, 187, 187, 0.5) !important;
-    padding: 0 17px !important;
     border-radius: 2px !important;
     font-family: "Montserrat", sans-serif !important;
-    font-size: 13px!important;
-    font-weight: 400!important;
-    font-style: normal!important;
-    line-height: 1.5em!important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
     text-transform: uppercase!important;
-    letter-spacing: 0.15em!important;
+    letter-spacing: 0.15em !important;
     line-height: initial !important;
     text-transform: none !important;
     letter-spacing: 0 !important;
@@ -441,6 +437,7 @@ h2 {
 }
 
 .epages-shop-sort>input[type="text"], input[type="search"], textarea, select {
+    max-width: 150px;
     background: none !important;
     border: 1px solid rgba(187, 187, 187, 0.5) !important;
     padding: 0 17px !important;
@@ -731,6 +728,7 @@ div.epages-shop-variation {
 .epages-cart-button {
     background-color: white !important;
     background: white !important;
+    padding: 0 !important;
     float: right;
     cursor: pointer;
     border: 0;
@@ -845,12 +843,12 @@ div.epages-shop-variation {
 }
 /**************************  Cart table *************************/
 
-table {
+.epages-cart-overlay > table {
     margin-bottom: 1.5em;
     border-collapse: separate !important;
     border: none !important;
 }
-th {
+.epages-cart-overlay > th {
     background-color: #fff !important;
 }
 .epages-cart-overlay table {
@@ -919,6 +917,7 @@ th {
 @media screen and (max-width: 600px) {
     .epages-cart-overlay-line-table table {
         width: 100%;
+        line-height: normal;
     }
     .epages-cart-overlay-line-table table td {
         text-align: left;
@@ -934,8 +933,7 @@ th {
         border: none !important;
     }
     .epages-cart-overlay-line-table tbody td {
-        padding-left: 30%;
-        align-self: center;
+        align-self: left;
     }
 
     .epages-cart-overlay-line-table td:nth-child(2) {
@@ -943,7 +941,7 @@ th {
         border-top: 1px solid #ebebeb;
     }
     .epages-cart-overlay-line-table td:nth-child(6) {
-        text-align: center;
+        text-align: left;
     }
     .epages-cart-overlay-line-table tr {
         font-weight: bold;
@@ -951,7 +949,7 @@ th {
     }
     .epages-cart-overlay-line-table tbody td {
         display: block;
-        text-align: center;
+        text-align: left;
     }
     .epages-cart-overlay-line-table tbody td:before {
         content: attr(data-th);
