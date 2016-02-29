@@ -1071,24 +1071,24 @@ input[type="submit"] {
     clear: both;
     text-align: center;
 }
-.shop-pagination li {
+.epages-shop-pagination li {
     display: inline;
     color: #fff;
 }
-.shop-pagination>li:first-child>a,
-.shop-pagination>li:first-child>span {
+.epages-shop-pagination>li:first-child>a,
+.epages-shop-pagination>li:first-child>span {
     margin-left: 0;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-.shop-pagination>li:last-child>a,
-.shop-pagination>li:last-child>span {
+.epages-shop-pagination>li:last-child>a,
+.epages-shop-pagination>li:last-child>span {
     margin-right: 0;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
-.shop-pagination>li>a,
-.shop-pagination>li>span {
+.epages-shop-pagination>li>a,
+.epages-shop-pagination>li>span {
     padding: 6px 12px;
     margin-left: -5px;
     color: #337ab7;
@@ -1096,7 +1096,7 @@ input[type="submit"] {
     background-color: #fff;
     border: 1px solid #dedede;
 }
-.shop-pagination>li.active>a {
+.epages-shop-pagination>li.active>a {
     background-color: #337ab7;
     color: #fff;
 }
@@ -1104,33 +1104,25 @@ input[type="submit"] {
     clear: both;
     text-align: center;
 }
-.shop-pagination>li {
+.epages-shop-pagination>li {
     display: inline-block;
     font-size: 6pt;
     color: #fff;
     padding-bottom: 10px;
 }
-.shop-pagination>li:first-child>a,
-.shop-pagination>li:first-child>span {
+.epages-shop-pagination>li:first-child>a,
+.epages-shop-pagination>li:first-child>span {
     margin-left: 0;
 }
-.shop-pagination>li:last-child>a,
-.shop-pagination>li:last-child>span {
+.epages-shop-pagination>li:last-child>a,
+.epages-shop-pagination>li:last-child>span {
     margin-right: 0;
 }
-.shop-pagination>li>a,
-.shop-pagination>li>span {
-    padding: 6px 12px;
-    margin-left: -5px;
-    color: #888888;
-    text-decoration: none;
-    background-color: #fff;
-}
-.shop-pagination>li.active>a {
+.epages-shop-pagination>li.active>a {
     background-color: #333333;
     color: #fff;
 }
 
-.shop-pagination>ul>li {
+.epages-shop-pagination>ul>li {
     padding: 0 !important;
 }
