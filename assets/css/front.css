@@ -735,12 +735,30 @@ div.epages-shop-variation {
     cursor: pointer;
     border: 0;
     outline: none;
-}
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.5em;
+  }
 .epages-cart-button span {
-    font-size: 16px;
-    font-weight: bold;
-    vertical-align: top;
-    padding-left: 5px;
+  display: inline-block;
+  padding: 0 8px;
+  margin-top: 5px;
+  margin-left: 10px;
+  min-width: 33px;
+  font-weight: 400;
+  height: 33px;
+  background-color: #a79d9d;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+  vertical-align: top;
+  line-height: 1.9;
+  font-family: serif;
 }
 .epages-cart-button {
     color: inherit !important;
