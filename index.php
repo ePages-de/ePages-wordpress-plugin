@@ -5,8 +5,8 @@ Plugin Name: ePages Online Shop
 Plugin URI: http://www.epages.com/us/
 Description: ePages Online Shop integration for WordPress.
 Version: 1.1
-Author: mindmatters
-Author URI: http://mindmatters.de/
+Author: ePages GmbH
+Author URI: http://www.epages.com/
 Text Domain: epages
 Domain Path: /languages
 */
