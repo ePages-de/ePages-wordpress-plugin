@@ -12,6 +12,8 @@
   <p><?php _e('Have a question? Visit our <a href="https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website">help center'  , 'epages'); ?></a></p>
   <p><?php _e('Your API URL is: ' , 'epages'); ?><b><?php echo get_option("epages_api_url" , 'epages') ?></b></p>
 
+  <a href="<?php echo get_option("epages_mbo_url") ?>"> <?php submit_button( __('Go to shop administration' , 'epages')) ?></a>
+
   <form method="post" action="options.php">
     <?php settings_fields("epages_options_page"); ?>
     <input type="hidden" name="epages_api_url" value="">
