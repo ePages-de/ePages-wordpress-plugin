@@ -698,6 +698,10 @@ div.epages-shop-variation {
     -moz-box-shadow: none;
     box-shadow: none;
 }
+
+.pico-content::-webkit-scrollbar {
+       width: 0 !important;
+   }
 /**************************** Shop Product  ********************************/
 
 .epages-shop-product-link {
