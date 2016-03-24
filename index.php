@@ -44,6 +44,7 @@ require_once EPAGES_PLUGIN_DIR . "/functions/load_template.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/options_page.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/register_shortcode.php";
 
+
 // Load actions
 require_once EPAGES_PLUGIN_DIR . "/actions/init.php";
 require_once EPAGES_PLUGIN_DIR . "/actions/add_options_page.php";
