@@ -65,6 +65,7 @@
             <?php _e('Show product sorting' ,'epages'); ?>
             <span class="tooltip" data-tooltip="Mark this checkbox, if you want to display a product sorting option in your product list view."><i class="fa fa-lg fa-info-circle"></i></span>
           </label>
+        </div>
         <div class="media-frame-toolbar">
           <div class="media-toolbar">
             <div class="media-toolbar-secondary">
