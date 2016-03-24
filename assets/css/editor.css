@@ -200,6 +200,11 @@ h4  {
 #epages-shop-button {
   float: right;
 }
+#epages-shop-remove-button {
+  font-family: FontAwesome;
+  content: "\f217";
+  padding-right: 5px;
+}
 
 .button-disconect {
     background: #f95c5c;

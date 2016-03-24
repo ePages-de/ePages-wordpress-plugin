@@ -185,7 +185,7 @@ window.ePagesShop = window.ePagesShop || {};
       },
       position: {
         top: function(placeholder) {
-          return placeholder.offset().top + 105;
+          return placeholder.offset().top + 150;
         },
         left: function(placeholder, button) {
           return placeholder.offset().left + placeholder.outerWidth() / 2 - button.outerWidth() / 2 - 2;
@@ -382,4 +382,3 @@ window.ePagesShop = window.ePagesShop || {};
   });
 
 }(window, document));
-
