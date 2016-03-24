@@ -65,8 +65,11 @@
             <?php _e('Show product sorting' ,'epages'); ?>
             <span class="tooltip" data-tooltip="Mark this checkbox, if you want to display a product sorting option in your product list view."><i class="fa fa-lg fa-info-circle"></i></span>
           </label>
-        </div>
 
+          <div>
+            <p><?php _e('Additionally, you can add a basket widget to your website using'  , 'epages'); ?> <a target="_blank" href="widgets.php"><?php _e('WordPress native widgets'  , 'epages'); ?></a>     </p>
+          </div>
+        </div>
         <div class="media-frame-toolbar">
           <div class="media-toolbar">
             <div class="media-toolbar-secondary">
