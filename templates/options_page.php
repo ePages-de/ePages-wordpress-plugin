@@ -29,7 +29,7 @@
       <b><a href="https://www.epages.co.uk/" target="_blank"><?php _e('Create your free Online Shop' , 'epages'); ?></a></b>
       <?php _e('If you already have an ePages Online Shop, move on to the next step.' , 'epages'); ?>
     </li>
-    <li><?php _e('Enter your API url here. ','epages'); ?><a href="https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website"><?php _e('Learn more' , 'epages'); ?></a> <?php _e('how to attain the URL' , 'epages'); ?></li>
+    <li><?php _e('Enter your API URL here. ','epages'); ?><a href="https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website"><?php _e('Learn more' , 'epages'); ?></a> <?php _e('how to attain the URL' , 'epages'); ?></li>
   </ol>
 
 
