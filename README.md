@@ -69,16 +69,17 @@ Our e-commerce software is available from [these hosting providers](http://www.e
 ** Installation for developers**
 The ePages WordPress plugin enables you to integrate [SITe](https://github.com/ePages-de/site) into your Wordpress blog / page.
 
-  - Setup
+* Setup
 
   ```bash
   docker-compose up
   docker-compose run db mysql -h sitewordpress_db_1 -pexample wordpress < db.sql
   ```
 
-  - Now visit [http://localhost:8080/](http://localhost:8080/)
+* Now visit [http://localhost:8080/](http://localhost:8080/)
 
-  - You can login as the user "admin" with password "admin".
+* You can login as the user "admin" with password "admin".
+
 
 ## Frequently Asked Questions
 
