@@ -85,10 +85,8 @@ FAQs will be available soon.
 = 0.1 =
 * Use the plugin to sell products from your ePages shop on WordPress.
 
-# SITe-Wordpress
-The ePages WordPress plugin enables you to integrate [SITe](https://github.com/ePages-de/site) into your Wordpress blog / page.
-
 ## Installation for developers
+The ePages WordPress plugin enables you to integrate [SITe](https://github.com/ePages-de/site) into your Wordpress blog / page.
 
   - Setup
 
