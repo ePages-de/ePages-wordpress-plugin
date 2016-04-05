@@ -1,20 +1,18 @@
 # ePages Online Shop
 
-Contributors: epages
+**Contributors**: epages
 
-Donate link: 
+**Tags**: cart, checkout, e-commerce, ecommerce, paypal, sales, sell, shop, store, storefront, digital goods, downloadable products, e-commerce, e-commerce, online shop, online store, product catalog, products, shopping, shopping cart, wordpress ecommerce, wp e-commerce
 
-Tags: cart, checkout, e-commerce, ecommerce, paypal, sales, sell, shop, store, storefront, digital goods, downloadable products, e-commerce, e-commerce, online shop, online store, product catalog, products, shopping, shopping cart, wordpress ecommerce, wp e-commerce
+**Requires at least**: 3.0.1
 
-Requires at least: 3.0.1
+**Tested up to**: 3.4
 
-Tested up to: 3.4
+**Stable tag**: 4.3
 
-Stable tag: 4.3
+**License**: MIT
 
-License: MIT
-
-License URI: https://opensource.org/licenses/MIT 
+**License URL**: https://opensource.org/licenses/MIT 
 
 Connect your ePages Online Shop with WordPress in less than 3 minutes.
 
