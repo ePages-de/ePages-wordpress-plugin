@@ -10,7 +10,7 @@ License URI: https://opensource.org/licenses/MIT
 
 Connect your ePages Online Shop with WordPress in less than 3 minutes.
 
-# Description
+## Description
 
 **Start selling on your site with the powerful ePages shop solution. Simply choose an ePages shop which meets your needs and download the free online shop plugin for WordPress.**
 
@@ -36,7 +36,7 @@ Discover all features [here](http://www.epages.com/en/features/ "All features")
 
 Our e-commerce software is available from [these hosting providers](http://www.epages.com/en/partner/provider/ "Hosting providers").
 
-== Installation ==
+## Installation
 
 **Automatic installation** (the easy way)
 
@@ -64,27 +64,9 @@ Our e-commerce software is available from [these hosting providers](http://www.e
 
 * Click *Upload Plugin* and choose the saved zip file (from step 1) in the appeared dialog window
 
-* Click Install
+* Click Install 
 
-# Frequently Asked Questions
-
-FAQs will be available soon.
-
-# Screenshots
-
-1. Product list view- screenshot-1.png. 
-2. Add products to a page - screenshot-2.png
-
-# Changelog
-= 0.1 =
-* Initial version
-
-# Upgrade Notice
-
-= 0.1 =
-* Use the plugin to sell products from your ePages shop on WordPress.
-
-# Installation for developers
+** Installation for developers**
 The ePages WordPress plugin enables you to integrate [SITe](https://github.com/ePages-de/site) into your Wordpress blog / page.
 
   - Setup
@@ -98,7 +80,24 @@ The ePages WordPress plugin enables you to integrate [SITe](https://github.com/e
 
   - You can login as the user "admin" with password "admin".
 
+## Frequently Asked Questions
+
+FAQs will be available soon.
+
+## Screenshots
+
+1. Product list view- screenshot-1.png. 
+2. Add products to a page - screenshot-2.png
+
+## Changelog
+= 0.1 =
+* Initial version
+
+## Upgrade Notice
+
+= 0.1 =
+* Use the plugin to sell products from your ePages shop on WordPress.
 
 
-# License
+## License
 SITe-Wordpress is released under the [MIT License](http://opensource.org/licenses/MIT).
