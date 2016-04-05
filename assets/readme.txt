@@ -72,8 +72,8 @@ FAQs will be available soon.
 
 == Screenshots ==
 
-1. Product list view- screenshot-1.png. 
-2. Add products to a page - screenshot-2.png
+1. Product list view
+2. Add products to a page
 
 == Changelog ==
 = 0.1 =
