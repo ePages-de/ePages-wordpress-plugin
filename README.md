@@ -18,7 +18,7 @@ See our plugin in action in [this](http://wordpress.epages.com/more-products/ "D
 
 Join the community of merchants using the largest independent online shop software in Europe. We make it easy: We take care of the security and the faultless functioning of your online shop software. All technical updates are carried out for you automatically and without any additional costs. Take advantage of this unique, all-inclusive e-commerce package.
 
-**Your advantages using the ePages online shop plugin**
+### Your advantages using the ePages online shop plugin
 
 * Easy integration: Just a few clicks and you can start selling. With CSS you can take care of further adjustments
 
