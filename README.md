@@ -1,7 +1,8 @@
 # ePages Online Shop
 
-***Contributors**: epages*
-***Tags**: cart, checkout, e-commerce, ecommerce, paypal, sales, sell, shop, store, storefront, digital goods, downloadable products, e-commerce, e-commerce, online shop, online store, product catalog, products, shopping, shopping cart, wordpress ecommerce, wp e-commerce*
+**Contributors**: epages
+
+**Tags**: cart, checkout, e-commerce, ecommerce, paypal, sales, sell, shop, store, storefront, digital goods, downloadable products, e-commerce, e-commerce, online shop, online store, product catalog, products, shopping, shopping cart, wordpress ecommerce, wp e-commerce
 
 **Requires at least**: 3.0.1
 
@@ -71,7 +72,8 @@ Our e-commerce software is available from [these hosting providers](http://www.e
 
 * Click Install 
 
-** Installation for developers**
+**Installation for developers**
+
 The ePages WordPress plugin enables you to integrate [SITe](https://github.com/ePages-de/site) into your Wordpress blog / page.
 
 * Setup
@@ -92,8 +94,8 @@ FAQs will be available soon.
 
 ## Screenshots
 
-1. Product list view- screenshot-1.png. 
-2. Add products to a page - screenshot-2.png
+1. Product list view
+2. Add products to a page
 
 ## Changelog
 = 0.1 =
