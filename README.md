@@ -86,7 +86,7 @@ FAQs will be available soon.
 * Use the plugin to sell products from your ePages shop on WordPress.
 
 # SITe-Wordpress
-SITe-Wordpress is a Wordpress Plugin to integrate [SITe](https://github.com/ePages-de/site) in your Wordpress Blog. SITe-Wordpress let you integrate your online shop in a easy way in all your Wordpress Posts.
+The ePages WordPress plugin enables you to integrate [SITe](https://github.com/ePages-de/site) into your Wordpress blog / page.
 
 ## Installation for developers
 
