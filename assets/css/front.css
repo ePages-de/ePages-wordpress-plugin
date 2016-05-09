@@ -23,29 +23,32 @@ select {
 .epages-shop-overlay h3 {
     font-size: 120%;
 }
-/****** Product buy button ******/
+/****** Buy & Checkout Button ******/
 
+.epages-shop-overlay-buy-button,
+.epages-cart-overlay-checkout-button {
+    background-color: #66BB6A;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 15px;
+    text-decoration: none;
+    text-shadow: none;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 15px auto;
+}
+.epages-shop-overlay-buy-button:hover,
+.epages-cart-overlay-checkout-button:hover {
+    background-color: #4CAF50;
+}
 .epages-shop-overlay-buy-button {
     width: 100%;
-    background: #66BB6A !important;
-    background-color: #66BB6A !important;
-    -moz-border-radius: 18px !important;
-    -webkit-border-radius: 18px !important;
-    border-radius: 18px !important;
-    border: none !important;
-    display: inline-block !important;
-    cursor: pointer !important;
-    color: #FFFFFF !important;
-    font-size: 18px !important;
-    padding: 16px 31px !important;
-    float: left !important;
-    text-decoration: none !important;
-    text-shadow: none !important;
-    text-align: center !important;
-    text-transform: uppercase !important;
-    margin: 0px auto !important;
-    margin-top: 15px !important;
-    margin-bottom: 15px !important;
 }
 .epages-shop-overlay-buy-button[disabled=disabled],
 .epages-shop-overlay-buy-button:disabled {
@@ -55,17 +58,7 @@ select {
 /**************************** Cart button  ********************************/
 
 .epages-cart-button {
-    background-color: white !important;
-    background: white !important;
     padding: 0 !important;
-    float: right;
-    cursor: pointer;
-    border: 0;
-    outline: none;
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-size: 36px;
     line-height: 1;
     color: inherit;
@@ -76,7 +69,6 @@ select {
   margin-top: 5px;
   margin-left: 10px;
   min-width: 33px;
-  font-weight: 400;
   height: 33px;
   background-color: #a79d9d;
   border-radius: 20px;
@@ -87,37 +79,7 @@ select {
   line-height: 1.9;
 }
 .epages-cart-button:hover {
-    background-color: grey;
-}
-
-/****** Checkout button ******/
-
-.epages-cart-overlay-checkout-button {
-    vertical-align: middle;
-    font-weight: bold;
-    background: #66BB6A !important;
-    background-color: #66BB6A !important;
-    -moz-border-radius: 18px;
-    -webkit-border-radius: 18px;
-    border-radius: 18px;
-    border: none;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 18px;
-    text-decoration: none;
-    text-shadow: none;
-    padding: 15px;
-}
-.epages-cart-overlay-checkout-button:hover {
-    background-color: #4CAF50;
-}
-.epages-cart-overlay-checkout-button button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    text-align: center;
-    background-color: white;
+    background-color: #fff !important;
 }
 
 /****** Remove from basket button ******/
