@@ -1,6 +1,4 @@
 /**************************  Search & Filter Form  *************************/
-
-
 .epages-search-form>input[type="text"],
 .epages-shop-sort>input[type="text"],
 input[type="search"],
@@ -16,15 +14,11 @@ select {
     height: 3.35em !important;
     margin-bottom: 1.85em !important;
 }
-
-
 /**************************** Product overlay window  ********************************/
-
 .epages-shop-overlay h3 {
     font-size: 120%;
 }
 /****** Buy & Checkout Button ******/
-
 .epages-shop-overlay-buy-button,
 .epages-cart-overlay-checkout-button {
     background-color: #66BB6A;
@@ -54,9 +48,7 @@ select {
 .epages-shop-overlay-buy-button:disabled {
     color: #ddd;
 }
-
 /**************************** Cart button  ********************************/
-
 .epages-cart-button {
     padding: 0 !important;
     font-size: 36px;
@@ -81,14 +73,14 @@ select {
 .epages-cart-button:hover {
     background-color: #fff !important;
 }
-
 /****** Remove from basket button ******/
-
 .epages-cart-overlay-line-item-remove::before {
     color: #575757;
 }
-
 /***** Zerif responsive fixes *****/
+.epages-shop-product-list {
+    margin-top: 0;
+}
 @media (min-width: 460px) and (max-width: 559px) {
     .epages-shop-widget .epages-shop-product {
         width: 50%;
