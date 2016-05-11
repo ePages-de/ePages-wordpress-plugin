@@ -43,48 +43,64 @@ Discover all features [here](http://www.epages.com/en/features/ "All features")
 Our e-commerce software is available from [these hosting providers](http://www.epages.com/en/partner/provider/ "Hosting providers").
 
 ## Installation
+#### Automatic installation
 
-**Automatic installation** (the easy way)
+**Setting up your online shop**
 
-* In your WordPress admin backend, navigate to *Plugins* → *Add New*
+1. Visit one of [our partners](http://www.epages.com/en/partner/provider/ "Partners"), select a shop package that suits your needs and register your shop. 
+2. Set up your shop. Find further support in our [help center](https://www.online-help-center.com/ "Help center").  
+While setting up your shop you should especially take care of these steps:
+  * Run the setup assistant
+  * Start with adding your products
+  * Set up one or more delivery methods
+  * Set up one or more payment methods
+  * Add legal texts (e.g. terms and conditions). You also have to add these texts to your WordPress website. 
 
-* Under Search, type in *ePages Online Shop* and click Search*
+**Installing the WordPress plugin**
 
-* In the search results find the *ePages Online Shop* plugin and click Install now to install it
+1. In the administration area of your WordPress website, select *Plugins* and then *Add new*.
+2. Enter 'ePages e-commerce' into the search field in the upper right corner.
+3. Select *Install now* for the ePages Online Shop plugin. 
+4. Select *Activate this plugin*.
+5. In your shop’s administration area, select *Help* in the main menu.
+6. At the bottom of the page, your API URL is displayed. Copy the API URL. 
+7. In the administration area of your WordPress website, select Online Shop.
+8. Paste the complete API URL into the field which is shown below step 2.
+9. Save the changes. 
+Your shop and your WordPress website are now connected. Your WordPress site isset to display products from your shop on pages or in blog posts. 
 
-* When plugin is installed click *Activate Plugin* link
+**Adding products to pages of your WordPress website**
 
-* Navigate to *Online Shop* → General page in your WordPress admin backend and follow the instruction provided there
+1. In the administration area of your WordPress website, open the page or post you want to add products to. 
+2. Place the cursor where you want to display the products. 
+3. Select the button *Add shop*.
+4. Here you can determine if you want to display all of your products or only products of a certain category. If you choose the latter, you can then define which category you want to display. 
+5. Select *Appearance*.
+6. Here you can define if the following elements should be shown: 
+  * A search field with which visitors can search for products
+  * A selected category
+  * The possibility to sort products by their name or price (ascending or descending)
+7. Save the changes.
+8. If you already published this page or post before, select *Update*. If not, select *Publish*.
+The products are now displayed on that page or post and can be ordered by your visitors. 
+If you want to edit the settings for this page or post later on, open the page or post in the administration area of your WordPress site and select *Edit* for the shop element. 
 
-* Get a shop from one of [these hosting providers](http://www.epages.com/en/partner/provider/ "Hosting providers") or enter the backoffice of your existing shop (backoffice> help). Then copy the API URL, which is displayed on the bottom of the help page. 
-
-* Paste the API URL into the plugin configuration page (see step 5)
-
-* Done. You can now add your online shop to any WordPress page or post. Just click ‘Add shop’
-
-**Uploading the plugin zip archive in WordPress admin backend**
+#### Uploading the plugin zip archive in WordPress admin backend
 
 * Download the *ePages Online Shop* plugin from the [GitHub repository](https://github.com/ePages-de/ePages-wordpress-plugin "Download")
-
 * In your WordPress admin backend, navigate to *Plugins* → *Add New*
-
 * Click *Upload Plugin* and choose the saved zip file (from step 1) in the appeared dialog window
+* Click *Install* 
 
-* Click Install 
-
-**Installation for developers**
+#### Installation for developers
 
 The ePages WordPress plugin enables you to integrate [SITe](https://github.com/ePages-de/site) into your Wordpress blog / page.
-
 * Setup
-
   ```bash
   docker-compose up
   docker-compose run db mysql -h sitewordpress_db_1 -pexample wordpress < db.sql
   ```
-
 * Now visit [http://localhost:8080/](http://localhost:8080/)
-
 * You can login as the user "admin" with password "admin".
 
 
