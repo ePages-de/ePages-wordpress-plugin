@@ -1,12 +1,12 @@
 === ePages Online Shop ===
 Contributors: epages
-Donate link: 
+Donate link:
 Tags: cart, checkout, e-commerce, ecommerce, paypal, sales, sell, shop, store, storefront, digital goods, downloadable products, e-commerce, e-commerce, online shop, online store, product catalog, products, shopping, shopping cart, wordpress ecommerce, wp e-commerce
 Requires at least: 3.0.1
 Tested up to: 3.4
 Stable tag: 4.6
 License: MIT
-License URI: https://opensource.org/licenses/MIT 
+License URI: https://opensource.org/licenses/MIT
 
 Connect your ePages Online Shop with WordPress in less than 3 minutes.
 
@@ -50,7 +50,7 @@ Our e-commerce software is available from [these hosting providers](http://www.e
 
 * Navigate to *Online Shop* → General page in your WordPress admin backend and follow the instruction provided there
 
-* Get a shop from one of [these hosting providers](http://www.epages.com/en/partner/provider/ "Hosting providers") or enter the backoffice of your existing shop (backoffice> help). Then copy the API URL, which is displayed on the bottom of the help page. 
+* Get a shop from one of [these hosting providers](http://www.epages.com/en/partner/provider/ "Hosting providers") or enter the backoffice of your existing shop (backoffice> help). Then copy the API URL, which is displayed on the bottom of the help page.
 
 * Paste the API URL into the plugin configuration page (see step 5)
 
@@ -72,8 +72,8 @@ FAQs will be available soon.
 
 == Screenshots ==
 
-1. Product list view
-2. Add products to a page
+1. Product list view- screenshot-1.png.
+2. Add products to a page - screenshot-2.png
 
 == Changelog ==
 = 0.1 =
