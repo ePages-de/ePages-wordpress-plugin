@@ -89,9 +89,6 @@ The ePages WordPress plugin enables you to integrate [SITe](https://github.com/e
 
 
 ## Frequently Asked Questions
-
-## Frequently Asked Questions
-
 **How does the plugin work on my WordPress site?**
 As soon as the plugin is installed, products will be showcased on selected pages or posts. If a customer clicks on one of the products, an overlay window opens up with further details on the product. The established ePages check out process will be activated, as soon as the customer adds all selected products to the shopping basket and wants to proceed with the order. 
 
