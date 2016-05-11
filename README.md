@@ -43,7 +43,7 @@ Discover all features [here](http://www.epages.com/en/features/ "All features")
 Our e-commerce software is available from [these hosting providers](http://www.epages.com/en/partner/provider/ "Hosting providers").
 
 ## Installation
-### Automatic installation
+### Automatic installation (the easy way)
 
 **Setting up your online shop**
 
@@ -126,8 +126,12 @@ This manual (LINK will be available soon) gives you more details on the plugin i
 2. Add products to a page
 
 ## Changelog
+
+= 4.6 =
+* Bugfixes and improvements on the beta version
+
 = 0.1 =
-* Initial version
+* Initial beta version
 
 ## Upgrade Notice
 
