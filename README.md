@@ -43,7 +43,7 @@ Discover all features [here](http://www.epages.com/en/features/ "All features")
 Our e-commerce software is available from [these hosting providers](http://www.epages.com/en/partner/provider/ "Hosting providers").
 
 ## Installation
-#### Automatic installation
+### Automatic installation
 
 **Setting up your online shop**
 
@@ -85,14 +85,14 @@ Your shop and your WordPress website are now connected. Your WordPress site isse
 The products are now displayed on that page or post and can be ordered by your visitors. 
 If you want to edit the settings for this page or post later on, open the page or post in the administration area of your WordPress site and select *Edit* for the shop element. 
 
-#### Uploading the plugin zip archive in WordPress admin backend
+### Uploading the plugin zip archive in WordPress admin backend
 
 * Download the *ePages Online Shop* plugin from the [GitHub repository](https://github.com/ePages-de/ePages-wordpress-plugin "Download")
 * In your WordPress admin backend, navigate to *Plugins* → *Add New*
 * Click *Upload Plugin* and choose the saved zip file (from step 1) in the appeared dialog window
 * Click *Install* 
 
-#### Installation for developers
+### Installation for developers
 
 The ePages WordPress plugin enables you to integrate [SITe](https://github.com/ePages-de/site) into your Wordpress blog / page.
 * Setup
