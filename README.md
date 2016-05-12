@@ -45,6 +45,8 @@ Our e-commerce software is available from [these hosting providers](http://www.e
 ## Installation
 ### Automatic installation (the easy way)
 
+Please refer to this [article](http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf "Setup guide") for detailed guidance and screenshots.
+
 **Setting up your online shop**
 
 1. Visit one of [our partners](http://www.epages.com/en/partner/provider/ "Partners"), select a shop package that suits your needs and register your shop. 
