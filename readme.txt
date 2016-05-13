@@ -120,7 +120,7 @@ Some legal aspects, for example, the terms and conditions, need to be added to t
 Using CSS it is easy to change the design of your e-commerce pages on your WordPress site. With ePages software, the check out process can also be adapted. 
 
 **Where can I find more details regarding the installation of the plugin?**
-This manual (LINK will be available soon) gives you more details on the plugin installation.
+This [manual](http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf "Setup guide") gives you more details on the plugin installation.
 
 == Screenshots ==
 
