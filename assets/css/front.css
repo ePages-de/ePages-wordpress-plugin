@@ -4,78 +4,83 @@
 input[type="search"],
 textarea,
 select {
-    max-width: 150px;
-    border: 1px solid rgba(187, 187, 187, 0.5) !important;
-    border-radius: 2px !important;
-    padding: 0 17px !important;
-    font:400 13px "Montserrat",sans-serif !important;
-    -webkit-transition: all 0.3s cubic-bezier( 0.5, 0.2, 0.5, 1 ) !important;
-    transition: all 0.3s cubic-bezier( 0.5, 0.2, 0.5, 1 )!important;
-    height: 3.35em !important;
-    margin-bottom: 1.85em !important;
+  max-width: 150px;
+  border: 1px solid rgba(187, 187, 187, 0.5) !important;
+  border-radius: 2px !important;
+  padding: 0 17px !important;
+  font:400 13px "Montserrat",sans-serif !important;
+  -webkit-transition: all 0.3s cubic-bezier( 0.5, 0.2, 0.5, 1 ) !important;
+  transition: all 0.3s cubic-bezier( 0.5, 0.2, 0.5, 1 )!important;
+  height: 3.35em !important;
+  margin-bottom: 1.85em !important;
 }
 /**************************** Product overlay window  ********************************/
 .epages-shop-overlay h3 {
-    font-size: 120%;
+  font-size: 120%;
 }
 /****** Buy & Checkout Button ******/
 .epages-shop-overlay-buy-button,
 .epages-cart-overlay-checkout-button {
-    background-color: #66BB6A;
-    -moz-border-radius: 18px;
-    -webkit-border-radius: 18px;
-    border-radius: 18px;
-    border: none;
-    display: inline-block;
-    cursor: pointer;
-    color: #FFFFFF;
-    font-size: 18px;
-    padding: 15px;
-    text-decoration: none;
-    text-shadow: none;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 15px auto;
+  background-color: #66BB6A;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+  border-radius: 18px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 15px;
+  text-decoration: none;
+  text-shadow: none;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 15px auto;
 }
 .epages-shop-overlay-buy-button:hover,
 .epages-cart-overlay-checkout-button:hover {
-    background-color: #4CAF50;
+  background-color: #4CAF50;
 }
 .epages-shop-overlay-buy-button {
-    width: 100%;
+  width: 100%;
 }
 .epages-shop-overlay-buy-button[disabled=disabled],
 .epages-shop-overlay-buy-button:disabled {
-    color: #ddd;
+  color: #ddd;
 }
 /**************************** Cart button  ********************************/
 .epages-cart-button,
 .epages-cart-button:hover,
 .epages-cart-button:active,
 .epages-cart-button:visited {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
-    background-color: transparent !important;
-    padding: 0 !important;
-    font-size: 36px;
-    line-height: 1;
-    color: inherit;
-  }
-.epages-cart-button span {
-  display: inline-block;
-  padding: 0 8px;
-  margin-top: 5px;
-  margin-left: 10px;
-  min-width: 33px;
-  height: 33px;
-  background-color: #a79d9d;
-  border-radius: 20px;
-  color: #fff;
-  font-size: 17px;
-  text-align: center;
-  vertical-align: top;
-  line-height: 1.9;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  font-size: 36px !important;
+  line-height: 1 !important;
+  color: inherit !important;
 }
+.epages-cart-button i {
+  vertical-align: middle !important;
+  font-size: inherit !important;
+}
+.epages-cart-button span {
+	background-color: #a79d9d !important;
+  border-radius: 20px !important;
+  color: #fff !important;
+  display: inline-block !important;
+  font-size: 17px !important;
+  height: 33px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.9 !important;
+  margin-left: 10px !important;
+  margin-top: 5px !important;
+  min-width: 33px !important;
+  padding: 0 8px !important;
+  text-align: center !important;
+  vertical-align: top !important;
+ }
 /****** Remove from basket button ******/
 .epages-cart-overlay-line-item-remove::before {
-    color: #575757;
+  color: #575757;
 }
