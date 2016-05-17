@@ -14,33 +14,43 @@
 
 **License URL**: https://opensource.org/licenses/MIT 
 
-Connect your ePages Online Shop with WordPress in less than 3 minutes.
+Selling made easy: Turn your WordPress site into an online shop with the ePages plugin.
 
 ## Description
 
-**Start selling on your site with the powerful ePages shop solution. Simply choose an ePages shop which meets your needs and download the free online shop plugin for WordPress.**
+**Selling online with ePages** 
+More than 140,000 companies are already taking advantage of the all-in-one shop solution offered by ePages. If you are running a WordPress site or blog you can now also benefit from this powerful e-commerce plugin and sell your products online with ease.
 
-See our plugin in action in [this](http://wordpress.epages.com/more-products/ "Demo") demo.
+**Advantages of the ePages Online Shop Plugin**
 
-Join the community of merchants using the largest independent online shop software in Europe. We make it easy: We take care of the security and the faultless functioning of your online shop software. All technical updates are carried out for you automatically and without any additional costs. Take advantage of this unique, all-inclusive e-commerce package.
+* **Easy integration**: With just a few clicks, e-commerce functionality is added seamlessly to your WordPress site.
+*	**Feature rich, low cost**: No need to pay for expensive add-ons. The plugin offers a strong core feature set with access to Amazon, eBay, PayPal, Amazon Payments and many more.
+* **Proven back office**: Rest assured that your shop administration area is fully optimised. Manage products and orders, payments, shipping and taxes with ease.
+* **High compatibility**: ePages Online Shop plugin works brilliantly on any WordPress site and is compatible with most frameworks and themes. Have you built your own theme? Find out more about integrating the plugin at [GitHub](https://github.com/ePages-de/ePages-wordpress-plugin "GitHub")
+* **Selling successfully**: The plugin equips you to easily meet all legal requirements and delivers a secure check out process.
+* **Free and automatic updates**: With the ePages cloud solution, you can relax knowing that you will receive all security and version updates as well as backups automatically and for free.
 
-### Your advantages using the ePages online shop plugin
+**Powerful features of your ePages shop**
 
-* Easy integration: Just a few clicks and you can start selling. With CSS you can take care of further adjustments
+* Sell up to 1000 products
+* Also create product variations and downloadable products
+* Showcase your products with a slideshow
+* Let your customers choose in-between various payment options (e.g. PayPal Express)
+* Offer a SSL-secured checkout
+* Sell on eBay and Amazon
+* Let your customers pick their preferred shipment method
+* Easy management with import or export of data 
+* Print invoices, packing slips and credit notes 
+* Customize your shop further with the App & Theme Store
+* Soon available: Sage One integration and coupons
 
-* Competitive price
+**How to get started**
 
-* Powerful ordering process: SSL secured checkout with plenty of payments
+Explore how your website could look like with the [ePages Online Shop Plugin](http://wordpress.epages.com/more-products/ "Demo").
 
-* Ease of use: All e-commerce settings will be done through the established ePages administration area
+ePages shops are offered by many providers worldwide. Simply select a package from one of [our partners](http://www.epages.com/en/partner/provider/ "Resellers") that best meets your needs, install the free ePages online shop plugin for WordPress and hit the ground running in e-commerce.
 
-* 60+ services and integrations (e.g. PayPal, Amazon, DHL) available
-
-* Automated updates
-
-Discover all features [here](http://www.epages.com/en/features/ "All features")
-
-Our e-commerce software is available from [these hosting providers](http://www.epages.com/en/partner/provider/ "Hosting providers").
+Please note: The availability of features may depend upon on the specific plan you have choosen from your provider.
 
 ## Installation
 ### Automatic installation (the easy way)
