@@ -33,6 +33,7 @@ static $siteUrl = "https://site-production.herokuapp.com/site.js";
 // "Authorization" => "Bearer M0mPgTiGPtw5LkdCGwhel3gcGc5PqIPF",
 static $epages_api_http_options = array(
   "headers" => array(
+    "user-agent"    => "epages-WP",
     "Accept"        => "application/vnd.epages.v1+json"
   ),
 );
