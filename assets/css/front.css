@@ -14,6 +14,9 @@ select {
   height: 3.35em !important;
   margin-bottom: 1.85em !important;
 }
+select {
+  padding-right: 0 !important;
+}
 /**************************** Product overlay window  ********************************/
 .epages-shop-overlay h3 {
   font-size: 120%;
