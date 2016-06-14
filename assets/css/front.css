@@ -1,13 +1,10 @@
 /**************************  Search & Filter Form  *************************/
 .epages-search-form>input[type="text"],
 .epages-shop-sort>input[type="text"],
-input[type="search"],
-textarea,
-select {
-  max-width: 150px;
+.epages-shop-navigation select {
+  width: 200px;
   border: 1px solid rgba(187, 187, 187, 0.5) !important;
   border-radius: 2px !important;
-  padding: 0 17px !important;
   font:400 13px "Montserrat",sans-serif !important;
   -webkit-transition: all 0.3s cubic-bezier( 0.5, 0.2, 0.5, 1 ) !important;
   transition: all 0.3s cubic-bezier( 0.5, 0.2, 0.5, 1 )!important;
