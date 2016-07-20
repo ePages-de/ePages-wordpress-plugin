@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Mon Feb 22 2016 11:44:54 GMT+0100 (CET)\n"
 "PO-Revision-Date: Mon Feb 22 2016 18:06:11 GMT+0100 (CET)\n"
-"Last-Translator: Overlord <d.ignatieva@epages.com>\n"
+"Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
 "Language: German\n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
@@ -21,14 +21,6 @@ msgstr ""
 "X-Loco-Target-Locale: de_DE\n"
 "X-Generator: Loco - https://localise.biz/\n"
 "X-Poedit-SearchPath-0: ."
-
-#: ../templates/popup.php:54
-msgid ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
-msgstr ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
 
 #. Name of the plugin
 msgid "ePages Online Shop"
@@ -57,6 +49,10 @@ msgstr "Plugin-Datei kann nicht direkt aufgerufen werden."
 #: ../actions/add_editor_button.php:5
 msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Add Shop</a>"
 msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Shop hinzufügen</a>"
+
+#: ../actions/add_editor_button.php:5
+msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Edit Shop</a>"
+msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Shop bearbeiten</a>"
 
 #: ../actions/add_options_page.php:4
 msgid "Online Shop Settings"
@@ -111,38 +107,29 @@ msgid "Congratulations! Your Online Shop is now connected with your Website!"
 msgstr "Ihr Onlineshop wurde erfolgreich mit Ihrer Website verknüpft."
 
 #: ../templates/options_page.php:10
-msgid ""
-"Now you can add your Online Shop to any Wordpress page or post. Just click "
-"the Add Online Shop button."
-msgstr ""
-"Sie können nun Ihren Onlineshop jeder WordPress-Seite bzw. jedem WordPress-"
-"Beitrag hinzufügen. Klicken Sie zum Hinzufügen eines neuen Beitrags einfach "
-"auf 'Shop hinzufügen'."
+msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the Add Online Shop button."
+msgstr "Sie können nun Ihren Onlineshop jeder WordPress-Seite bzw. jedem WordPress-Beitrag hinzufügen. Klicken Sie zum Hinzufügen eines neuen Beitrags einfach auf 'Shop hinzufügen'."
 
 #: ../templates/options_page.php:11
-msgid ""
-"After that click Edit to edit product and appearance settings for Online "
-"Shop for this page or post."
-msgstr ""
-"Anschließend haben Sie die Möglichkeit, die Produkt- und "
-"Anzeigeeinstellungen Ihres Onlineshops für diese Seite oder diesen Beitrag "
-"zu bearbeiten. Sie können diese Einstellungen jederzeit durch Klicken auf "
-"'Shop bearbeiten' ändern.\""
+msgid "After that click Edit to edit product and appearance settings for Online Shop for this page or post."
+msgstr "Anschließend haben Sie die Möglichkeit, die Produkt- und Anzeigeeinstellungen Ihres Onlineshops für diese Seite oder diesen Beitrag zu bearbeiten. Sie können diese Einstellungen jederzeit durch Klicken auf 'Shop bearbeiten' ändern.\""
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid ""
-"Have a question? Visit our <a href=\"https://www.online-help-center."
-"com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
-msgstr ""
-"Sie haben Fragen? Dann besuchen Sie einfach unser <a href=\"https://www."
-"online-help-center.com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\"> Hilfecenter"
+msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
+msgstr "Sie haben Fragen? Dann besuchen Sie einfach unser <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\"> Hilfecenter"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "
 msgstr "Ihre API URL lautet:"
+
+#: ../templates/options_page.php:14
+msgid "Go to shop administration"
+msgstr "Zur Shop-Administration"
+
+#: ../templates/options_page.php:15
+msgid "Add shop to the page"
+msgstr "Shop zur Seite hinzufügen"
 
 #: ../templates/options_page.php:19
 msgid "Disconnect Online Shop"
@@ -150,9 +137,7 @@ msgstr "Verknüpfung zum Onlineshop trennen"
 
 #: ../templates/options_page.php:22
 msgid "There are just a few steps left to start selling on your Wordpress site"
-msgstr ""
-"In wenigen Schritten können Sie mit dem Verkauf auf Ihrer WordPress-Website "
-"beginnen."
+msgstr "In wenigen Schritten können Sie mit dem Verkauf auf Ihrer WordPress-Website beginnen."
 
 #: ../templates/options_page.php:25
 msgid "Create your free Online Shop"
@@ -160,9 +145,7 @@ msgstr "Erstellen Sie Ihren kostenlosen Onlineshop"
 
 #: ../templates/options_page.php:26
 msgid "If you already have an ePages Online Shop, move on to the next step."
-msgstr ""
-"Wenn Sie bereits über einen ePages-Onlineshop verfügen, fahren Sie mit dem "
-"nächsten Schritt fort."
+msgstr "Wenn Sie bereits über einen ePages-Onlineshop verfügen, fahren Sie mit dem nächsten Schritt fort."
 
 #: ../templates/options_page.php:28
 msgid "Enter your API url here. "
@@ -212,13 +195,25 @@ msgstr "Wie soll Ihr Onlineshop aussehen?"
 msgid "Show search field"
 msgstr "Suchfeld anzeigen"
 
+#: ../templates/popup.php:54
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
+msgstr "data-tooltip=\"Markieren Sie diese Checkbox, wenn in der Produktlistenansicht ein Suchfeld angezeigt werden soll.\">"
+
 #: ../templates/popup.php:59
 msgid "Show category selection"
 msgstr "Kategorieauswahl anzeigen"
 
+#: ../templates/popup.php:60
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a category selection dropdown menu in your product list view.\">"
+msgstr "data-tooltip=\"Markieren Sie diese Checkbox, wenn in der Produktlistenansicht ein Dropdown-Menü zur Kategorie-Auswahl angezeigt werden soll.\">"
+
 #: ../templates/popup.php:65
 msgid "Show product sorting"
 msgstr "Produktsortierung anzeigen"
+
+#: ../templates/popup.php:66
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a product sorting option in your product list view.\">"
+msgstr "data-tooltip=\"Markieren Sie diese Checkbox, wenn in der Produktlistenansicht eine Option zur Produktsortierung angezeigt werden soll.\">"
 
 #: ../templates/popup.php:75
 msgid "Plugin settings"

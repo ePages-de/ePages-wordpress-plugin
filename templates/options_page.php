@@ -11,8 +11,8 @@
 
   <div id="setting-error-tgmpa" class="updated settings-error notice">
   <h4><strong> <?php _e('Your API URL is: ' , 'epages'); ?> <em><?php echo get_option("epages_api_url" , 'epages') ?></b></em></strong></h4>
-  <p><strong><a target="_blank" href="<?php echo get_option("epages_mbo_url") ?>">Go to shop administration</a>
-    | <a class="dismiss-notice" href="/wp-admin/edit.php?post_type=page" target="_parent">Add shop to the page</a></strong></p><p></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>
+  <p><strong><a target="_blank" href="<?php echo get_option("epages_mbo_url") ?>"><?php _e('Go to shop administration' , 'epages'); ?></a>
+    | <a class="dismiss-notice" href="/wp-admin/edit.php?post_type=page" target="_parent"><?php _e('Add shop to the page' , 'epages'); ?></a></strong></p><p></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>
   <div class="md-8 pull-right">
   <form method="post" action="options.php">
     <?php settings_fields("epages_options_page"); ?>

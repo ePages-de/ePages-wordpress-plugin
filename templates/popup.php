@@ -57,13 +57,13 @@
           <label>
             <input type="checkbox" value="category-list" class="epages-option-category-list">
             <?php _e('Show category selection' ,'epages'); ?>
-            <span class="tooltip" data-tooltip="Mark this checkbox, if you want to display a category selection dropdown menu in your product list view."><i class="fa fa-lg fa-info-circle"></i></span>
+            <span class="tooltip" <?php _e('data-tooltip="Mark this checkbox, if you want to display a category selection dropdown menu in your product list view.">' ,'epages'); ?><i class="fa fa-lg fa-info-circle"></i></span>
           </label>
 
           <label>
             <input type="checkbox" value="sort" checked="checked" class="epages-option-sort">
             <?php _e('Show product sorting' ,'epages'); ?>
-            <span class="tooltip" data-tooltip="Mark this checkbox, if you want to display a product sorting option in your product list view."><i class="fa fa-lg fa-info-circle"></i></span>
+            <span class="tooltip" <?php _e('data-tooltip="Mark this checkbox, if you want to display a product sorting option in your product list view.">' ,'epages'); ?><i class="fa fa-lg fa-info-circle"></i></span>
           </label>
         </div>
         <div class="media-frame-toolbar">

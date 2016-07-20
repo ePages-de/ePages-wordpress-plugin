@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Feb 23 2016 10:59:10 GMT+0100 (CET)\n"
 "PO-Revision-Date: Tue Feb 23 2016 11:30:24 GMT+0100 (CET)\n"
-"Last-Translator: Overlord <d.ignatieva@epages.com>\n"
+"Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
 "Language: Swedish\n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
@@ -50,6 +50,10 @@ msgstr "Det går inte att få direkt åtkomst till plugin-filen."
 msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Add Shop</a>"
 msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Lägg till butik</a>"
 
+#: ../actions/add_editor_button.php:5
+msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Edit Shop</a>"
+msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Redigera butik</a>"
+
 #: ../actions/add_options_page.php:4
 msgid "Online Shop Settings"
 msgstr "Inställningar för onlinebutik"
@@ -73,6 +77,14 @@ msgstr "<strong>ePages inställningar</strong>"
 #: ../actions/show_admin_message.php:7
 msgid "to to set up the plugin."
 msgstr "för att konfigurera pluginprogrammet."
+
+#: ../templates/options_page.php:14
+msgid "Go to shop administration"
+msgstr "Gå till butiksadministration"
+
+#: ../templates/options_page.php:15
+msgid "Add shop to the page"
+msgstr "Lägg till butik på sidan"
 
 #: ../functions/options_page.php:17
 msgid "Trying to validate shop URL: "
@@ -103,32 +115,17 @@ msgid "Congratulations! Your Online Shop is now connected with your Website!"
 msgstr "Grattis! Din onlinebutik är nu ansluten till din webbsida."
 
 #: ../templates/options_page.php:10
-msgid ""
-"Now you can add your Online Shop to any Wordpress page or post. Just click "
-"the Add Online Shop button."
-msgstr ""
-"Nu kan du lägga till din onlinebutik på valfri WordPress-sida eller i ett "
-"inlägg. Klicka på Lägg till butik när du skapar ett nytt inlägg."
+msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the Add Online Shop button."
+msgstr "Nu kan du lägga till din onlinebutik på valfri WordPress-sida eller i ett inlägg. Klicka på Lägg till butik när du skapar ett nytt inlägg."
 
 #: ../templates/options_page.php:11
-msgid ""
-"After that click Edit to edit product and appearance settings for Online "
-"Shop for this page or post."
-msgstr ""
-"Sedan kan du redigera inställningar för produkten och onlinebutikens "
-"utseende för sidan eller inlägget. Du kan alltid ändra inställningarna genom "
-"att klicka på Redigera butik."
+msgid "After that click Edit to edit product and appearance settings for Online Shop for this page or post."
+msgstr "Sedan kan du redigera inställningar för produkten och onlinebutikens utseende för sidan eller inlägget. Du kan alltid ändra inställningarna genom att klicka på Redigera butik."
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid ""
-"Have a question? Visit our <a href=\"https://www.online-help-center."
-"com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
-msgstr ""
-"Har du frågor? Besök vårt <a href=\"https://www.online-help-center."
-"com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">Hjälpcenter"
+msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
+msgstr "Har du frågor? Besök vårt <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">Hjälpcenter"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "
@@ -140,9 +137,7 @@ msgstr "Avbryt anslutningen till onlinebutiken"
 
 #: ../templates/options_page.php:22
 msgid "There are just a few steps left to start selling on your Wordpress site"
-msgstr ""
-"<strong>Nu återstår bara ett par steg, innan du kan börja sälja på din "
-"webbplats från WordPress</strong>"
+msgstr "<strong>Nu återstår bara ett par steg, innan du kan börja sälja på din webbplats från WordPress</strong>"
 
 #: ../templates/options_page.php:25
 msgid "Create your free Online Shop"
@@ -201,20 +196,24 @@ msgid "Show search field"
 msgstr "Visa sökfält"
 
 #: ../templates/popup.php:54
-msgid ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
-msgstr ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
+msgstr "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
 
 #: ../templates/popup.php:59
 msgid "Show category selection"
 msgstr "Visa kategorival"
 
+#: ../templates/popup.php:60
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a category selection dropdown menu in your product list view.\">"
+msgstr "data-tooltip=\"Markera den här kryssrutan om du vill visa en listrutemeny för kategorival i produktlistvyn.\">"
+
 #: ../templates/popup.php:65
 msgid "Show product sorting"
 msgstr "Visa produktsortering"
+
+#: ../templates/popup.php:66
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a product sorting option in your product list view.\">"
+msgstr "data-tooltip=\"Markera den här kryssrutan om du vill visa ett alternativ för produktsortering i produktlistvyn.\">"
 
 #: ../templates/popup.php:75
 msgid "Plugin settings"

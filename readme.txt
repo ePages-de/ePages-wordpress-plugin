@@ -4,7 +4,7 @@ Donate link: http://www.epages.com/en/
 Tags: cart, checkout, e-commerce, ecommerce, paypal, sales, sell, shop, store, storefront, digital goods, downloadable products, e-commerce, e-commerce, online shop, online store, product catalog, products, shopping, shopping cart, wordpress ecommerce, wp e-commerce
 Requires at least: 3.0.1
 Tested up to: 4.5
-Stable tag: 4.65
+Stable tag: 4.66
 License: MIT
 License URI: https://opensource.org/licenses/MIT 
 

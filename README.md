@@ -8,7 +8,7 @@
 
 **Tested up to**: 4.5
 
-**Stable tag**: 4.65
+**Stable tag**: 4.66
 
 **License**: MIT
 

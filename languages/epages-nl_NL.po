@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Feb 23 2016 10:16:03 GMT+0100 (CET)\n"
 "PO-Revision-Date: Tue Feb 23 2016 11:29:03 GMT+0100 (CET)\n"
-"Last-Translator: Overlord <d.ignatieva@epages.com>\n"
+"Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
 "Language: Dutch\n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
@@ -50,6 +50,10 @@ msgstr "Plugin file cannot be accessed directly."
 msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Add Shop</a>"
 msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Winkel toevoegen</a>"
 
+#: ../actions/add_editor_button.php:5
+msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Edit Shop</a>"
+msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Winkel bewerken</a>"
+
 #: ../actions/add_options_page.php:4
 msgid "Online Shop Settings"
 msgstr "Instellingen voor online winkel"
@@ -73,6 +77,14 @@ msgstr "<strong>ePages-instellingen</strong>"
 #: ../actions/show_admin_message.php:7
 msgid "to to set up the plugin."
 msgstr " om de plug-in in te stellen."
+
+#: ../templates/options_page.php:14
+msgid "Go to shop administration"
+msgstr "Naar winkelbeheer"
+
+#: ../templates/options_page.php:15
+msgid "Add shop to the page"
+msgstr "Winkel aan de pagina toevoegen"
 
 #: ../functions/options_page.php:17
 msgid "Trying to validate shop URL: "
@@ -103,33 +115,17 @@ msgid "Congratulations! Your Online Shop is now connected with your Website!"
 msgstr "Gefeliciteerd! Uw online winkel is nu verbonden met onze website."
 
 #: ../templates/options_page.php:10
-msgid ""
-"Now you can add your Online Shop to any Wordpress page or post. Just click "
-"the Add Online Shop button."
-msgstr ""
-"U kunt nu uw online winkel aan alle WordPress-pagina's of berichten "
-"toevoegen. Klik gewoon op 'Winkel toevoegen' wanneer u een nieuw bericht "
-"toevoegt."
+msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the Add Online Shop button."
+msgstr "U kunt nu uw online winkel aan alle WordPress-pagina's of berichten toevoegen. Klik gewoon op 'Winkel toevoegen' wanneer u een nieuw bericht toevoegt."
 
 #: ../templates/options_page.php:11
-msgid ""
-"After that click Edit to edit product and appearance settings for Online "
-"Shop for this page or post."
-msgstr ""
-"U kunt de product- en weergave-instellingen voor uw online winkel bewerken "
-"voor deze pagina of dit bericht. U kunt deze instellingen altijd wijzigen "
-"door op 'Winkel bewerken' te klikken."
+msgid "After that click Edit to edit product and appearance settings for Online Shop for this page or post."
+msgstr "U kunt de product- en weergave-instellingen voor uw online winkel bewerken voor deze pagina of dit bericht. U kunt deze instellingen altijd wijzigen door op 'Winkel bewerken' te klikken."
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid ""
-"Have a question? Visit our <a href=\"https://www.online-help-center."
-"com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
-msgstr ""
-"Heeft u een vraag? Ga dan naar ons <a href=\"https://www.online-help-center."
-"com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">Helpcentrum"
+msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
+msgstr "Heeft u een vraag? Ga dan naar ons <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">Helpcentrum"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "
@@ -141,9 +137,7 @@ msgstr "Online winkel ontkoppelen"
 
 #: ../templates/options_page.php:22
 msgid "There are just a few steps left to start selling on your Wordpress site"
-msgstr ""
-"<strong>U hoeft nog maar een paar stappen te voltooien en dan kunt u gaan "
-"verkopen op uw WordPress-site.</strong>"
+msgstr "<strong>U hoeft nog maar een paar stappen te voltooien en dan kunt u gaan verkopen op uw WordPress-site.</strong>"
 
 #: ../templates/options_page.php:25
 msgid "Create your free Online Shop"
@@ -151,9 +145,7 @@ msgstr "Maak uw eigen gratis online winkel"
 
 #: ../templates/options_page.php:26
 msgid "If you already have an ePages Online Shop, move on to the next step."
-msgstr ""
-"Als u al een online winkel van ePages hebt, gaat u verder naar de volgende "
-"stap."
+msgstr "Als u al een online winkel van ePages hebt, gaat u verder naar de volgende stap."
 
 #: ../templates/options_page.php:28
 msgid "Enter your API url here. "
@@ -204,20 +196,24 @@ msgid "Show search field"
 msgstr "Zoekveld weergeven"
 
 #: ../templates/popup.php:54
-msgid ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
-msgstr ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
+msgstr "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
 
 #: ../templates/popup.php:59
 msgid "Show category selection"
 msgstr "Categorieselectie weergeven"
 
+#: ../templates/popup.php:60
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a category selection dropdown menu in your product list view.\">"
+msgstr "data-tooltip=\"Schakel dit selectievakje in als u een vervolgkeuzemenu voor categorieselectie wilt weergeven in uw productlijstweergave.\">"
+
 #: ../templates/popup.php:65
 msgid "Show product sorting"
 msgstr "Productsortering weergeven"
+
+#: ../templates/popup.php:66
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a product sorting option in your product list view.\">"
+msgstr "data-tooltip=\"Schakel dit selectievakje in als u een productsorteeroptie wilt weergeven in uw productlijstweergave.\">"
 
 #: ../templates/popup.php:75
 msgid "Plugin settings"

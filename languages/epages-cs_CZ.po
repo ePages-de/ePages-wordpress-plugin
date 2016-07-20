@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Mon Feb 22 2016 17:29:32 GMT+0100 (CET)\n"
 "PO-Revision-Date: Mon Feb 22 2016 17:37:12 GMT+0100 (CET)\n"
-"Last-Translator: Overlord <d.ignatieva@epages.com>\n"
+"Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
 "Language: Czech\n"
 "Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
@@ -51,6 +51,10 @@ msgstr "Nelze získat přímý přístup k souboru modulu plug-in."
 msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Add Shop</a>"
 msgstr "Přidat obchod"
 
+#: ../actions/add_editor_button.php:5
+msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Edit Shop</a>"
+msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Upravit obchod</a>"
+
 #: ../actions/add_options_page.php:4
 msgid "Online Shop Settings"
 msgstr "Nastavení online obchodu"
@@ -74,6 +78,14 @@ msgstr "<strong>nastavení ePages</strong>"
 #: ../actions/show_admin_message.php:7
 msgid "to to set up the plugin."
 msgstr "a nastavte modul plug-in."
+
+#: ../templates/options_page.php:14
+msgid "Go to shop administration"
+msgstr "Přejít k administraci obchodu"
+
+#: ../templates/options_page.php:15
+msgid "Add shop to the page"
+msgstr "Přidat obchod na stránku"
 
 #: ../functions/options_page.php:17
 msgid "Trying to validate shop URL: "
@@ -104,34 +116,17 @@ msgid "Congratulations! Your Online Shop is now connected with your Website!"
 msgstr "Gratulujeme! Váš online obchod je nyní propojen s vaším webem."
 
 #: ../templates/options_page.php:10
-msgid ""
-"Now you can add your Online Shop to any Wordpress page or post. Just click "
-"the Add Online Shop button."
-msgstr ""
-"Nyní můžete svůj online obchod přidat na jakoukoli stránku WordPress či do "
-"jakéhokoli příspěvku. Stačí při přidávání nového příspěvku kliknout na "
-"možnost „Přidat obchod“."
+msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the Add Online Shop button."
+msgstr "Nyní můžete svůj online obchod přidat na jakoukoli stránku WordPress či do jakéhokoli příspěvku. Stačí při přidávání nového příspěvku kliknout na možnost „Přidat obchod“."
 
 #: ../templates/options_page.php:11
-msgid ""
-"After that click Edit to edit product and appearance settings for Online "
-"Shop for this page or post."
-msgstr ""
-"Poté můžete pro tuto stránku či příspěvek upravit nastavení produktů a "
-"zobrazení online obchodu. Kliknutím na možnost „Upravit obchod“ můžete toto "
-"nastavení kdykoli změnit."
+msgid "After that click Edit to edit product and appearance settings for Online Shop for this page or post."
+msgstr "Poté můžete pro tuto stránku či příspěvek upravit nastavení produktů a zobrazení online obchodu. Kliknutím na možnost „Upravit obchod“ můžete toto nastavení kdykoli změnit."
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid ""
-"Have a question? Visit our <a href=\"https://www.online-help-center."
-"com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
-msgstr ""
-"Chcete se na něco zeptat? Navštivte naše <a href=\\\"https://www.online-help-"
-"center.com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">centrum "
-"nápovědy"
+msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
+msgstr "Chcete se na něco zeptat? Navštivte naše <a href=\\\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">centrum nápovědy"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "
@@ -143,9 +138,7 @@ msgstr "Odpojit online obchod"
 
 #: ../templates/options_page.php:22
 msgid "There are just a few steps left to start selling on your Wordpress site"
-msgstr ""
-"<strong>Už jen pár kroků a můžete začít na svém webu WordPress prodávat."
-"</strong>"
+msgstr "<strong>Už jen pár kroků a můžete začít na svém webu WordPress prodávat.</strong>"
 
 #: ../templates/options_page.php:25
 msgid "Create your free Online Shop"
@@ -204,20 +197,24 @@ msgid "Show search field"
 msgstr "Zobrazit vyhledávací pole"
 
 #: ../templates/popup.php:54
-msgid ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
-msgstr ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
+msgstr "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
 
 #: ../templates/popup.php:59
 msgid "Show category selection"
 msgstr "Zobrazit výběr kategorie"
 
+#: ../templates/popup.php:60
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a category selection dropdown menu in your product list view.\">"
+msgstr "data-tooltip=\"Toto políčko zaškrtněte v případě, že chcete v zobrazení seznamu produktů zobrazit rozevírací nabídku pro výběr kategorie.\">"
+
 #: ../templates/popup.php:65
 msgid "Show product sorting"
 msgstr "Zobrazit řazení produktů"
+
+#: ../templates/popup.php:66
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a product sorting option in your product list view.\">"
+msgstr "data-tooltip=\"Toto políčko zaškrtněte v případě, že chcete v zobrazení seznamu produktů zobrazit možnost pro řazení produktů.\">"
 
 #: ../templates/popup.php:75
 msgid "Plugin settings"

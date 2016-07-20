@@ -7,7 +7,7 @@ msgstr ""
 "POT-Creation-Date: Mon Feb 22 2016 11:44:54 GMT+0100 (CET)\n"
 "POT-Revision-Date: Mon Feb 22 2016 13:29:29 GMT+0100 (CET)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Overlord <d.ignatieva@epages.com>\n"
+"Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
@@ -53,6 +53,10 @@ msgstr ""
 msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Add Shop</a>"
 msgstr ""
 
+#: ../actions/add_editor_button.php:5
+msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Edit Shop</a>"
+msgstr ""
+
 #: ../actions/add_options_page.php:4
 msgid "Online Shop Settings"
 msgstr ""
@@ -75,6 +79,14 @@ msgstr ""
 
 #: ../actions/show_admin_message.php:7
 msgid "to to set up the plugin."
+msgstr ""
+
+#: ../templates/options_page.php:14
+msgid "Go to shop administration"
+msgstr ""
+
+#: ../templates/options_page.php:15
+msgid "Add shop to the page"
 msgstr ""
 
 #: ../functions/options_page.php:17
@@ -106,23 +118,16 @@ msgid "Congratulations! Your Online Shop is now connected with your Website!"
 msgstr ""
 
 #: ../templates/options_page.php:10
-msgid ""
-"Now you can add your Online Shop to any Wordpress page or post. Just click "
-"the Add Online Shop button."
+msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the Add Online Shop button."
 msgstr ""
 
 #: ../templates/options_page.php:11
-msgid ""
-"After that click Edit to edit product and appearance settings for Online "
-"Shop for this page or post."
+msgid "After that click Edit to edit product and appearance settings for Online Shop for this page or post."
 msgstr ""
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid ""
-"Have a question? Visit our <a href=\"https://www.online-help-center."
-"com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
+msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
 msgstr ""
 
 #: ../templates/options_page.php:13
@@ -194,17 +199,23 @@ msgid "Show search field"
 msgstr ""
 
 #: ../templates/popup.php:54
-msgid ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
 msgstr ""
 
 #: ../templates/popup.php:59
 msgid "Show category selection"
 msgstr ""
 
+#: ../templates/popup.php:60
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a category selection dropdown menu in your product list view.\">"
+msgstr ""
+
 #: ../templates/popup.php:65
 msgid "Show product sorting"
+msgstr ""
+
+#: ../templates/popup.php:66
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a product sorting option in your product list view.\">"
 msgstr ""
 
 #: ../templates/popup.php:75

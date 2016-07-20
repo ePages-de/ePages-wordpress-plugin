@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Feb 23 2016 10:36:08 GMT+0100 (CET)\n"
 "PO-Revision-Date: Tue Feb 23 2016 11:28:28 GMT+0100 (CET)\n"
-"Last-Translator: Overlord <d.ignatieva@epages.com>\n"
+"Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
 "Language: Norwegian (Bokmål)\n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
@@ -50,6 +50,10 @@ msgstr "Får ikke direkte tilgang til plugin-filen."
 msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Add Shop</a>"
 msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Legg til butikk</a>"
 
+#: ../actions/add_editor_button.php:5
+msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Edit Shop</a>"
+msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Rediger butikk</a>"
+
 #: ../actions/add_options_page.php:4
 msgid "Online Shop Settings"
 msgstr "Nettbutikksinnstillinger"
@@ -73,6 +77,14 @@ msgstr "<strong> ePages-innstillingene</strong>"
 #: ../actions/show_admin_message.php:7
 msgid "to to set up the plugin."
 msgstr " for å konfigurere plugin-filen."
+
+#: ../templates/options_page.php:14
+msgid "Go to shop administration"
+msgstr "Gå til butikkadministrasjon"
+
+#: ../templates/options_page.php:15
+msgid "Add shop to the page"
+msgstr "Legg til butikk til siden"
 
 #: ../functions/options_page.php:17
 msgid "Trying to validate shop URL: "
@@ -103,32 +115,17 @@ msgid "Congratulations! Your Online Shop is now connected with your Website!"
 msgstr "Gratulerer! Nettbutikken din er nå koblet til nettsiden vår."
 
 #: ../templates/options_page.php:10
-msgid ""
-"Now you can add your Online Shop to any Wordpress page or post. Just click "
-"the Add Online Shop button."
-msgstr ""
-"Nå kan du legge til nettbutikken til hvilken som helst WordPress-side eller "
-"post. Bare klikk på «Legg til butikk» når du legger til en ny post."
+msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the Add Online Shop button."
+msgstr "Nå kan du legge til nettbutikken til hvilken som helst WordPress-side eller post. Bare klikk på «Legg til butikk» når du legger til en ny post."
 
 #: ../templates/options_page.php:11
-msgid ""
-"After that click Edit to edit product and appearance settings for Online "
-"Shop for this page or post."
-msgstr ""
-"Så kan du redigere produktet eller visningsinnstillingene for nettbutikken "
-"din for denne siden eller posten. Du kan hele tiden endre disse "
-"innstillingene ved å klikke på «Rediger butikk»."
+msgid "After that click Edit to edit product and appearance settings for Online Shop for this page or post."
+msgstr "Så kan du redigere produktet eller visningsinnstillingene for nettbutikken din for denne siden eller posten. Du kan hele tiden endre disse innstillingene ved å klikke på «Rediger butikk»."
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid ""
-"Have a question? Visit our <a href=\"https://www.online-help-center."
-"com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
-msgstr ""
-"Har du et spørsmål? Gå inn på vårt <a href=\"https://www.online-help-center."
-"com/customer/en/portal/articles?"
-"utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">Hjelpesenter"
+msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
+msgstr "Har du et spørsmål? Gå inn på vårt <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">Hjelpesenter"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "
@@ -140,9 +137,7 @@ msgstr "Koble fra nettbutikken"
 
 #: ../templates/options_page.php:22
 msgid "There are just a few steps left to start selling on your Wordpress site"
-msgstr ""
-"\"<strong>Det er bare noen få trinn igjen til at du kan begynne å selge på "
-"WordPress-nettstedet ditt</strong>"
+msgstr "\"<strong>Det er bare noen få trinn igjen til at du kan begynne å selge på WordPress-nettstedet ditt</strong>"
 
 #: ../templates/options_page.php:25
 msgid "Create your free Online Shop"
@@ -201,20 +196,24 @@ msgid "Show search field"
 msgstr "Vis søkefelt"
 
 #: ../templates/popup.php:54
-msgid ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
-msgstr ""
-"data-tooltip=\"Mark this checkbox, if you want to display a search field in "
-"your product list view.\">"
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
+msgstr "data-tooltip=\"Mark this checkbox, if you want to display a search field in your product list view.\">"
 
 #: ../templates/popup.php:59
 msgid "Show category selection"
 msgstr "Vis kategorivalg"
 
+#: ../templates/popup.php:60
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a category selection dropdown menu in your product list view.\">"
+msgstr "data-tooltip=\"Merk av denne avmerkingsboksen hvis du vil vise et kategori i rullegardinmenyen i produktlistevisning.\">"
+
 #: ../templates/popup.php:65
 msgid "Show product sorting"
 msgstr "Vis produktsortering"
+
+#: ../templates/popup.php:66
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a product sorting option in your product list view.\">"
+msgstr "data-tooltip=\"Merk av denne avmerkingsboksen hvis du vil vise et produktsorteringsalternativ i produktlistevisning.\">"
 
 #: ../templates/popup.php:75
 msgid "Plugin settings"
