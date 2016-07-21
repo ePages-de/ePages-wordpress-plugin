@@ -115,17 +115,17 @@ msgid "Congratulations! Your Online Shop is now connected with your Website!"
 msgstr "Enhorabona! La vostra botiga en línia ara està connectada al vostre lloc web."
 
 #: ../templates/options_page.php:10
-msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the Add Online Shop button."
+msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the <strong>Add Online Shop</strong> button."
 msgstr "Ara podeu afegir la vostra botiga en línia a qualsevol missatge o pàgina del WordPress. Només heu de fer clic a 'Afegeix botiga' quan afegiu un nou missatge."
 
 #: ../templates/options_page.php:11
-msgid "After that click Edit to edit product and appearance settings for Online Shop for this page or post."
+msgid "After that click <strong>Edit</strong> to edit product and appearance settings for Online Shop for this page or post."
 msgstr "Aleshores, podeu canviar en qualsevol moment les opcions de producte i d'aspecte de la vostra botiga en línia per a aquest missatge o aquesta pàgina. Per canviar-les, només heu de fer clic a 'Edita la botiga'."
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
-msgstr "Teniu algun dubte? Visiteu el nostre <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">Centre d'Ajuda</a>."
+msgid "Have a question? Visit our <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">help center</a>"
+msgstr "Teniu algun dubte? Visiteu el nostre <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">Centre d'Ajuda</a>."
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "

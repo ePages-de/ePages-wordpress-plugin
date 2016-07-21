@@ -107,17 +107,17 @@ msgid "Congratulations! Your Online Shop is now connected with your Website!"
 msgstr "Ihr Onlineshop wurde erfolgreich mit Ihrer Website verknüpft."
 
 #: ../templates/options_page.php:10
-msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the Add Online Shop button."
+msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the <strong>Add Online Shop</strong> button."
 msgstr "Sie können nun Ihren Onlineshop jeder WordPress-Seite bzw. jedem WordPress-Beitrag hinzufügen. Klicken Sie zum Hinzufügen eines neuen Beitrags einfach auf 'Shop hinzufügen'."
 
 #: ../templates/options_page.php:11
-msgid "After that click Edit to edit product and appearance settings for Online Shop for this page or post."
+msgid "After that click <strong>Edit</strong> to edit product and appearance settings for Online Shop for this page or post."
 msgstr "Anschließend haben Sie die Möglichkeit, die Produkt- und Anzeigeeinstellungen Ihres Onlineshops für diese Seite oder diesen Beitrag zu bearbeiten. Sie können diese Einstellungen jederzeit durch Klicken auf 'Shop bearbeiten' ändern.\""
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
-msgstr "Sie haben Fragen? Dann besuchen Sie einfach unser <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\"> Hilfecenter"
+msgid "Have a question? Visit our <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">help center</a>"
+msgstr "Sie haben Fragen? Dann besuchen Sie einfach unser <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">Hilfecenter</a>"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "

@@ -115,17 +115,17 @@ msgid "Congratulations! Your Online Shop is now connected with your Website!"
 msgstr "Gratulerer! Nettbutikken din er nå koblet til nettsiden vår."
 
 #: ../templates/options_page.php:10
-msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the Add Online Shop button."
+msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the <strong>Add Online Shop</strong> button."
 msgstr "Nå kan du legge til nettbutikken til hvilken som helst WordPress-side eller post. Bare klikk på «Legg til butikk» når du legger til en ny post."
 
 #: ../templates/options_page.php:11
-msgid "After that click Edit to edit product and appearance settings for Online Shop for this page or post."
+msgid "After that click <strong>Edit</strong> to edit product and appearance settings for Online Shop for this page or post."
 msgstr "Så kan du redigere produktet eller visningsinnstillingene for nettbutikken din for denne siden eller posten. Du kan hele tiden endre disse innstillingene ved å klikke på «Rediger butikk»."
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\">help center"
-msgstr "Har du et spørsmål? Gå inn på vårt <a href=\"https://www.online-help-center.com/customer/en/portal/articles?utm_source=ePages&utm_medium=Menu%20Entry&utm_campaign=website\\\">Hjelpesenter"
+msgid "Have a question? Visit our <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">help center</a>"
+msgstr "Har du et spørsmål? Gå inn på vårt <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">Hjelpesenter</a>"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "
