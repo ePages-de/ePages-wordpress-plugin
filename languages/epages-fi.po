@@ -3,24 +3,22 @@ msgstr ""
 "Project-Id-Version: ePages Online Shop\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Mon Feb 22 2016 17:56:20 GMT+0100 (CET)\n"
-"PO-Revision-Date: Tue Feb 23 2016 11:22:08 GMT+0100 (CET)\n"
+"PO-Revision-Date: 2016-07-21 17:54+0200\n"
 "Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
-"Language: Finnish\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: ..\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
-"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
-"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;_ex:1,2c;"
+"_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;"
+"trans:1;transChoice:1,2\n"
 "X-Loco-Target-Locale: fi_FI\n"
-"X-Generator: Loco - https://localise.biz/"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-SearchPath-0: ..\n"
 
 #. Name of the plugin
 msgid "ePages Online Shop"
@@ -116,11 +114,12 @@ msgstr "Onnittelut! Verkkokauppasi on nyt yhdistetty verkkosivustoosi."
 
 #: ../templates/options_page.php:10
 msgid "Now you can add your Online Shop to any Wordpress page or post. Just click the <strong>Add Online Shop</strong> button."
-msgstr "Nyt voit lisätä oman verkkokauppasi mille tahansa WordPress-sivulle tai -julkaisuun. Valitse vain Lisää kauppa, kun lisäät uuden julkaisun."
+msgstr "Nyt voit lisätä oman verkkokauppasi mille tahansa WordPress-sivulle tai -julkaisuun. Valitse vain <strong>Lisää kauppa</strong>, kun lisäät uuden julkaisun."
 
 #: ../templates/options_page.php:11
 msgid "After that click <strong>Edit</strong> to edit product and appearance settings for Online Shop for this page or post."
-msgstr "Voit tämän jälkeen muokata verkkokauppasi tuote- ja ulkoasuasetuksia tälle sivulle tai julkaisulle. Voit aina muuttaa näitä asetuksia valitsemalla Muokkaa kauppaa."
+msgstr ""
+"Voit tämän jälkeen muokata verkkokauppasi tuote- ja ulkoasuasetuksia tälle sivulle tai julkaisulle. Voit aina muuttaa näitä asetuksia valitsemalla <strong>Edit</strong>."
 
 #: ../templates/options_page.php:12
 #, php-format

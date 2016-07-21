@@ -7,7 +7,7 @@
   <br>
   <p><?php _e('Now you can add your Online Shop to any Wordpress page or post. Just click the <strong>Add Online Shop</strong> button.'  , 'epages'); ?><br>
   <?php _e('After that click <strong>Edit</strong> to edit product and appearance settings for Online Shop for this page or post.'  , 'epages'); ?></p>
-  <p><strong><?php _e('Have a question? Visit our <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">help center</a>','epages'); ?></strong></p>
+  <p><strong><?php _e('Have a question? Visit our <a href="http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf" target="_blank">help center</a>','epages'); ?></strong></p>
 
   <div id="setting-error-tgmpa" class="updated settings-error notice">
   <h4><strong> <?php _e('Your API URL is: ' , 'epages'); ?> <em><?php echo get_option("epages_api_url" , 'epages') ?></b></em></strong></h4>
