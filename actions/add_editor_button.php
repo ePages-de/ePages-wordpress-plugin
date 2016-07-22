@@ -2,7 +2,7 @@
 
 function epages_add_editor_button() {
   if (get_option ("epages_api_url_confirmed")) {
-    echo __('<a href="#" id="epages-shop-button" class="button">Add Shop</a>' , 'epages');
+    ?><a href="#" id="epages-shop-button" class="button" style="display:none;"><?php _e('Add Shop' , 'epages'); ?></a><a href="#" id="epages-edit-button" class="button" style="display:none;"><?php _e('Edit Shop' , 'epages'); ?></a><?php
   }
 }
 

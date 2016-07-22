@@ -192,12 +192,12 @@ h4  {
   font-weight: bold;
 }
 
-#epages-shop-button:before {
+#epages-shop-button:before, #epages-edit-button:before {
   font-family: FontAwesome;
   content: "\f217";
   padding-right: 5px;
 }
-#epages-shop-button {
+#epages-shop-button, #epages-edit-button {
   float: right;
 }
 #epages-shop-remove-button {

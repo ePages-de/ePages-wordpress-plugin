@@ -18,6 +18,7 @@ window.ePagesShop = window.ePagesShop || {};
     editorPopup:             "#epages-popup-content",
     editorSaveButton:        "#epages-save-button",
     shopButton:              "#epages-shop-button",
+    editButton:              "#epages-edit-button",
     placeholder:             ".epages-shop-placeholder",
     categoriesContainer:     ".epages-categories-container",
     allProductsRadioButton:  ".epages-all-products-radio-button",
@@ -212,7 +213,14 @@ window.ePagesShop = window.ePagesShop || {};
   };
 
   eps.updateShopButton = function() {
-    $(eps.selectors.shopButton).text(eps.findShortcode(eps.textEditorContent()) ? "Edit Shop" : "Add Shop");
+    if (eps.editorContainsWidget()) {
+      $(eps.selectors.shopButton).attr('style',"display:none;");
+      $(eps.selectors.editButton).attr('style',"");
+    }
+    else {
+      $(eps.selectors.shopButton).attr('style',"");
+      $(eps.selectors.editButton).attr('style',"display:none;");
+    }
   };
 
   // Adds, removes or updates the position of a button
@@ -258,6 +266,11 @@ window.ePagesShop = window.ePagesShop || {};
 
     // Opens the editor popup.
     $(eps.selectors.shopButton).click(function(event) {
+      event.preventDefault();
+      eps.updateEditorOptions();
+      eps.openEditorPopup();
+    });
+    $(eps.selectors.editButton).click(function(event) {
       event.preventDefault();
       eps.updateEditorOptions();
       eps.openEditorPopup();

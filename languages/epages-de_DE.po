@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SITe\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Mon Feb 22 2016 11:44:54 GMT+0100 (CET)\n"
-"PO-Revision-Date: 2016-07-21 17:56+0200\n"
+"PO-Revision-Date: 2016-07-22 21:01+0200\n"
 "Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -44,12 +44,12 @@ msgid "Plugin file cannot be accessed directly."
 msgstr "Plugin-Datei kann nicht direkt aufgerufen werden."
 
 #: ../actions/add_editor_button.php:5
-msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Add Shop</a>"
-msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Shop hinzufügen</a>"
+msgid "Add Shop"
+msgstr "Shop hinzufügen"
 
 #: ../actions/add_editor_button.php:5
-msgid "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Edit Shop</a>"
-msgstr "<a href=\"#\" id=\"epages-shop-button\" class=\"button\">Shop bearbeiten</a>"
+msgid "Edit Shop"
+msgstr "Shop bearbeiten"
 
 #: ../actions/add_options_page.php:4
 msgid "Online Shop Settings"
@@ -146,7 +146,7 @@ msgid "If you already have an ePages Online Shop, move on to the next step."
 msgstr "Wenn Sie bereits über einen ePages-Onlineshop verfügen, fahren Sie mit dem nächsten Schritt fort."
 
 #: ../templates/options_page.php:28
-msgid "Enter your API url here. "
+msgid "Enter your API URL here. "
 msgstr "Geben Sie hier Ihre API URL ein. "
 
 #: ../templates/options_page.php:28
