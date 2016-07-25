@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SITe\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Mon Feb 22 2016 11:44:54 GMT+0100 (CET)\n"
-"PO-Revision-Date: 2016-07-22 21:01+0200\n"
+"PO-Revision-Date: 2016-07-25 17:30+0200\n"
 "Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -115,7 +115,7 @@ msgstr ""
 #: ../templates/options_page.php:12
 #, php-format
 msgid "Have a question? Visit our <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">help center</a>"
-msgstr "Sie haben Fragen? Dann besuchen Sie einfach unser <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">Hilfecenter</a>"
+msgstr "Sie haben Fragen? Dann besuchen Sie einfach unser <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-DE.pdf\" target=\"_blank\">Hilfecenter</a>"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "
