@@ -177,9 +177,10 @@ window.ePagesShop = window.ePagesShop || {};
 
   // Updates the shop placeholder‘s edit button.
   eps.updateEditButton = function() {
+    var editText = document.getElementById("epages-edit-button").text;
     eps.updateButton({
       id: "epages-shop-edit-button",
-      value: "Edit",
+      value: editText,
       callback: function() {
         eps.updateEditorOptions();
         eps.openEditorPopup();
