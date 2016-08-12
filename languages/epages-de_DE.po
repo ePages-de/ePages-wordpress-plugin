@@ -108,9 +108,9 @@ msgid "Now you can add your Online Shop to any Wordpress page or post. Just clic
 msgstr "Sie können nun Ihren Onlineshop jeder WordPress-Seite bzw. jedem WordPress-Beitrag hinzufügen. Klicken Sie dazu einfach auf <strong>Shop hinzufügen</strong>."
 
 #: ../templates/options_page.php:11
-msgid "After that click <strong>Edit</strong> to edit product and appearance settings for Online Shop for this page or post."
+msgid "After that click <strong>Shop bearbeiten</strong> to edit product and appearance settings for Online Shop for this page or post."
 msgstr ""
-"Anschließend haben Sie die Möglichkeit, durch Klicken auf <strong>Edit</strong> die Produkt- und Anzeigeeinstellungen Ihres Onlineshops für diese Seite oder diesen Beitrag zu bearbeiten. Sie können diese Einstellungen jederzeit ändern.\""
+"Anschließend haben Sie die Möglichkeit, durch Klicken auf <strong>Shop bearbeiten</strong> die Produkt- und Anzeigeeinstellungen Ihres Onlineshops für diese Seite oder diesen Beitrag zu bearbeiten. Sie können diese Einstellungen jederzeit ändern.\""
 
 #: ../templates/options_page.php:12
 #, php-format
