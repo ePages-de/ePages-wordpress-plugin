@@ -4,7 +4,7 @@
 Plugin Name: ePages Online Shop
 Plugin URI: http://www.epages.com/us/
 Description: ePages Online Shop integration for WordPress.
-Version: 4.69
+Version: 5.0
 Author: ePages GmbH
 Author URI: http://www.epages.com/
 Text Domain: epages
@@ -44,6 +44,7 @@ require_once EPAGES_PLUGIN_DIR . "/functions/log.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/load_template.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/options_page.php";
 require_once EPAGES_PLUGIN_DIR . "/functions/register_shortcode.php";
+require_once EPAGES_PLUGIN_DIR . "/functions/cart_widget.php";
 
 
 // Load actions

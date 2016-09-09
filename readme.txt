@@ -3,8 +3,8 @@ Contributors: epages
 Donate link: http://www.epages.com/en/
 Tags: cart, checkout, e-commerce, ecommerce, paypal, sales, sell, shop, store, storefront, digital goods, downloadable products, e-commerce, e-commerce, online shop, online store, product catalog, products, shopping, shopping cart, wordpress ecommerce, wp e-commerce
 Requires at least: 3.0.1
-Tested up to: 4.5
-Stable tag: 4.69
+Tested up to: 5.0
+Stable tag: 5.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -130,7 +130,7 @@ Some legal aspects, for example, the terms and conditions, need to be added to t
 Using CSS it is easy to change the design of your e-commerce pages on your WordPress site. With ePages software, the check out process can also be adapted.
 
 **Where can I find more details regarding the installation of the plugin?**
-This [manual](http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf "Setup guide") gives you more details on the plugin installation.
+This [manual](https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin- "Setup guide") gives you more details on the plugin installation.
 
 == Screenshots ==
 

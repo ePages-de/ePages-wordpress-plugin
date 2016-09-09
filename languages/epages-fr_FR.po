@@ -122,7 +122,7 @@ msgstr "Vous pouvez ensuite modifier le produit et les paramètres d'apparence d
 #: ../templates/options_page.php:12
 #, php-format
 msgid "Have a question? Visit our <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">help center</a>"
-msgstr "Vous avez une question ? Rendez-vous sur notre <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">Centre de support</a>"
+msgstr "Vous avez une question ? Rendez-vous sur notre <a href=\"https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-\" target=\"_blank\">Centre de support</a>"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "

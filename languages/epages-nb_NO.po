@@ -123,7 +123,7 @@ msgstr ""
 #: ../templates/options_page.php:12
 #, php-format
 msgid "Have a question? Visit our <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">help center</a>"
-msgstr "Har du et spørsmål? Gå inn på vårt <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">Hjelpesenter</a>"
+msgstr "Har du et spørsmål? Gå inn på vårt <a href=\"https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-\" target=\"_blank\">Hjelpesenter</a>"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "
