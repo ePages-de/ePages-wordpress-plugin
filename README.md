@@ -139,6 +139,9 @@ This [manual](https://www.online-help-center.com/customer/portal/articles/256181
 
 ## Changelog
 
+= 5.0 =
+* Cart widget and some links updated
+
 = 4.6 =
 * Bugfixes and improvements on the beta version
 
