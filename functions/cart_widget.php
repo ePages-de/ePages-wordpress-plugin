@@ -125,7 +125,7 @@ class Cart_Widget extends WP_Widget {
 
             totalD.className = "epages-cart-overlay-total";
             total = parseFloat(element.lineItemPrice) * parseInt(element.quantity);
-            totalD.innerText = total.toString() + " " + element.lineItemPrice.substr(element.lineItemPrice.length - 1);
+            totalD.innerText = total.toFixed(2).toString() + " " + element.lineItemPrice.substr(element.lineItemPrice.length - 1);
 
             removeD.className = "epages-cart-overlay-remove";
             var remove = document.createElement("button");
@@ -157,7 +157,6 @@ class Cart_Widget extends WP_Widget {
           total[0].innerText = localStorage.getItem("epages-shop-cart-total").replace(/"/g, "");
 
           var link = document.getElementsByClassName("epages-cart-overlay-checkout-button");
-          // link[0].href = "#checkout";
 
           function checkout() {
             var checkoutWindow, left, top;
@@ -248,6 +247,27 @@ class Cart_Widget extends WP_Widget {
                       modal.style.display = "none";
                   }
               }
+            </script>';
+            echo '<script>
+            function updateCart() {
+              var xhr = new XMLHttpRequest();
+
+              xhr.open("POST", "https://pm.epages.com/rs/shops/unai/carts");
+              xhr.setRequestHeader("Content-Type", "application/json");
+              xhr.onload = function() {
+                if (xhr.status === 201) {
+                  var jsonResponse = JSON.parse(xhr.responseText);
+                  console.log(jsonResponse);
+                  localStorage.setItem("epages-shop-cart-checkoutUrl", jsonResponse.checkoutUrl);
+                  return 1;
+                }
+                else if (xhr.status !== 201) {
+                    return 0;
+                }
+              };
+              // xhr.send(JSON.stringify({"lineItems":[{"productId":"578E3E45-665F-557D-D9F6-D5809AB308E1","quantity":3},{"productId":"578E3E3C-1E46-04C2-0F23-D5809AB308D5","quantity":3}]}));
+              xhr.send();
+            }
             </script>';
   }
 
