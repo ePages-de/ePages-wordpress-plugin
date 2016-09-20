@@ -1,6 +1,6 @@
 var cart = JSON.parse(localStorage.getItem('epages-shop-cart-products'));
 var shopId = localStorage.getItem("epages-shop-cart-checkoutUrl").split("Shops/")[1].split("/")[0];
-document.querySelector('.epages-shop-cart span').innerHTML = cart.length;
+document.querySelector('.epages-shop-cart.fake span').innerHTML = cart.length;
 
 function createCartElement(element, index, array) {
   var tbody = document.getElementsByTagName("tbody");
@@ -147,7 +147,7 @@ function updateCart() {
 
       items = jsonResponse.lineItemContainer.productLineItems;
       items.forEach(updateLocalStorageCart);
-      document.querySelector('.epages-shop-cart span').innerHTML = cart.length;
+      document.querySelector('.epages-shop-cart.fake span').innerHTML = cart.length;
     }
     else if (xhr.status !== 201) {
         return 0;
@@ -175,7 +175,7 @@ function newUpdates() {
 buildCart();
 
 if (realCart()) {
-  var widget = document.querySelectorAll("section > div.epages-shop-cart")[0];
+  var widget = document.querySelectorAll("div.epages-shop-cart.fake")[0];
   var h2 = widget.previousElementSibling;
   var modal = widget.nextElementSibling;
   var section = modal.nextElementSibling;

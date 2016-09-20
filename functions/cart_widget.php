@@ -39,7 +39,7 @@ class Cart_Widget extends WP_Widget {
 			 echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 		 }
      echo '
-     <div class="epages-shop-cart" style="float:left;">
+     <div class="epages-shop-cart fake" style="float:left;">
       <button class="epages-cart-button" id="cartShow">
         <i class="fa fa-shopping-cart"></i>
         <span>0</span>
