@@ -1,4 +1,5 @@
 var cart = JSON.parse(localStorage.getItem('epages-shop-cart-products'));
+var shopId = localStorage.getItem("epages-shop-cart-checkoutUrl").split("Shops/")[1].split("/")[0];
 document.querySelector('.epages-shop-cart span').innerHTML = cart.length;
 
 function createCartElement(element, index, array) {
@@ -78,6 +79,15 @@ function checkout() {
   return checkoutWindow.location = localStorage.getItem("epages-shop-cart-checkoutUrl").replace(/"/g, "");
 }
 
+function deleteFromCart(productId) {
+  for (var i = 0; i < cart.length; i++) {
+    if (productId == cart[i].productId) {
+      cart.splice(i, 1);
+    }
+  }
+  localStorage.setItem('epages-shop-cart-products', JSON.stringify(cart));
+}
+
 function buildCart() {
   var newCart = { "lineItems": [] };
   for (var i = 0; i < cart.length; i++) {
@@ -93,6 +103,7 @@ function updateLocalStorage(productId, quantity) {
     if (localSCart.lineItems[i].productId == productId) {
       if (parseInt(quantity) == 0) {
         localSCart.lineItems.splice(i, 1);
+        deleteFromCart(productId);
       } else {
         localSCart.lineItems[i].quantity = quantity;
       }
@@ -103,8 +114,9 @@ function updateLocalStorage(productId, quantity) {
 }
 
 function updateLocalStorageCart(element, index, array) {
+  var cartA = JSON.parse(localStorage.getItem('epages-shop-cart-products'));
   for (var i = 0; i < cart.length; i++) {
-    if (element.productId == cart[i].productId){
+    if (element.productId == cart[i].productId) {
       cart[i].quantity = element.quantity.amount;
       cart[i].lineItemPrice = element.lineItemPrice.formatted;
       var product = document.querySelectorAll("tr#tr-" + cart[i].productId + "> td.epages-cart-overlay-total")[0];
@@ -117,7 +129,7 @@ function updateLocalStorageCart(element, index, array) {
 function updateCart() {
   var xhr = new XMLHttpRequest();
 
-  xhr.open("POST", "https://pm.epages.com/rs/shops/unai/carts");
+  xhr.open("POST", "https://pm.epages.com/rs/shops/" + shopId + "/carts");
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.onload = function() {
     if (xhr.status === 201) {
@@ -135,6 +147,7 @@ function updateCart() {
 
       items = jsonResponse.lineItemContainer.productLineItems;
       items.forEach(updateLocalStorageCart);
+      document.querySelector('.epages-shop-cart span').innerHTML = cart.length;
     }
     else if (xhr.status !== 201) {
         return 0;
@@ -163,19 +176,36 @@ buildCart();
 
 if (realCart()) {
   var widget = document.querySelectorAll("section > div.epages-shop-cart")[0];
-  var sibling = widget.previousElementSibling;
-  if (sibling.nodeName == "H2") {
-    sibling.parentElement.removeChild(sibling);
+  var h2 = widget.previousElementSibling;
+  var modal = widget.nextElementSibling;
+  var section = modal.nextElementSibling;
+  section.classList.add("no-border");
+  if (h2.nodeName == "H2") {
+    h2.parentElement.removeChild(h2);
   }
   widget.parentElement.removeChild(widget);
+  modal.parentElement.removeChild(modal);
 } else {
   createModal();
   updateCart();
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+  var buttons = document.querySelectorAll(".epages-cart-overlay-line-item-remove");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function(event) {
+      var row = event.target.parentElement.parentElement;
+      var productId = row.id.split("tr-")[1];
+      updateLocalStorage(productId, 0);
+      row.parentElement.removeChild(row);
+      updateCart();
+    });
+  }
 }
 
 var modal = document.getElementById("cartModal");
 var btn = document.getElementById("cartShow");
-var span = document.getElementsByClassName("close")[0];
 var inputs = document.querySelectorAll(".epages-cart-overlay-line-item-quantity");
 
 for (var i = 0; i < inputs.length; i++) {
@@ -191,10 +221,6 @@ if (btn) {
   btn.onclick = function() {
       modal.style.display = "block";
   }
-}
-
-span.onclick = function() {
-    modal.style.display = "none";
 }
 
 window.onclick = function(event) {

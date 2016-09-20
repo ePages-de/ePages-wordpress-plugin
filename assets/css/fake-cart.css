@@ -57,3 +57,7 @@ td > button:before {
     text-decoration: none;
     cursor: pointer;
 }
+
+.no-border {
+  border-top-width: 0 !important;
+}
