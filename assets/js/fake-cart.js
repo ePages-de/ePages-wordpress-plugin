@@ -1,5 +1,7 @@
 var cart = JSON.parse(localStorage.getItem('epages-shop-cart-products'));
 var shopId = localStorage.getItem("epages-shop-cart-checkoutUrl").split("Shops/")[1].split("/")[0];
+var shopUrl = document.querySelector('div .epages-shop-cart.fake').id;
+
 document.querySelector('.epages-shop-cart.fake span').innerHTML = cart.length;
 
 function createCartElement(element, index, array) {
@@ -129,7 +131,7 @@ function updateLocalStorageCart(element, index, array) {
 function updateCart() {
   var xhr = new XMLHttpRequest();
 
-  xhr.open("POST", "https://pm.epages.com/rs/shops/" + shopId + "/carts");
+  xhr.open("POST", shopUrl + "/carts");
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.onload = function() {
     if (xhr.status === 201) {

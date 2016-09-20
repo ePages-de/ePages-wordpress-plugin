@@ -38,8 +38,9 @@ class Cart_Widget extends WP_Widget {
 		 if ( ! empty( $instance['title'] ) ) {
 			 echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 		 }
-     echo '
-     <div class="epages-shop-cart fake" style="float:left;">
+     echo '<div class="epages-shop-cart fake" style="float:left;" id="';
+     echo get_option("epages_api_url");
+     echo '">
       <button class="epages-cart-button" id="cartShow">
         <i class="fa fa-shopping-cart"></i>
         <span>0</span>
