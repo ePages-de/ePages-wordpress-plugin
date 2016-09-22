@@ -43,6 +43,16 @@
           </label>
 
           <ol class="epages-categories-container"></ol>
+
+          <label>
+            <input type="radio" name="product-settings" value="products" class="epages-products-radio-button">
+            <?php _e('Only the selected product','epages'); ?>
+            <img src="<?php echo $epages_plugin_url . "/assets/images/spinner.gif"; ?>" class="epages-products-spinner hidden">
+            <input type="text" name="product-settings" value="" class="epages-products-input">
+            <button type="button" name="product-settings" class="epages-products-button button button-primary button-large"><?php _e('Find','epages'); ?></button>
+          </label>
+
+          <ol class="epages-products-container"></ol>
         </div>
 
         <div class="media-frame-content appearance">

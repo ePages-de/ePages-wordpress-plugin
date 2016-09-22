@@ -5,7 +5,8 @@ function epages_shop_widget_shortcode_handler($attributes) {
 
 	$attributes = shortcode_atts(
 		array(
-			'data_category_id'   => null,
+			'data_product_details'   => null,
+      'data_category_id'   => null,
       'data_search_form'   => true,
       'data_category_list' => false,
       'data_sort'          => true
@@ -19,6 +20,7 @@ function epages_shop_widget_shortcode_handler($attributes) {
 
   // Product settings.
   $tag .= epages_add_shortcode_option($attributes, "data_category_id");
+  $tag .= epages_add_shortcode_option($attributes, "data_product_details");
 
   // Appearance settings.
   $tag .= epages_add_shortcode_option($attributes, "data_search_form");

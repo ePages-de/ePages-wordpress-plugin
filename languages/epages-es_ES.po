@@ -189,6 +189,14 @@ msgstr "Todos los productos de la categoría seleccionada"
 msgid "How do you want your shop to look like?"
 msgstr "¿Qué aspecto quiere que tenga su tienda en línea?"
 
+#: ../templates/popup.php:49
+msgid "Only the selected product"
+msgstr "Solo el producto seleccionado"
+
+#: ../templates/popup.php:52
+msgid "Find"
+msgstr "Buscar"
+
 #: ../templates/popup.php:53
 msgid "Show search field"
 msgstr "Mostrar campo de búsqueda"

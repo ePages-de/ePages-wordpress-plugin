@@ -178,15 +178,7 @@ buildCart();
 
 if (realCart()) {
   var widget = document.querySelectorAll("div.epages-shop-cart.fake")[0];
-  var h2 = widget.previousElementSibling;
-  var modal = widget.nextElementSibling;
-  var section = modal.nextElementSibling;
-  section.classList.add("no-border");
-  if (h2.nodeName == "H2") {
-    h2.parentElement.removeChild(h2);
-  }
   widget.parentElement.removeChild(widget);
-  modal.parentElement.removeChild(modal);
 } else {
   createModal();
   updateCart();

@@ -21,16 +21,21 @@ window.ePagesShop = window.ePagesShop || {};
     editButton:              "#epages-edit-button",
     placeholder:             ".epages-shop-placeholder",
     categoriesContainer:     ".epages-categories-container",
+    productsContainer:       ".epages-products-container",
     allProductsRadioButton:  ".epages-all-products-radio-button",
+    productsRadioButton:     ".epages-products-radio-button",
     categoriesRadioButton:   ".epages-categories-radio-button",
     categoriesSpinner:       ".epages-categories-spinner",
+    productsSpinner:         ".epages-products-spinner",
     searchFormOption:        ".epages-option-search-form",
     categoryListOption:      ".epages-option-category-list",
     sortOption:              ".epages-option-sort",
     menu:                    ".media-menu",
     menuItem:                ".media-menu-item",
     modalContent:            ".media-modal-content",
-    closeButton:             ".media-modal-close"
+    closeButton:             ".media-modal-close",
+    findProductButton:       ".epages-products-button",
+    findProductInput:        ".epages-products-input"
   };
 
   eps.keycodes = {
@@ -41,6 +46,21 @@ window.ePagesShop = window.ePagesShop || {};
   eps.loadCategories = function() {
     return $.ajax({
       url: eps.shopUrl + "/categories",
+      headers: eps.httpHeaders
+    });
+  };
+
+  // Loads the shop‘s products and returns a Promise.
+  eps.loadProducts = function() {
+    return $.ajax({
+      url: eps.shopUrl + "/products",
+      headers: eps.httpHeaders
+    });
+  };
+
+  eps.loadProductsByName = function(query) {
+    return $.ajax({
+      url: eps.shopUrl + "/products?q=" + query,
       headers: eps.httpHeaders
     });
   };
@@ -64,6 +84,25 @@ window.ePagesShop = window.ePagesShop || {};
         $(eps.selectors.categoriesContainer).html(html);
       }).always(function() {
         $(eps.selectors.categoriesSpinner).css("visibility", "hidden");
+      });
+  };
+
+  eps.loadAndDisplayProducts = function() {
+    $(eps.selectors.productsSpinner).css("visibility", "visible");
+    var input = $(eps.selectors.findProductInput)[0].value;
+    return eps.loadProductsByName(input)
+      .done(function(products) {
+        // We expect the first category to contain the
+        // actual shop products to display.
+        items = products.items;
+
+        html = items.map(function(product) {
+          return $('<li><input type="radio" name="epages-products" value="' + product.productId + '">' + product.name + '</li>');
+        });
+
+        $(eps.selectors.productsContainer).html(html);
+      }).always(function() {
+        $(eps.selectors.productsSpinner).css("visibility", "hidden");
       });
   };
 
@@ -148,10 +187,25 @@ window.ePagesShop = window.ePagesShop || {};
     if (categoryId) {
       $(eps.selectors.allProductsRadioButton, eps.editorPopup).prop("checked", false);
       $(eps.selectors.categoriesRadioButton, eps.editorPopup).prop("checked", true);
+      $(eps.selectors.productsRadioButton, eps.editorPopup).prop("checked", false);
 
       eps.loadAndDisplayCategories()
         .done(function() {
           $(eps.selectors.categoriesContainer + " input[value=" + categoryId + "]", eps.editorPopup)
+            .prop("checked", true);
+        });
+    }
+
+    // Product settings.
+    var productId = existingShortcode.shortcode.attrs.named.data_product_details;
+    if (productId) {
+      $(eps.selectors.allProductsRadioButton, eps.editorPopup).prop("checked", false);
+      $(eps.selectors.categoriesRadioButton, eps.editorPopup).prop("checked", false);
+      $(eps.selectors.productsRadioButton, eps.editorPopup).prop("checked", true);
+
+      eps.loadAndDisplayProducts()
+        .done(function() {
+          $(eps.selectors.productsContainer + " input[value=" + productId + "]", eps.editorPopup)
             .prop("checked", true);
         });
     }
@@ -299,6 +353,15 @@ window.ePagesShop = window.ePagesShop || {};
       eps.loadAndDisplayCategories();
     });
 
+    // Loads the shop‘s products.
+    $(eps.selectors.productsRadioButton, eps.editorPopup).click(function(event) {
+      eps.loadAndDisplayProducts();
+    });
+
+    $(eps.selectors.findProductButton, eps.editorPopup).click(function(event) {
+      eps.loadAndDisplayProducts();
+    });
+
     // Closes the editor popup on `escape`.
     $(document).keydown(function(event) {
       if (event.keyCode === eps.keycodes.escape && eps.editorPopupIsOpen()) {
@@ -344,6 +407,14 @@ window.ePagesShop = window.ePagesShop || {};
         var selectedCategory = $(eps.selectors.categoriesContainer +" input:checked")[0];
         if (selectedCategory) {
           result.data_category_id = selectedCategory.value;
+        }
+      }
+
+      // Product settings.
+      if ($(eps.selectors.productsRadioButton).prop("checked")) {
+        var selectedProduct = $(eps.selectors.productsContainer +" input:checked")[0];
+        if (selectedProduct) {
+          result.data_product_details = selectedProduct.value;
         }
       }
 
