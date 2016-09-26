@@ -23,6 +23,7 @@ class Cart_Widget extends WP_Widget {
 			__('Online shop basket widget', 'epages'), // Name
 			array( 'description' => __( 'Add ePages basket to your sidebar', 'epages' )) // Args
 		);
+    wp_enqueue_script("icon", EPAGES_PLUGIN_URL . "/assets/js/icon.js", array(), false, true);
 	}
 
   /**
@@ -106,7 +107,6 @@ class Cart_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-
 	}
 
 	/**
