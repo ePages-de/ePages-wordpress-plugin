@@ -217,3 +217,15 @@ msgstr "data-tooltip=\"Отметьте этот флажок, если вы х�
 #: ../templates/popup.php:75
 msgid "Plugin settings"
 msgstr "Параметры подключаемого модуля"
+
+#: ../functions/cart_widget.php:23
+msgid "Online shop basket widget"
+msgstr "Online shop cart widget"
+
+#: ../functions/cart_widget.php:24
+msgid "Add ePages basket to your sidebar"
+msgstr "Add ePages cart to your sidebar"
+
+#: ../templates/popup.php:18 ../templates/popup.php:50
+msgid "Find any product from your store"
+msgstr "Find any product from your store"

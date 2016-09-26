@@ -20,8 +20,8 @@ class Cart_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'Cart_Widget', // Base ID
-			__('ePages Cart', 'text_domain'), // Name
-			array( 'description' => __( 'Add ePages cart to your sidebar', 'epages' ), ) // Args
+			__('Online shop basket widget', 'epages'), // Name
+			array( 'description' => __( 'Add ePages basket to your sidebar', 'epages' )) // Args
 		);
 	}
 

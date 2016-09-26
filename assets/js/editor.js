@@ -172,6 +172,7 @@ window.ePagesShop = window.ePagesShop || {};
       // Product settings.
       $(eps.selectors.allProductsRadioButton, eps.editorPopup).prop("checked", true);
       $(eps.selectors.categoriesRadioButton, eps.editorPopup).prop("checked", false);
+      $(eps.selectors.productsRadioButton, eps.editorPopup).prop("checked", false);
       $(eps.selectors.categoriesContainer, eps.editorPopup).empty();
 
       // Appearance settings.
@@ -196,7 +197,6 @@ window.ePagesShop = window.ePagesShop || {};
         });
     }
 
-    // Product settings.
     var productId = existingShortcode.shortcode.attrs.named.data_product_details;
     if (productId) {
       $(eps.selectors.allProductsRadioButton, eps.editorPopup).prop("checked", false);
@@ -346,19 +346,33 @@ window.ePagesShop = window.ePagesShop || {};
     // Clears the shop‘s categories.
     $(eps.selectors.allProductsRadioButton, eps.editorPopup).click(function(event) {
       $(eps.selectors.categoriesContainer, eps.editorPopup).empty();
+      $(eps.selectors.productsContainer, eps.editorPopup).empty();
+      $(eps.selectors.findProductInput).value = "";
+      document.getElementsByClassName('epages-products-input')[0].value = '';
     });
 
     // Loads the shop‘s categories.
     $(eps.selectors.categoriesRadioButton, eps.editorPopup).click(function(event) {
+      $(eps.selectors.productsContainer, eps.editorPopup).empty();
+      $(eps.selectors.findProductInput).value = "";
+      document.getElementsByClassName('epages-products-input')[0].value = '';
       eps.loadAndDisplayCategories();
     });
 
     // Loads the shop‘s products.
     $(eps.selectors.productsRadioButton, eps.editorPopup).click(function(event) {
+      $(eps.selectors.categoriesContainer, eps.editorPopup).empty();
+      $(eps.selectors.findProductInput).value = "";
+      document.getElementsByClassName('epages-products-input')[0].value = '';
       eps.loadAndDisplayProducts();
     });
 
+    // Find button
     $(eps.selectors.findProductButton, eps.editorPopup).click(function(event) {
+      $(eps.selectors.categoriesContainer, eps.editorPopup).empty();
+      $(eps.selectors.productsRadioButton, eps.editorPopup).prop("checked", true);
+      $(eps.selectors.allProductsRadioButton, eps.editorPopup).prop("checked", false);
+      $(eps.selectors.categoriesRadioButton, eps.editorPopup).prop("checked", false);
       eps.loadAndDisplayProducts();
     });
 
