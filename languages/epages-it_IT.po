@@ -154,7 +154,7 @@ msgid "Learn more"
 msgstr "Scopri "
 
 #: ../templates/options_page.php:28
-msgid "how to attain the URL"
+msgid "how to attain the URL."
 msgstr "come ottenere l'URL."
 
 #: ../templates/options_page.php:37

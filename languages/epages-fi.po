@@ -155,7 +155,7 @@ msgid "Learn more"
 msgstr "Lue, "
 
 #: ../templates/options_page.php:28
-msgid "how to attain the URL"
+msgid "how to attain the URL."
 msgstr " kuinka voit hankkia URL:n."
 
 #: ../templates/options_page.php:37

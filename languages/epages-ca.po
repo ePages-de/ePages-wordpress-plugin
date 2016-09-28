@@ -154,7 +154,7 @@ msgid "Learn more"
 msgstr "Vegeu"
 
 #: ../templates/options_page.php:28
-msgid "how to attain the URL"
+msgid "how to attain the URL."
 msgstr " com obtenir l'URL."
 
 #: ../templates/options_page.php:37
@@ -220,10 +220,6 @@ msgstr "Opcions de complement"
 #: ../functions/cart_widget.php:23
 msgid "Online shop basket widget"
 msgstr "Online shop cart widget"
-
-#: ../functions/cart_widget.php:24
-msgid "Add ePages basket to your sidebar"
-msgstr "Add ePages cart to your sidebar"
 
 #: ../functions/cart_widget.php:24
 msgid "Add ePages basket to your sidebar"

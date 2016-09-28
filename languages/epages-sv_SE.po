@@ -156,7 +156,7 @@ msgid "Learn more"
 msgstr "Ta reda på "
 
 #: ../templates/options_page.php:28
-msgid "how to attain the URL"
+msgid "how to attain the URL."
 msgstr " hur du skaffar ett URL."
 
 #: ../templates/options_page.php:37

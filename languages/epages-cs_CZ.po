@@ -157,7 +157,7 @@ msgid "Learn more"
 msgstr "Zde najdete informace o tom"
 
 #: ../templates/options_page.php:28
-msgid "how to attain the URL"
+msgid "how to attain the URL."
 msgstr ", jak adresu URL získat."
 
 #: ../templates/options_page.php:37

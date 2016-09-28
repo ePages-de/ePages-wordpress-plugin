@@ -154,8 +154,8 @@ msgid "Learn more"
 msgstr "Learn more"
 
 #: ../templates/options_page.php:28
-msgid "how to attain the URL"
-msgstr "how to attain the URL"
+msgid "how to attain the URL."
+msgstr "how to attain the URL."
 
 #: ../templates/options_page.php:37
 msgid "Invalid shop URL"
