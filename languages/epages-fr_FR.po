@@ -121,8 +121,20 @@ msgstr "Vous pouvez ensuite modifier le produit et les paramètres d'apparence d
 
 #: ../templates/options_page.php:12
 #, php-format
-msgid "Have a question? Visit our <a href=\"http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf\" target=\"_blank\">help center</a>"
+msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-\" target=\"_blank\">help center</a>"
 msgstr "Vous avez une question ? Rendez-vous sur notre <a href=\"https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-\" target=\"_blank\">Centre de support</a>"
+
+#: ../templates/options_page.php:10
+msgid "Have a question? Visit our "
+msgstr "Vous avez une question ? Rendez-vous sur notre "
+
+#: ../templates/options_page.php:10
+msgid "https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-"
+msgstr "https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-"
+
+#: ../templates/options_page.php:10
+msgid "help center"
+msgstr "Centre de support"
 
 #: ../templates/options_page.php:13
 msgid "Your API URL is: "
@@ -227,3 +239,11 @@ msgstr "Add ePages cart to your sidebar"
 #: ../templates/popup.php:18 ../templates/popup.php:50
 msgid "Find any product from your store"
 msgstr "Find any product from your store"
+
+#: ../templates/popup.php:49
+msgid "Only the selected product"
+msgstr "Only the selected product"
+
+#: ../templates/popup.php:52
+msgid "Find"
+msgstr "Find"
