@@ -25,7 +25,7 @@ msgstr "ePages-Onlineshop"
 
 #. URI of the plugin
 msgid "http://www.epages.com/us"
-msgstr "http://www.epages.com/us"
+msgstr "http://www.epages.com/"
 
 #. Description of the plugin
 msgid "ePages Online Shop integration for WordPress."
@@ -85,11 +85,11 @@ msgstr "Validierungsstatus der API URL: "
 
 #: ../functions/options_page.php:24
 msgid "Success"
-msgstr "Success"
+msgstr "Erfolg"
 
 #: ../functions/options_page.php:24
 msgid "Failure"
-msgstr "Failure"
+msgstr "Fehler"
 
 #: ../functions/options_page.php:45
 msgid "Exception while parsing the shop URL validation response."
@@ -219,12 +219,12 @@ msgstr "Plugin-Einstellungen"
 
 #: ../functions/cart_widget.php:23
 msgid "Online shop basket widget"
-msgstr "Online shop Warenkorb widget"
+msgstr "Onlineshop Warenkorb widget"
 
 #: ../functions/cart_widget.php:24
 msgid "Add ePages basket to your sidebar"
-msgstr "Add ePages cart to your sidebar"
+msgstr "Fügen Sie den Warenkorb zu Ihrer Seitenbar"
 
 #: ../templates/popup.php:18 ../templates/popup.php:50
 msgid "Find any product from your store"
-msgstr "Find any product from your store"
+msgstr "Finden Sie alle Produkte aus Ihrem Onlineshop"
