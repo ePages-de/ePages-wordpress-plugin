@@ -247,3 +247,7 @@ msgstr "Add ePages cart to your sidebar"
 #: ../templates/popup.php:18 ../templates/popup.php:50
 msgid "Find any product from your store"
 msgstr "Find any product from your store"
+
+#: ../templates/options_page.php:12
+msgid "http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf"
+msgstr "http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf"

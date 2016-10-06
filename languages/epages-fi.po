@@ -248,3 +248,7 @@ msgstr "Only the selected product"
 #: ../templates/popup.php:52
 msgid "Find"
 msgstr "Find"
+
+#: ../templates/options_page.php:12
+msgid "http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf"
+msgstr "http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf"

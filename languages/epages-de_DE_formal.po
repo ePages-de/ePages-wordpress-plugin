@@ -242,8 +242,12 @@ msgstr "Finden Sie alle Produkte aus Ihrem Onlineshop"
 
 #: ../templates/popup.php:49
 msgid "Only the selected product"
-msgstr "Only the selected product"
+msgstr "Nur das ausgewählte Produkt"
 
 #: ../templates/popup.php:52
 msgid "Find"
-msgstr "Find"
+msgstr "Finden"
+
+#: ../templates/options_page.php:12
+msgid "http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf"
+msgstr "http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-DE.pdf"
