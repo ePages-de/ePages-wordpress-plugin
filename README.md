@@ -6,9 +6,9 @@
 
 **Requires at least**: 3.0.1
 
-**Tested up to**: 5.0.6
+**Tested up to**: 5.0.8
 
-**Stable tag**: 5.0.6
+**Stable tag**: 5.0.8
 
 **License**: MIT
 

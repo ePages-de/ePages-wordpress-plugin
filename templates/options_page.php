@@ -1,5 +1,6 @@
 <div class="wrap">
-<?php if ((get_option("epages_api_url_confirmed"  , 'epages') != "epages") && (get_option("epages_api_url_confirmed"  , 'epages') != "")) { ?>
+<?php $option = get_option("epages_api_url_confirmed"  , 'epages') ?>
+<?php if (( $option !== "epages") && (!empty($option))) { ?>
   <div class="wrap">
     <div class="epages-verified-shop-text"><i class="fa fa-check-circle fa-4x"></i><span><b>
       <?php _e('Congratulations! Your Online Shop is now connected with your Website!' , 'epages'); ?></b></span></div>
