@@ -156,6 +156,15 @@ function updateCart() {
     }
   };
   xhr.send(localStorage.getItem("epages-shop-updates"));
+  var empty = document.getElementsByClassName("epages-cart-overlay-is-empty")[0];
+  var not_empty = document.getElementsByClassName("epages-cart-overlay-not-empty")[0];
+  if (localStorage.getItem("epages-shop-cart-products") === "[]") {
+    empty.style.display = "block";
+    not_empty.style.display = "none";
+  } else {
+    empty.style.display = "none";
+    not_empty.style.display = "block";
+  }
 }
 
 function realCart() {
@@ -214,6 +223,15 @@ for (var i = 0; i < inputs.length; i++) {
 if (btn) {
   btn.onclick = function() {
       modal.style.display = "block";
+      var empty = document.getElementsByClassName("epages-cart-overlay-is-empty")[0];
+      var not_empty = document.getElementsByClassName("epages-cart-overlay-not-empty")[0];
+      if (localStorage.getItem("epages-shop-cart-products") === "[]") {
+        empty.style.display = "block";
+        not_empty.style.display = "none";
+      } else {
+        empty.style.display = "none";
+        not_empty.style.display = "block";
+      }
   }
 }
 
