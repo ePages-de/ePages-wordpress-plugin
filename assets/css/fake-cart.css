@@ -66,3 +66,10 @@ td > button:before {
 .epages-cart-healine {
   display: inline-block;
 }
+
+.modal-content.epages-cart-overlay {
+  max-height: 80%;
+  max-width: 1000px;
+  min-width: 200px;
+  overflow: auto;
+}

@@ -35,6 +35,7 @@ class Cart_Widget extends WP_Widget {
 	 * @param array $instance Saved values from database.
 	 */
 	 function widget( $args, $instance ) {
+     echo '<section id="epages-section" class="widget widget_epages">';
      echo '<div class="epages-shop-cart fake" style="float:left;" id="';
      echo get_option("epages_api_url");
      echo '">
@@ -45,7 +46,7 @@ class Cart_Widget extends WP_Widget {
      </div>
      <div class="modal" id="cartModal">
        <div class="modal-content epages-cart-overlay">
-         <span class="close">x</span>
+         <span class="close pico-close fa fa-2x fa-times-circle undefined"></span>
          <h2 class="epages-cart-healine" data-i18n="basket">Basket</h2>
          <div class="epages-cart-overlay-not-empty">
            <table class="epages-cart-overlay-line-table">
@@ -93,6 +94,7 @@ class Cart_Widget extends WP_Widget {
          </div>
        </div>
      </div>
+     </section>
      ';
      wp_enqueue_script("epages-fake-cart", EPAGES_PLUGIN_URL . "/assets/js/fake-cart.js", array(), false, true);
      wp_enqueue_style("epages-fake-cart-css", EPAGES_PLUGIN_URL . "/assets/css/fake-cart.css");
