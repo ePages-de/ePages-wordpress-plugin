@@ -50,6 +50,7 @@ td > button:before {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    display: inline-block;
 }
 .close:hover,
 .close:focus {
@@ -60,4 +61,8 @@ td > button:before {
 
 .no-border {
   border-top-width: 0 !important;
+}
+
+.epages-cart-healine {
+  display: inline-block;
 }
