@@ -71,5 +71,11 @@ td > button:before {
   max-height: 80%;
   max-width: 1000px;
   min-width: 200px;
+  position: absolute;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 55%;
+  margin: 0 0 0 0;
   overflow: auto;
 }

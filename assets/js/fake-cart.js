@@ -194,6 +194,7 @@ if (realCart()) {
   var span = document.getElementsByClassName("close")[0];
   span.onclick = function() {
       modal.style.display = "none";
+      document.getElementsByTagName("html")[0].style.overflow = "auto";
   }
   var buttons = document.querySelectorAll(".epages-cart-overlay-line-item-remove");
   for (var i = 0; i < buttons.length; i++) {
@@ -223,6 +224,8 @@ for (var i = 0; i < inputs.length; i++) {
 if (btn) {
   btn.onclick = function() {
       modal.style.display = "block";
+      modal.style.overflow = "hidden";
+      document.getElementsByTagName("html")[0].style.overflow = "hidden";
       var empty = document.getElementsByClassName("epages-cart-overlay-is-empty")[0];
       var not_empty = document.getElementsByClassName("epages-cart-overlay-not-empty")[0];
       if (localStorage.getItem("epages-shop-cart-products") === "[]") {
@@ -238,5 +241,7 @@ if (btn) {
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        document.body.style.overflow = 'hidden';
+        document.getElementsByTagName("html")[0].style.overflow = "auto";
     }
 }
