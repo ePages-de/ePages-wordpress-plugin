@@ -79,3 +79,7 @@ td > button:before {
   margin: 0 0 0 0;
   overflow: auto;
 }
+
+.epages-cart-overlay-total {
+  2width: 14% !important;
+}

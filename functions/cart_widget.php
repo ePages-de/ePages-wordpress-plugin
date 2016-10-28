@@ -68,7 +68,7 @@ class Cart_Widget extends WP_Widget {
                  <td class="epages-cart-overlay-remove"></td>
                </tr>
                <tr>
-                 <td colspan="4">Standard delivery</td>
+                 <td colspan="4" data-i18n="shipping">Standard delivery</td>
                  <td class="epages-cart-overlay-delivery-price">0</td>
                  <td class="epages-cart-overlay-remove"></td>
                </tr>
@@ -96,6 +96,7 @@ class Cart_Widget extends WP_Widget {
      </div>
      </section>
      ';
+     wp_enqueue_script("i18n-js", EPAGES_PLUGIN_URL . "/assets/js/i18n.js", array(), false, true);
      wp_enqueue_script("epages-fake-cart", EPAGES_PLUGIN_URL . "/assets/js/fake-cart.js", array(), false, true);
      wp_enqueue_style("epages-fake-cart-css", EPAGES_PLUGIN_URL . "/assets/css/fake-cart.css");
   }

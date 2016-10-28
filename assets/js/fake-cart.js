@@ -2,7 +2,152 @@ var cart = JSON.parse(localStorage.getItem('epages-shop-cart-products'));
 var shopId = localStorage.getItem("epages-shop-cart-checkoutUrl").split("Shops/")[1].split("/")[0];
 var shopUrl = document.querySelector('div .epages-shop-cart.fake').id;
 
+// Translations
+es = i18n.create({
+  values:{
+    "basket": "Cesta",
+    "basket-add": "Añadir a la cesta",
+    "basket-empty": "Su cesta está vacía.",
+    "basket-fail": "Este proceso ha tardado más de lo esperado. Vuelva a intentarlo ahora.",
+    "category": "Categoría",
+    "checkout": "Comprar",
+    "description": "Descripción",
+    "manufacturer-price": "Precio anterior",
+    "additional-product-information": "Información de producto adicional",
+    "exclude-vat": "el IVA y la ",
+    "exclude-vat-price": "El precio, el IVA y la ",
+    "exclude-vat-prices": "Los precios, el IVA y la ",
+    "include-vat-cart": "Incluye el IVA",
+    "include-vat": "Incluye el IVA y ",
+    "include-vat-price": "El precio incluye el IVA y ",
+    "include-vat-prices": "Los precios incluyen el IVA y la ",
+    "loading": "Cargando...",
+    "sortby": "Ordenar por",
+    "name": "Nombre",
+    "no-products": "Su búsqueda no ha obtenido ningún resultado.",
+    "price-asc": "Precio: de menor a mayor",
+    "price-desc": "Precio: de mayor a menor",
+    "quantity": "Cantidad",
+    "search": "Buscar",
+    "shipping": "Envío",
+    "shipping-price": "Precio de envío",
+    "ssl": "Sus datos se transferirán a través de una conexión cifrada (SSL) y no se revelarán a terceros.",
+    "subtotal": "Subtotal",
+    "total-price": "Precio total",
+    "unit-price": "Precio",
+    "remove-line-item": "Eliminar producto",
+    "variation-options": "Elija sus opciones",
+    "all-products": "Todos los productos",
+    "pieces": "unidad(es)"
+  }
+})
+
+en = i18n.create({
+  values:{
+    "basket": "Basket",
+    "basket-add": "Add to basket",
+    "basket-empty": "Your basket is empty.",
+    "basket-fail": "Oops. This took longer than it should. Please try again now.",
+    "category": "Category",
+    "checkout": "Check out",
+    "description": "Description",
+    "manufacturer-price": "Old price",
+    "additional-product-information": "Additional product information",
+    "exclude-vat": "plus VAT, plus ",
+    "exclude-vat-price": "Price plus VAT, plus ",
+    "exclude-vat-prices": "Prices plus VAT, plus ",
+    "include-vat-cart": "includes VAT",
+    "include-vat": "includes VAT, plus ",
+    "include-vat-price": "Price includes VAT, plus ",
+    "include-vat-prices": "Prices include VAT, plus ",
+    "loading": "Loading ...",
+    "sortby": "Sort by",
+    "name": "Name",
+    "no-products": "Your search did not produce any matches.",
+    "price-asc": "Price: low to high",
+    "price-desc": "Price: high to low",
+    "quantity": "Quantity",
+    "search": "Search",
+    "shipping": "delivery",
+    "shipping-price": "Delivery price",
+    "ssl": "Your data will be transmitted through an encrypted connection (SSL) and will not be disclosed to third parties.",
+    "subtotal": "Subtotal",
+    "total-price": "Total price",
+    "unit-price": "Price",
+    "remove-line-item": "Remove product",
+    "variation-options": "Please choose your option(s)",
+    "all-products": "All products",
+    "pieces": "piece(s)"
+  }
+})
+
+de = i18n.create({
+  values:{
+    "basket": "Warenkorb",
+    "basket-add": "In Warenkorb legen",
+    "basket-empty": "Ihr Warenkorb ist leer.",
+    "basket-fail": "Das hat länger gedauert, als es sollte. Bitte versuchen Sie es erneut.",
+    "category": "Kategorie",
+    "checkout": "Zur Kasse",
+    "description": "Beschreibung",
+    "manufacturer-price": "Alter Preis",
+    "additional-product-information": "Weitere Produktinformationen",
+    "exclude-vat": "zzgl. MwSt., zzgl. ",
+    "exclude-vat-price": "Preis zzgl. MwSt., zzgl. ",
+    "exclude-vat-prices": "Preise zzgl. MwSt., zzgl. ",
+    "include-vat-cart": "inkl. MwSt.",
+    "include-vat": "inkl. MwSt. und ",
+    "include-vat-price": "Preis inkl. MwSt. und ",
+    "include-vat-prices": "Preise inkl. MwSt., plus ",
+    "loading": "Seite lädt ...",
+    "sortby": "Sortieren nach",
+    "name": "Name",
+    "no-products": "Ihre Suchanfrage ergab keine Treffer.",
+    "price-asc": "Preis aufsteigend",
+    "price-desc": "Preis absteigend",
+    "quantity": "Anzahl",
+    "search": "Suchen",
+    "shipping": "Versand",
+    "shipping-price": "Versandkosten",
+    "ssl": "Ihre Daten werden über eine verschlüsselte Verbindung übertragen (SSL) und nicht an Dritte weitergegeben.",
+    "subtotal": "Zwischensumme",
+    "total-price": "Gesamtpreis",
+    "unit-price": "Preis",
+    "remove-line-item": "Produkt entfernen",
+    "variation-options": "Bitte wählen sie Ihre Option(en)",
+    "all-products": "Alle Produkte",
+    "pieces": "Stück"
+  }
+})
+// -------------
+
 document.querySelector('.epages-shop-cart.fake span').innerHTML = cart.length;
+
+function translateEverything() {
+  language = localStorage.getItem("epages-shop-lang") || 'en';
+  var terms = ["basket", "basket-add", "basket-empty", "basket-fail", "category", "checkout", "description", "manufacturer-price", "additional-product-information", "exclude-vat", "exclude-vat-price", "exclude-vat-prices", "include-vat-cart", "include-vat", "include-vat-price", "include-vat-prices", "loading", "sortby", "name", "no-products", "price-asc", "price-desc", "quantity", "search", "shipping", "shipping-price", "ssl", "subtotal", "total-price", "unit-price", "remove-line-item", "variation-options", "all-products", "pieces"];
+  for (var t in terms) {
+    var term = terms[t];
+    var translate = jQuery("[data-i18n='" + term + "']");
+    if (translate.length > 0) {
+      for (var e in translate) {
+        if (term === 'pieces') {
+          var elem = translate[e];
+          if (!isNaN(e)) {
+            var value = eval(language + '("' + term + '")');
+            var amount = elem.childNodes[1].value;
+            elem.innerHTML = elem.innerHTML.replace("piece(s)", value);
+            elem.childNodes[1].value = amount;
+          }
+        } else {
+          var elem = translate[e];
+          var value = eval(language + '("' + term + '")');
+          elem.innerText = value;
+        }
+      }
+    }
+  }
+}
 
 function createCartElement(element, index, array) {
   var tbody = document.getElementsByTagName("tbody");
@@ -31,6 +176,7 @@ function createCartElement(element, index, array) {
 
   quantityD.className = "epages-cart-overlay-quantity";
   quantityD.innerText = "piece(s)"
+  quantityD.setAttribute('data-i18n', 'pieces');
   var quantity = document.createElement("input");
   quantity.value = element.quantity;
   quantity.className = "epages-cart-overlay-line-item-quantity";
@@ -232,6 +378,7 @@ if (btn) {
         empty.style.display = "block";
         not_empty.style.display = "none";
       } else {
+        translateEverything();
         empty.style.display = "none";
         not_empty.style.display = "block";
       }
