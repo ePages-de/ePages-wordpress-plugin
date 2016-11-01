@@ -35,7 +35,8 @@ window.ePagesShop = window.ePagesShop || {};
     modalContent:            ".media-modal-content",
     closeButton:             ".media-modal-close",
     findProductButton:       ".epages-products-button",
-    findProductInput:        ".epages-products-input"
+    findProductInput:        ".epages-products-input",
+    blueShop:                ".epages-shop-edit-button"
   };
 
   eps.keycodes = {
@@ -234,8 +235,10 @@ window.ePagesShop = window.ePagesShop || {};
     var editText = document.getElementById("epages-edit-button").text;
     eps.updateButton({
       id: "epages-shop-edit-button",
+      class: 'blue-shop',
       value: editText,
-      callback: function() {
+      callback: function(event) {
+        event.preventDefault();
         eps.updateEditorOptions();
         eps.openEditorPopup();
       },
@@ -287,7 +290,7 @@ window.ePagesShop = window.ePagesShop || {};
 
     if (editorContainsWidget && button.length == 0) {
       var button = $('<input type="button" id="' + options.id + '" value="' + options.value + '" \
-                            contenteditable="false" data-mce-bogus="true">')
+                            contenteditable="false" class="' + options.class + '" data-mce-bogus="true">')
           .appendTo(body);
 
       button.click(options.callback);
@@ -330,6 +333,12 @@ window.ePagesShop = window.ePagesShop || {};
       eps.updateEditorOptions();
       eps.openEditorPopup();
     });
+    // $(eps.selectors.blueShop).click(function(event) {
+    //   console.log('oli');
+    //   event.preventDefault();
+    //   eps.updateEditorOptions();
+    //   eps.openEditorPopup();
+    // });
 
     // Closes the editor popup.
     $(eps.selectors.closeButton, eps.editorPopup).click(function(event) {

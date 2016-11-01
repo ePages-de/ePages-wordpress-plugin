@@ -42,6 +42,8 @@ window.ePagesShop = window.ePagesShop || {};
       if (node == "epages-shop-remove-button") {
         editor.dom.remove(node.parentElement);
       } else if (node == "epages-shop-edit-button") {
+        event.preventDefault();
+        eps.updateEditorOptions();
         eps.openEditorPopup();
       }
     });
