@@ -35,7 +35,8 @@ static $epages_api_http_options = array(
   "headers" => array(
     "Accept"        => "application/vnd.epages.v1+json"
   ),
-  "user-agent" => "epages-WP"
+  "user-agent" => "epages-WP",
+  "timeout" => "20"
 );
 
 
