@@ -1,6 +1,8 @@
 var cart = JSON.parse(localStorage.getItem('epages-shop-cart-products'));
 var shopId = localStorage.getItem("epages-shop-cart-checkoutUrl").split("Shops/")[1].split("/")[0];
 var shopUrl = document.querySelector('div .epages-shop-cart.fake').id;
+var language = localStorage.getItem("epages-shop-lang") || 'en';
+var spinner = document.querySelector('.epages-categories-spinner');
 
 // Translations
 es = i18n.create({
@@ -124,26 +126,15 @@ de = i18n.create({
 document.querySelector('.epages-shop-cart.fake span').innerHTML = cart.length;
 
 function translateEverything() {
-  language = localStorage.getItem("epages-shop-lang") || 'en';
   var terms = ["basket", "basket-add", "basket-empty", "basket-fail", "category", "checkout", "description", "manufacturer-price", "additional-product-information", "exclude-vat", "exclude-vat-price", "exclude-vat-prices", "include-vat-cart", "include-vat", "include-vat-price", "include-vat-prices", "loading", "sortby", "name", "no-products", "price-asc", "price-desc", "quantity", "search", "shipping", "shipping-price", "ssl", "subtotal", "total-price", "unit-price", "remove-line-item", "variation-options", "all-products", "pieces"];
   for (var t in terms) {
     var term = terms[t];
     var translate = jQuery("[data-i18n='" + term + "']");
     if (translate.length > 0) {
       for (var e in translate) {
-        if (term === 'pieces') {
-          var elem = translate[e];
-          if (!isNaN(e)) {
-            var value = eval(language + '("' + term + '")');
-            var amount = elem.childNodes[1].value;
-            elem.innerHTML = elem.innerHTML.replace("piece(s)", value);
-            elem.childNodes[1].value = amount;
-          }
-        } else {
-          var elem = translate[e];
-          var value = eval(language + '("' + term + '")');
-          elem.innerText = value;
-        }
+        var elem = translate[e];
+        var value = eval(language + '("' + term + '")');
+        elem.innerText = value;
       }
     }
   }
@@ -175,8 +166,8 @@ function createCartElement(element, index, array) {
   priceD.innerText = element.lineItemPrice;
 
   quantityD.className = "epages-cart-overlay-quantity";
-  quantityD.innerText = "piece(s)"
-  quantityD.setAttribute('data-i18n', 'pieces');
+  var translatedPiece = eval(language + '("piece")');
+  quantityD.innerText = translatedPiece;
   var quantity = document.createElement("input");
   quantity.value = element.quantity;
   quantity.className = "epages-cart-overlay-line-item-quantity";
@@ -360,6 +351,8 @@ var inputs = document.querySelectorAll(".epages-cart-overlay-line-item-quantity"
 
 for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("change", function(event) {
+    spinner.style.visibility = 'visible';
+    setTimeout(function(){ spinner.style.visibility = 'hidden'; }, 1500);
     productId = event.target.parentElement.parentElement.id.split("tr-")[1];
     quantity = event.target.value;
     updateLocalStorage(productId, quantity);

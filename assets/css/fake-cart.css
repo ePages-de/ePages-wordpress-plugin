@@ -83,3 +83,12 @@ td > button:before {
 .epages-cart-overlay-total {
   2width: 14% !important;
 }
+
+.epages-categories-spinner-container {
+  display: flex;
+  justify-content: center;
+}
+
+.epages-categories-spinner {
+  visibility: hidden;
+}
