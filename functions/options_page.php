@@ -14,7 +14,7 @@ function epages_options_page() {
     $url = esc_html(get_option("epages_api_url"));
     $url = trim($url, "/") . "/";
 
-    epages_log( __("Trying to validate shop URL: "  , 'epages') . $url);
+    epages_log( __("Trying to validate API URL: "  , 'epages') . $url);
 
     $response = wp_remote_get($url, $epages_api_http_options);
     epages_log($response);
@@ -22,7 +22,7 @@ function epages_options_page() {
     $valid_shop_id = epages_is_valid_api_response($response);
     $mbo_url = epages_get_mbo_url($response);
 
-    epages_log( __("Shop URL validation status: ") . ($valid_shop_id ? __("Success"  , 'epages') : __("Failure"  , 'epages')));
+    epages_log( __("API URL validation status: ") . ($valid_shop_id ? __("Success"  , 'epages') : __("Failure"  , 'epages')));
     update_option("epages_api_url_confirmed", $valid_shop_id);
     update_option("epages_mbo_url", $mbo_url);
   }
@@ -44,7 +44,7 @@ function epages_is_valid_api_response($response) {
         return true;
       }
     } catch (Exception $ex) {
-      epages_log( __("Exception while parsing the shop URL validation response."  , 'epages') );
+      epages_log( __("Exception while parsing the shop API validation response."  , 'epages') );
     }
   }
 
@@ -57,7 +57,7 @@ function epages_get_mbo_url($response) {
       $json = json_decode($response["body"]);
       return $json->mboUrl;
     } catch (Exception $ex) {
-      epages_log( __("Exception while parsing the shop URL validation response."  , 'epages') );
+      epages_log( __("Exception while parsing the shop API validation response."  , 'epages') );
     }
   }
 }

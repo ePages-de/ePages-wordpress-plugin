@@ -38,7 +38,6 @@ es = i18n.create({
     "total-price": "Precio total",
     "unit-price": "Precio",
     "remove-line-item": "Eliminar producto",
-    "variation-options": "Elija sus opciones",
     "all-products": "Todos los productos",
     "pieces": "unidad(es)"
   }
@@ -77,7 +76,6 @@ en = i18n.create({
     "total-price": "Total price",
     "unit-price": "Price",
     "remove-line-item": "Remove product",
-    "variation-options": "Please choose your option(s)",
     "all-products": "All products",
     "pieces": "piece(s)"
   }
@@ -116,7 +114,6 @@ de = i18n.create({
     "total-price": "Gesamtpreis",
     "unit-price": "Preis",
     "remove-line-item": "Produkt entfernen",
-    "variation-options": "Bitte wählen sie Ihre Option(en)",
     "all-products": "Alle Produkte",
     "pieces": "Stück"
   }
@@ -126,7 +123,7 @@ de = i18n.create({
 document.querySelector('.epages-shop-cart.fake span').innerHTML = cart.length;
 
 function translateEverything() {
-  var terms = ["basket", "basket-add", "basket-empty", "basket-fail", "category", "checkout", "description", "manufacturer-price", "additional-product-information", "exclude-vat", "exclude-vat-price", "exclude-vat-prices", "include-vat-cart", "include-vat", "include-vat-price", "include-vat-prices", "loading", "sortby", "name", "no-products", "price-asc", "price-desc", "quantity", "search", "shipping", "shipping-price", "ssl", "subtotal", "total-price", "unit-price", "remove-line-item", "variation-options", "all-products", "pieces"];
+  var terms = ["basket", "basket-add", "basket-empty", "basket-fail", "category", "checkout", "description", "manufacturer-price", "additional-product-information", "exclude-vat", "exclude-vat-price", "exclude-vat-prices", "include-vat-cart", "include-vat", "include-vat-price", "include-vat-prices", "loading", "sortby", "name", "no-products", "price-asc", "price-desc", "quantity", "search", "shipping", "shipping-price", "ssl", "subtotal", "total-price", "unit-price", "remove-line-item", "all-products", "pieces"];
   for (var t in terms) {
     var term = terms[t];
     var translate = jQuery("[data-i18n='" + term + "']");

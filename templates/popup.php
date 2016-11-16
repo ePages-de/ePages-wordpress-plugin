@@ -16,7 +16,7 @@
         <div class="media-frame-menu">
           <div class="media-menu">
             <a href="#" class="media-menu-item" data-content="product-settings"><?php _e('Product settings' ,'epages'); ?> </a>
-            <a href="#" class="media-menu-item" data-content="appearance"><?php _e('Appearance','epages'); ?></a>
+            <a href="#" class="media-menu-item" data-content="appearance"><?php _e('Appearance settings','epages'); ?></a>
           </div>
         </div>
 
@@ -25,15 +25,15 @@
         </div>
 
         <div class="media-frame-title appearance">
-          <h1><?php _e('Appearance','epages'); ?><span class="dashicons dashicons-arrow-down"></span></h1>
+          <h1><?php _e('Appearance settings','epages'); ?><span class="dashicons dashicons-arrow-down"></span></h1>
         </div>
 
         <div class="media-frame-content product-settings">
-          <h2><?php _e('Which products do you want to display?','epages'); ?></h2>
+          <h2><?php _e('Choose the products you want to show on the website','epages'); ?></h2>
 
           <label>
             <input type="radio" name="product-settings" value="all-products" checked="checked" class="epages-all-products-radio-button">
-            <?php _e('Show all products','epages'); ?>
+            <?php _e('All products','epages'); ?>
           </label>
 
           <label>
@@ -48,7 +48,7 @@
             <input type="radio" name="product-settings" value="products" class="epages-products-radio-button">
             <?php _e('Only the selected product','epages'); ?>
             <img src="<?php echo $epages_plugin_url . "/assets/images/spinner.gif"; ?>" class="epages-products-spinner hidden">
-            <input type="text" name="product-settings" style="width:50%" value="" placeholder="<?php _e('Find any product from your store','epages'); ?>" class="epages-products-input">
+            <input type="text" name="product-settings" style="width:50%" value="" placeholder="<?php _e('Find any product from your shop','epages'); ?>" class="epages-products-input">
             <button type="button" name="product-settings" class="epages-products-button button button-primary button-large"><?php _e('Find','epages'); ?></button>
           </label>
 
@@ -56,23 +56,23 @@
         </div>
 
         <div class="media-frame-content appearance">
-          <h2><?php _e('How do you want your shop to look like?' ,'epages'); ?></h2>
+          <h2><?php _e('Choose the appearance settings for the product list view' ,'epages'); ?></h2>
 
           <label>
             <input type="checkbox" value="search-form" checked="checked" class="epages-option-search-form">
-            <?php _e('Show search field','epages'); ?>
-            <span class="tooltip" <?php _e('data-tooltip="Mark this checkbox, if you want to display a search field in your product list view.">' ,'epages'); ?><i class="fa fa-lg fa-info-circle"></i></span>
+            <?php _e('Search field','epages'); ?>
+            <span class="tooltip" <?php _e('data-tooltip="Mark this checkbox, if you want to display a search field in the product list view.">' ,'epages'); ?><i class="fa fa-lg fa-info-circle"></i></span>
           </label>
 
           <label>
             <input type="checkbox" value="category-list" class="epages-option-category-list">
-            <?php _e('Show category selection' ,'epages'); ?>
-            <span class="tooltip" <?php _e('data-tooltip="Mark this checkbox, if you want to display a category selection dropdown menu in your product list view.">' ,'epages'); ?><i class="fa fa-lg fa-info-circle"></i></span>
+            <?php _e('Category selection' ,'epages'); ?>
+            <span class="tooltip" <?php _e('data-tooltip="Mark this checkbox, if you want to display a category selection dropdown menu in the product list view.">' ,'epages'); ?><i class="fa fa-lg fa-info-circle"></i></span>
           </label>
 
           <label>
             <input type="checkbox" value="sort" checked="checked" class="epages-option-sort">
-            <?php _e('Show product sorting' ,'epages'); ?>
+            <?php _e('Product sorting' ,'epages'); ?>
             <span class="tooltip" <?php _e('data-tooltip="Mark this checkbox, if you want to display a product sorting option in your product list view.">' ,'epages'); ?><i class="fa fa-lg fa-info-circle"></i></span>
           </label>
           <div>

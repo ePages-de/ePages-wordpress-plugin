@@ -20,8 +20,8 @@ class Cart_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'Cart_Widget', // Base ID
-			__('Online shop basket widget', 'epages'), // Name
-			array( 'description' => __( 'Add ePages basket to your sidebar', 'epages' )) // Args
+			__('Basket widget', 'epages'), // Name
+			array( 'description' => __( 'Add ePages basket to sidebar', 'epages' )) // Args
 		);
     wp_enqueue_script("icon", EPAGES_PLUGIN_URL . "/assets/js/icon.js", array(), false, true);
 	}
