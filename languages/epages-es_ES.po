@@ -2,26 +2,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ePages Online Shop\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Feb 22 2016 17:48:29 GMT+0100 (CET)\n"
-"PO-Revision-Date: 2016-07-22 21:01+0200\n"
+"POT-Creation-Date: Tue Feb 23 2016 11:56:18 GMT+0100 (CET)\n"
+"PO-Revision-Date: 2016-12-12 10:36+0100\n"
 "Last-Translator: timosen <t.senechal@epages.com>\n"
 "Language-Team: \n"
-"Language: es_ES\n"
+"Language: en\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;"
-"_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
-"X-Loco-Target-Locale: es_ES\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: en_US\n"
 "X-Generator: Poedit 1.8.8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #. Name of the plugin
 msgid "ePages Online Shop"
-msgstr "Tienda en línea"
+msgstr "Tienda online de ePages"
 
 #. URI of the plugin
 msgid "http://www.epages.com/us"
@@ -29,7 +28,7 @@ msgstr "http://www.epages.com/us"
 
 #. Description of the plugin
 msgid "ePages Online Shop integration for WordPress."
-msgstr "La integración de ePages Tienda online para WordPress."
+msgstr "Integración de la tienda online de ePages con WordPress."
 
 #. Author of the plugin
 msgid "mindmatters"
@@ -41,7 +40,7 @@ msgstr "http://mindmatters.de"
 
 #: ../index.php:15
 msgid "Plugin file cannot be accessed directly."
-msgstr "No es posible acceder directamente al archivo de plugin."
+msgstr "No se puede acceder directamente al archivo del plugin."
 
 #: ../actions/add_editor_button.php:5
 msgid "Add Shop"
@@ -53,27 +52,84 @@ msgstr "Editar tienda"
 
 #: ../actions/add_options_page.php:4
 msgid "Shop settings"
-msgstr "Opciones de la tienda en línea"
+msgstr "Opciones de la tienda"
 
 #: ../actions/add_options_page.php:4
 msgid "Online Shop"
-msgstr "Tienda en línea"
+msgstr "Tienda online"
 
 #: ../actions/show_admin_message.php:4
 msgid "Your ePages shop is almost ready to use"
-msgstr "<strong>Su tienda en línea de ePages ya está casi lista para su uso</strong>."
+msgstr "Su tienda de ePages está prácticamente lista para su uso."
 
 #: ../actions/show_admin_message.php:5
 msgid "Set up the plugin in the "
-msgstr "Consulte en las "
+msgstr "Configure el complemento en el área de la "
 
 #: ../actions/show_admin_message.php:6
 msgid "<strong>Online Shop</strong>"
-msgstr "<strong>opciones de ePages</strong>"
+msgstr "<strong>tienda online</strong>"
 
 #: ../actions/show_admin_message.php:7
 msgid "area."
-msgstr "cómo configurar el plugin."
+msgstr "."
+
+#: ../functions/options_page.php:17
+msgid "Trying to validate API URL: "
+msgstr "Intentando validar la API URL: "
+
+#: ../functions/options_page.php:24
+msgid "API URL validation status: "
+msgstr "Estado de validación de la API URL: "
+
+#: ../functions/options_page.php:24
+msgid "Success"
+msgstr "Éxito"
+
+#: ../functions/options_page.php:24
+msgid "Failure"
+msgstr "Error"
+
+#: ../functions/options_page.php:45
+msgid "Exception while parsing the API URL validation response."
+msgstr "Se ha producido una excepción al analizar la respuesta de validación de la API URL."
+
+#: ../templates/options_page.php:2
+msgid "Connect your online shop with the plugin."
+msgstr "Conecte su tienda en línea con el plugin."
+
+#: ../templates/options_page.php:7
+msgid "Congratulations! Your online shop is now connected to your WordPress website."
+msgstr "¡Enhorabuena! Su tienda online está conectada con su sitio web de WordPress."
+
+#: ../templates/options_page.php:10
+msgid "You can now add your online shop to any WordPress page or post. Just click <strong>Add shop to the page</strong>."
+msgstr "Ya puede agregar su tienda online a cualquier mensaje o página de WordPress. Solo tiene que hacer clic en <strong>Añadir tienda a la página</strong>."
+
+#: ../templates/options_page.php:11
+msgid "Now click <strong>Edit shop</strong> to edit the product and appearance settings for your shop for this page or post. You can change these settings at any time."
+msgstr "Ahora haga clic en <strong>Editar tienda</strong> para cambiar la configuración del producto y la apariencia de su tienda para esta página o mensaje. Puede modificar la configuración en cualquier momento."
+
+#: ../templates/options_page.php:12
+#, php-format
+msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-\" target=\"_blank\">help center</a>"
+msgstr "Si tiene alguna pregunta, visite nuestro <a href=\"https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-\" target=\"_blank\">centro de ayuda</a>"
+
+#: ../templates/options_page.php:10
+msgid "Have a question? Visit our "
+msgstr "Si tiene alguna pregunta, visite nuestro "
+
+#: ../templates/options_page.php:10
+msgid "https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-"
+msgstr "https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-"
+
+#: ../templates/options_page.php:10
+msgid "Help Centre"
+msgstr "Centro de ayuda"
+
+#: ../templates/options_page.php:13
+msgid "Your API URL is: "
+msgstr "La API URL es: "
 
 #: ../templates/options_page.php:14
 msgid "To shop administration"
@@ -83,90 +139,33 @@ msgstr "Ir a administración de la tienda"
 msgid "Add shop to the page"
 msgstr "Añadir tienda a la página"
 
-#: ../functions/options_page.php:17
-msgid "Trying to validate API URL: "
-msgstr "Intentando validar API URL: "
-
-#: ../functions/options_page.php:24
-msgid "API URL validation status: "
-msgstr "Estado de validación de API URL: "
-
-#: ../functions/options_page.php:24
-msgid "Success"
-msgstr "éxito"
-
-#: ../functions/options_page.php:24
-msgid "Failure"
-msgstr "fracaso"
-
-#: ../functions/options_page.php:45
-msgid "Exception while parsing the shop API validation response."
-msgstr "Excepción al analizar la respuesta de validación de API URL."
-
-#: ../templates/options_page.php:2
-msgid "Connect your online shop with the plugin."
-msgstr "Conecte su tienda en línea con el plugin"
-
-#: ../templates/options_page.php:7
-msgid "Congratulations! Your online shop is now connected to your WordPress website."
-msgstr "¡Enhorabuena! Su tienda en línea ahora está conectada con su sitio web."
-
-#: ../templates/options_page.php:10
-msgid "You can now add your online shop to any WordPress page or post. Just click <strong>Add shop to the page</strong>."
-msgstr "Ahora puede añadir su tienda en línea a cualquier publicación o página de WordPress: basta con hacer clic en <strong>Añadir tienda</strong> cuando añada una nueva publicación."
-
-#: ../templates/options_page.php:11
-msgid "Now click <strong>Edit shop</strong> to edit the product and appearance settings for your shop for this page or post. You can change these settings at any time."
-msgstr "Posteriormente, puede cambiar en cualquier momento las opciones de producto y aspecto de su tienda en línea para esta publicación o esta página. Para ello, solo tiene que hacer clic en <strong>Edit</strong>."
-
-#: ../templates/options_page.php:12
-#, php-format
-msgid "Have a question? Visit our <a href=\"https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-\" target=\"_blank\">help center</a>"
-msgstr "¿Tiene alguna pregunta? Visite nuestro <a href=\"https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-\" target=\"_blank\">Centro de Ayuda</a>"
-
-#: ../templates/options_page.php:10
-msgid "Have a question? Visit our "
-msgstr "¿Tiene alguna pregunta? Visite nuestro "
-
-#: ../templates/options_page.php:10
-msgid "https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-"
-msgstr "https://www.online-help-center.com/customer/portal/articles/2561815-how-do-i-use-the-wordpress-plugin-"
-
-#: ../templates/options_page.php:10
-msgid "Help Centre"
-msgstr "Centro de Ayuda"
-
-#: ../templates/options_page.php:13
-msgid "Your API URL is: "
-msgstr "Su API URL es:"
-
 #: ../templates/options_page.php:19
 msgid "Disconnect shop"
-msgstr "Desconectar tienda en línea"
+msgstr "Desconectar tienda"
 
 #: ../templates/options_page.php:22
 msgid "There are just a few steps left to start selling on your Wordpress site."
-msgstr "<strong>Solo quedan unos pasos para empezar a vender en su sitio de WordPress</strong>"
+msgstr "Solo quedan unos pocos pasos para empezar a vender en su sitio de WordPress."
 
 #: ../templates/options_page.php:25
 msgid "Create your free online shop"
-msgstr "Cree su tienda en línea gratis"
+msgstr "Cree su tienda online gratis"
 
 #: ../templates/options_page.php:26
 msgid "If you already have an ePages online shop, move on to the next step."
-msgstr "Si ya tiene una tienda en línea de ePages, continúe con el paso siguiente."
+msgstr "Si ya tiene una tienda online de ePages, pase al siguiente paso."
 
 #: ../templates/options_page.php:28
 msgid "Enter your API URL here. "
-msgstr "Escriba aquí su API URL. "
+msgstr "Introduzca la API URL aquí. "
 
 #: ../templates/options_page.php:28
 msgid "Learn more"
-msgstr "Vea "
+msgstr "Más información"
 
 #: ../templates/options_page.php:28
 msgid "how to retrieve the URL."
-msgstr " cómo obtener la URL."
+msgstr "cómo recuperar la URL."
 
 #: ../templates/options_page.php:37
 msgid "Invalid API URL"
@@ -182,15 +181,15 @@ msgstr "Opciones de producto"
 
 #: ../templates/popup.php:19 ../templates/popup.php:28
 msgid "Appearance settings"
-msgstr "Configuración de la visualización"
+msgstr "Opciones de apariencia"
 
 #: ../templates/popup.php:32
 msgid "Choose the products you want to show on the website"
-msgstr "¿Qué productos desea mostrar?"
+msgstr "Elija los productos que desea mostrar en el sitio web"
 
 #: ../templates/popup.php:36
 msgid "All products"
-msgstr "Mostrar todos los productos"
+msgstr "Todos los productos"
 
 #: ../templates/popup.php:41
 msgid "All products from selected category"
@@ -198,7 +197,47 @@ msgstr "Todos los productos de la categoría seleccionada"
 
 #: ../templates/popup.php:49
 msgid "Choose the appearance settings for the product list view"
-msgstr "¿Qué aspecto quiere que tenga su tienda en línea?"
+msgstr "Elija las opciones de apariencia para la vista de lista de productos"
+
+#: ../templates/popup.php:53
+msgid "Search field"
+msgstr "Campo de búsqueda"
+
+#: ../templates/popup.php:54
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a search field in the product list view.\">"
+msgstr "data-tooltip=\"Marque esta casilla si desea mostrar un campo de búsqueda en la vista de la lista de productos.\">"
+
+#: ../templates/popup.php:59
+msgid "Category selection"
+msgstr "Selección de categoría"
+
+#: ../templates/popup.php:60
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a category selection dropdown menu in the product list view.\">"
+msgstr "data-tooltip=\"Marque esta casilla si desea mostrar un menú desplegable para seleccionar una categoría en la vista de productos.\">"
+
+#: ../templates/popup.php:65
+msgid "Product sorting"
+msgstr "Filtrar productos"
+
+#: ../templates/popup.php:66
+msgid "data-tooltip=\"Mark this checkbox, if you want to display a product sorting option in your product list view.\">"
+msgstr "data-tooltip=\"Marque esta casilla si desea mostrar una opción de filtrar productos en la vista de productos.\">"
+
+#: ../templates/popup.php:75
+msgid "Plugin settings"
+msgstr "Opciones del plugin"
+
+#: ../functions/cart_widget.php:23
+msgid "Basket widget"
+msgstr "Widget de cesta"
+
+#: ../functions/cart_widget.php:24
+msgid "Add ePages basket to sidebar"
+msgstr "Añadir la cesta de ePages a la barra lateral"
+
+#: ../templates/popup.php:18 ../templates/popup.php:50
+msgid "Find any product from your shop"
+msgstr "Buscar cualquier producto de su tienda"
 
 #: ../templates/popup.php:49
 msgid "Only the selected product"
@@ -207,46 +246,6 @@ msgstr "Solo el producto seleccionado"
 #: ../templates/popup.php:52
 msgid "Find"
 msgstr "Buscar"
-
-#: ../templates/popup.php:53
-msgid "Search field"
-msgstr "Mostrar campo de búsqueda"
-
-#: ../templates/popup.php:54
-msgid "data-tooltip=\"Mark this checkbox, if you want to display a search field in the product list view.\">"
-msgstr "data-tooltip=\"Mark this checkbox, if you want to display a search field in the product list view.\">"
-
-#: ../templates/popup.php:59
-msgid "Category selection"
-msgstr "Mostrar selección de categoría"
-
-#: ../templates/popup.php:60
-msgid "data-tooltip=\"Mark this checkbox, if you want to display a category selection dropdown menu in the product list view.\">"
-msgstr "data-tooltip=\"Marque esta casilla si desea mostrar un menú desplegable para seleccionar una categoría en la vista de su lista de productos.\">"
-
-#: ../templates/popup.php:65
-msgid "Product sorting"
-msgstr "Mostrar clasificación de productos"
-
-#: ../templates/popup.php:66
-msgid "data-tooltip=\"Mark this checkbox, if you want to display a product sorting option in your product list view.\">"
-msgstr "data-tooltip=\"Marque esta casilla si desea mostrar una opción de clasificación de productos en la vista de su lista de productos.\">"
-
-#: ../templates/popup.php:75
-msgid "Plugin settings"
-msgstr "Opciones de plugin"
-
-#: ../functions/cart_widget.php:23
-msgid "Basket widget"
-msgstr "Online shop cart widget"
-
-#: ../functions/cart_widget.php:24
-msgid "Add ePages basket to sidebar"
-msgstr "Add ePages cart to your sidebar"
-
-#: ../templates/popup.php:18 ../templates/popup.php:50
-msgid "Find any product from your shop"
-msgstr "Find any product from your shop"
 
 #: ../templates/options_page.php:12
 msgid "http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf"
