@@ -262,7 +262,7 @@ function updateLocalStorageCart(element, index, array) {
   localStorage.setItem('epages-shop-cart-products', JSON.stringify(cart));
 }
 
-function updateCart() {
+function updateCart(productId = 0) {
   var xhr = new XMLHttpRequest();
 
   xhr.open("POST", shopUrl + "/carts");
@@ -270,6 +270,21 @@ function updateCart() {
   xhr.onload = function() {
     if (xhr.status === 201) {
       var jsonResponse = JSON.parse(xhr.responseText);
+
+      if (productId != 0) {
+        var jsonQuantity = 0;
+        jsonResponse.lineItemContainer.productLineItems.forEach(function findProductQuantityOnArray(element) {
+          if (element.productId == productId) {
+             jsonQuantity = element.quantity.amount;
+             return false;
+          }
+        });
+
+        if (jsonQuantity != 0) {
+          var theProduct = document.querySelectorAll("tr#tr-" + productId + "> td.epages-cart-overlay-quantity > input")[0];
+          theProduct.value = jsonQuantity;
+        }
+      }
       localStorage.setItem("epages-shop-cart-checkoutUrl", jsonResponse.checkoutUrl);
 
       var subtotal = document.getElementsByClassName("epages-cart-overlay-sub-price");
@@ -350,10 +365,11 @@ for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("change", function(event) {
     spinner.style.visibility = 'visible';
     setTimeout(function(){ spinner.style.visibility = 'hidden'; }, 1500);
-    productId = event.target.parentElement.parentElement.id.split("tr-")[1];
-    quantity = event.target.value;
+    var productId = event.target.parentElement.parentElement.id.split("tr-")[1];
+    var quantity = event.target.value;
+    var json_products = JSON.parse(localStorage.getItem('epages-shop-cart-products'));
     updateLocalStorage(productId, quantity);
-    updateCart();
+    updateCart(productId);
   });
 }
 
