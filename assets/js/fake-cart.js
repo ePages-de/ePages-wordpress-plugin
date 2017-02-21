@@ -160,7 +160,7 @@ function createCartElement(element, index, array) {
   nameD.innerText = element.name;
 
   priceD.className = "epages-cart-overlay-image";
-  priceD.innerText = element.lineItemPrice;
+  priceD.innerText = element.priceInfo.price.formatted;
 
   quantityD.className = "epages-cart-overlay-quantity";
   var translatedPiece = eval(language + '("piece")');
