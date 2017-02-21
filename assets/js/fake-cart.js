@@ -283,6 +283,8 @@ function updateCart(productId = 0) {
         if (jsonQuantity != 0) {
           var theProduct = document.querySelectorAll("tr#tr-" + productId + "> td.epages-cart-overlay-quantity > input")[0];
           theProduct.value = jsonQuantity;
+          spinner.style.visibility = 'hidden';
+          setTimeout(function(){ alert('Unfortunately, the products you selected are not available in the amount you requested. The amount has been changed.'); },1);
         }
       }
       localStorage.setItem("epages-shop-cart-checkoutUrl", jsonResponse.checkoutUrl);
@@ -364,7 +366,6 @@ var inputs = document.querySelectorAll(".epages-cart-overlay-line-item-quantity"
 for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("change", function(event) {
     spinner.style.visibility = 'visible';
-    setTimeout(function(){ spinner.style.visibility = 'hidden'; }, 1500);
     var productId = event.target.parentElement.parentElement.id.split("tr-")[1];
     var quantity = event.target.value;
     var json_products = JSON.parse(localStorage.getItem('epages-shop-cart-products'));
