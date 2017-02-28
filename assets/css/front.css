@@ -84,3 +84,49 @@ select {
 .epages-cart-overlay-line-item-remove::before {
   color: #575757;
 }
+/****** Tooltip styles ******/
+.epages-cart-overlay-line-table .epages-cart-overlay-remove,
+.epages-cart-overlay-line-table .epages-cart-overlay-remove button {
+    width: 25px;
+    padding: 0;
+    position: relative;
+}
+.epages-cart-overlay-line-table .epages-cart-overlay-remove .tooltip {
+  position: absolute;
+  display: none;
+  border: 1px solid #dddddd;
+  padding: 5px;
+  line-height: 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  left: calc(-50% - 3px);
+  top: -8px;
+  background: white;
+}
+.epages-cart-overlay-line-table .epages-cart-overlay-remove .tooltip:after,
+.epages-cart-overlay-line-table .epages-cart-overlay-remove .tooltip:before {
+  top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.epages-cart-overlay-line-table .epages-cart-overlay-remove .tooltip:after {
+  border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 5px;
+	margin-left: -5px;
+}
+.epages-cart-overlay-line-table .epages-cart-overlay-remove .tooltip:before {
+  border-color: rgba(221, 221, 221, 0);
+	border-top-color: #dddddd;
+	border-width: 6px;
+	margin-left: -6px;
+}
+.epages-cart-overlay-line-item-remove:hover + .tooltip {
+  display: block;
+}

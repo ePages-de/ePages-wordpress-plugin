@@ -177,6 +177,10 @@ function createCartElement(element, index, array) {
   var remove = document.createElement("button");
   remove.className = "epages-cart-overlay-line-item-remove";
   remove.style = "background: transparent;"
+  var tooltip = document.createElement("span");
+  tooltip.className = "tooltip";
+  tooltip.setAttribute('data-i18n', 'remove-line-item');
+  tooltip.innerHTML = 'Delete product'
 
   // Append to the DOM
   imageD.appendChild(image);
@@ -187,6 +191,7 @@ function createCartElement(element, index, array) {
   tr.appendChild(quantityD);
   tr.appendChild(totalD);
   removeD.appendChild(remove);
+  removeD.appendChild(tooltip);
   tr.appendChild(removeD);
 
   tbody[0].appendChild(tr);
