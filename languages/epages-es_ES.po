@@ -253,4 +253,4 @@ msgstr "http://www.epages.com/downloads/pdf/epages-wordpress-plugin-setup-EN.pdf
 
 #: ../templates/popup.php:79
 msgid "Additionally, you can add a basket widget to your website using"
-msgstr "Additionally, you can add a basket widget to your website using"
+msgstr "Además, puede añadir un widget de cesta a su sitio web utilizando"
