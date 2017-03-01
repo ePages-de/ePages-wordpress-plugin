@@ -290,6 +290,7 @@ function updateCart(productId = 0) {
           theProduct.value = jsonQuantity;
           spinner.style.visibility = 'hidden';
           setTimeout(function(){ alert('Unfortunately, the products you selected are not available in the amount you requested. The amount has been changed.'); },1);
+          updateLocalStorage(productId, jsonQuantity);
         }
       }
       localStorage.setItem("epages-shop-cart-checkoutUrl", jsonResponse.checkoutUrl);
