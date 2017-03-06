@@ -130,3 +130,6 @@ select {
 .epages-cart-overlay-line-item-remove:hover + .tooltip {
   display: block;
 }
+.epages-cart-overlay table tbody tr {
+    height: 90px;
+}
