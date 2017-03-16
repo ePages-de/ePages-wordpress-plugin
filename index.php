@@ -4,10 +4,10 @@
 Plugin Name: ePages Online Shop
 Plugin URI: http://www.epages.com/us/
 Description: ePages Online Shop integration for WordPress.
-Version: 5.0.14
+Version: 5.0.15
 Author: ePages GmbH
 Author URI: http://www.epages.com/
-Text Domain: epages
+Text Domain: epages-online-shop
 Domain Path: /languages
 */
 
@@ -65,7 +65,7 @@ require_once EPAGES_PLUGIN_DIR . "/filters/build_script_tag.php";
 add_action( 'plugins_loaded', 'epages_load_textdomain' );
 
 function epages_load_textdomain() {
-	load_plugin_textdomain( 'epages', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	load_plugin_textdomain( 'epages-online-shop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
 
 if (is_admin()) {
