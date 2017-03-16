@@ -39,7 +39,8 @@ es = i18n.create({
     "unit-price": "Precio",
     "remove-line-item": "Eliminar producto",
     "pieces": "unidad(es)",
-    "all-products": "Todos los productos"
+    "all-products": "Todos los productos",
+    "product-amount-updated": "El producto seleccionado no está disponible en la cantidad solicitada. La cantidad se ha modificado."
   }
 })
 
@@ -77,7 +78,8 @@ en = i18n.create({
     "unit-price": "Price",
     "remove-line-item": "Delete product",
     "pieces": "piece(s)",
-    "all-products": "All products"
+    "all-products": "All products",
+    "product-amount-updated": "The selected product is not available in the amount requested. The amount has been changed."
   }
 })
 
@@ -115,7 +117,8 @@ de = i18n.create({
     "unit-price": "Preis",
     "remove-line-item": "Produkt löschen",
     "pieces": "piece(s)",
-    "all-products": "Alle Produkte"
+    "all-products": "Alle Produkte",
+    "product-amount-updated": "Es sind nicht ausreichend Produkte auf Lager. Die Anzahl wurde angepasst."
   }
 })
 // -------------
@@ -123,7 +126,7 @@ de = i18n.create({
 document.querySelector('.epages-shop-cart.fake span').innerHTML = cart.length;
 
 function translateEverything() {
-  var terms = ["basket", "basket-add", "basket-empty", "basket-fail", "category", "checkout", "description", "manufacturer-price", "additional-product-information", "exclude-vat", "exclude-vat-price", "exclude-vat-prices", "include-vat-cart", "include-vat", "include-vat-price", "include-vat-prices", "loading", "sortby", "name", "no-products", "price-asc", "price-desc", "quantity", "search", "shipping", "shipping-price", "ssl", "subtotal", "total-price", "unit-price", "remove-line-item", "all-products", "pieces"];
+  var terms = ["basket", "basket-add", "basket-empty", "basket-fail", "category", "checkout", "description", "manufacturer-price", "additional-product-information", "exclude-vat", "exclude-vat-price", "exclude-vat-prices", "include-vat-cart", "include-vat", "include-vat-price", "include-vat-prices", "loading", "sortby", "name", "no-products", "price-asc", "price-desc", "quantity", "search", "shipping", "shipping-price", "ssl", "subtotal", "total-price", "unit-price", "remove-line-item", "all-products", "pieces", "product-amount-updated"];
   for (var t in terms) {
     var term = terms[t];
     var translate = jQuery("[data-i18n='" + term + "']");
@@ -289,7 +292,19 @@ function updateCart(productId = 0) {
           var theProduct = document.querySelectorAll("tr#tr-" + productId + "> td.epages-cart-overlay-quantity > input")[0];
           theProduct.value = jsonQuantity;
           spinner.style.visibility = 'hidden';
-          setTimeout(function(){ alert('Unfortunately, the products you selected are not available in the amount you requested. The amount has been changed.'); },1);
+
+          var box = document.createElement('div');
+          box.className = 'shop-quantity-change';
+          var info = document.createElement('span')
+          info.appendChild(document.createTextNode('ⓘ'));
+          var text = document.createElement('div');
+          text.dataset.i18n = 'product-amount-updated';
+          box.appendChild(info);
+          box.appendChild(text);
+          var child = document.getElementsByClassName('epages-cart-overlay-not-empty')[0];
+          document.getElementsByClassName('epages-cart-overlay')[0].insertBefore(box, child);
+          translateEverything();
+
           updateLocalStorage(productId, jsonQuantity);
         }
       }
