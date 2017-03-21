@@ -123,7 +123,15 @@ de = i18n.create({
 })
 // -------------
 
-document.querySelector('.epages-shop-cart.fake span').innerHTML = cart.length;
+document.querySelector('.epages-shop-cart.fake span').innerHTML = getProductQuantity();
+
+function getProductQuantity() {
+  var quantity = 0;
+  for (var i in cart) {
+    quantity += cart[i].quantity;
+  }
+  return quantity;
+}
 
 function translateEverything() {
   var terms = ["basket", "basket-add", "basket-empty", "basket-fail", "category", "checkout", "description", "manufacturer-price", "additional-product-information", "exclude-vat", "exclude-vat-price", "exclude-vat-prices", "include-vat-cart", "include-vat", "include-vat-price", "include-vat-prices", "loading", "sortby", "name", "no-products", "price-asc", "price-desc", "quantity", "search", "shipping", "shipping-price", "ssl", "subtotal", "total-price", "unit-price", "remove-line-item", "all-products", "pieces", "product-amount-updated"];
@@ -321,7 +329,7 @@ function updateCart(productId = 0) {
 
       items = jsonResponse.lineItemContainer.productLineItems;
       items.forEach(updateLocalStorageCart);
-      document.querySelector('.epages-shop-cart.fake span').innerHTML = cart.length;
+      document.querySelector('.epages-shop-cart.fake span').innerHTML = getProductQuantity();
     }
     else if (xhr.status !== 201) {
         return 0;
