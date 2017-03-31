@@ -118,7 +118,7 @@ de = i18n.create({
     "remove-line-item": "Produkt löschen",
     "pieces": "piece(s)",
     "all-products": "Alle Produkte",
-    "product-amount-updated": "Es sind nicht ausreichend Produkte auf Lager. Die Anzahl wurde angepasst."
+    "product-amount-updated": "Das Produkt kann nicht in der ausgewählten Anzahl hinzugefügt werden. Die Anzahl wurde angepasst."
   }
 })
 // -------------
