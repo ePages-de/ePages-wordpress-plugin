@@ -278,7 +278,7 @@ function updateLocalStorageCart(element, index, array) {
   localStorage.setItem('epages-shop-cart-products', JSON.stringify(cart));
 }
 
-function updateCart(productId = 0) {
+function updateCart(productId = 0, quantity = 0) {
   var xhr = new XMLHttpRequest();
 
   xhr.open("POST", shopUrl + "/carts");
@@ -289,10 +289,10 @@ function updateCart(productId = 0) {
 
       if (productId != 0) {
         var jsonQuantity = 0;
-        jsonResponse.lineItemContainer.productLineItems.forEach(function findProductQuantityOnArray(element) {
+        jsonResponse.lineItemContainer.productLineItems.forEach(function(element) {
           if (element.productId == productId) {
-             jsonQuantity = element.quantity.amount;
-             return false;
+            jsonQuantity = element.quantity.amount;
+            return false;
           }
         });
 
@@ -301,6 +301,14 @@ function updateCart(productId = 0) {
           theProduct.value = jsonQuantity;
           spinner.style.visibility = 'hidden';
 
+          updateLocalStorage(productId, jsonQuantity);
+        }
+
+        if (document.getElementsByClassName('shop-quantity-change').length > 0) {
+          document.getElementsByClassName('shop-quantity-change')[0].remove();
+        }
+
+        if (jsonQuantity != quantity) {
           var box = document.createElement('div');
           box.className = 'shop-quantity-change';
           var info = document.createElement('span')
@@ -312,8 +320,6 @@ function updateCart(productId = 0) {
           var child = document.getElementsByClassName('epages-cart-overlay-not-empty')[0];
           document.getElementsByClassName('epages-cart-overlay')[0].insertBefore(box, child);
           translateEverything();
-
-          updateLocalStorage(productId, jsonQuantity);
         }
       }
       localStorage.setItem("epages-shop-cart-checkoutUrl", jsonResponse.checkoutUrl);
@@ -373,8 +379,9 @@ if (realCart()) {
   updateCart();
   var span = document.getElementsByClassName("close")[0];
   span.onclick = function() {
-      modal.style.display = "none";
-      document.getElementsByTagName("html")[0].style.overflow = "auto";
+    modal.style.display = "none";
+    document.getElementsByTagName("html")[0].style.overflow = "auto";
+    document.getElementsByClassName('shop-quantity-change')[0].remove()
   }
   var buttons = document.querySelectorAll(".epages-cart-overlay-line-item-remove");
   for (var i = 0; i < buttons.length; i++) {
@@ -399,7 +406,7 @@ for (var i = 0; i < inputs.length; i++) {
     var quantity = event.target.value;
     var json_products = JSON.parse(localStorage.getItem('epages-shop-cart-products'));
     updateLocalStorage(productId, quantity);
-    updateCart(productId);
+    updateCart(productId, quantity);
   });
 }
 
