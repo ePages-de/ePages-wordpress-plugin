@@ -40,7 +40,7 @@ More than 140,000 companies are already taking advantage of the all-in-one shop 
 
 **How to get started**
 
-Explore how your website could look like with the [ePages Online Shop Plugin](http://wordpress.epages.com/more-products/ "Demo").
+Explore how your website could look like with the [ePages Online Shop Plugin](http://wordpress.epages.com/ "Demo").
 
 ePages shops are offered by many providers worldwide. Simply select a package from one of [our partners](http://www.epages.com/en/partner/provider/ "Resellers") that best meets your needs, install the free ePages online shop plugin for WordPress and hit the ground running in e-commerce.
 
