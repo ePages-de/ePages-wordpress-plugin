@@ -49,7 +49,7 @@ class Cart_Widget extends WP_Widget {
          <span class="close pico-close fa fa-2x fa-times-circle undefined"></span>
          <h2 class="epages-cart-healine" data-i18n="basket">Basket</h2>
          <div class="epages-cart-overlay-not-empty">
-           <div class="epages-categories-spinner-container"><img src="http://site-production.herokuapp.com/images/spinner.gif" class="epages-categories-spinner"></div>
+           <div class="epages-categories-spinner-container"><img src="https://site-production.herokuapp.com/images/spinner.gif" class="epages-categories-spinner"></div>
            <table class="epages-cart-overlay-line-table">
              <thead>
                <tr>
